@@ -9,113 +9,140 @@ https://brad-hobbswd.github.io/trueportrait-revival
 
 ## About TruePortrait Revival
 
-TruePortrait Revival is a premium photo restoration concept dedicated to preserving treasured memories, family histories, and the people who matter most.
+TruePortrait Revival is a luxury photo restoration website concept dedicated to preserving treasured photographs, family histories, and meaningful memories.
 
 Every photograph carries a story.
 
-Through thoughtful restoration, color refinement, lighting enhancement, and careful detail preservation, TruePortrait Revival honors the original image while bringing forgotten memories back into focus.
+Through thoughtful restoration, color refinement, lighting enhancement, and careful detail preservation, TruePortrait Revival helps bring aging photographs back to life while honoring the identity, emotion, and character of every person captured.
 
-The goal is simple:
+Our purpose is simple:
 
-**Restore the photograph without losing the person within it.**
+**Restore the image. Preserve the person. Honor the memory.**
 
 ---
 
-## Our Mission
+# Our Mission
 
-Many photographs are more than pictures. They are connections to:
+Photographs are more than pictures. They are connections to:
 
-- Family history
 - Loved ones
+- Family history
 - Childhood memories
 - Generations before us
-- Moments that can never be recreated
+- Moments that cannot be recreated
 
-TruePortrait Revival focuses on preserving the identity, emotion, and character captured in every photograph.
+TruePortrait Revival focuses on preserving the people and stories behind every photograph.
 
 ---
 
-## Featured Services
+# Featured Services
 
-### 📷 Photo Restoration
+## Photo Restoration
 
-Restore aging photographs by improving:
+Carefully restoring treasured photographs by improving:
 
 - Fading
 - Scratches
+- Tears
 - Damage
-- Contrast
 - Image clarity
+- Overall appearance
 
 ---
 
-### 🎨 Color & Detail Refinement
+## Color & Detail Refinement
 
-Enhance photographs through:
+Enhancing photographs while preserving authenticity through:
 
 - Natural color restoration
 - Lighting improvement
+- Contrast refinement
 - Facial detail preservation
-- Balanced image refinement
 
 ---
 
-### 👨‍👩‍👧 Generations Reunited
+## Family Legacy Portraits
 
 Some family moments were never captured.
 
-TruePortrait Revival explores meaningful family legacy compositions, bringing together separate photographs to honor connections across generations.
+TruePortrait Revival creates meaningful family compositions that honor connections across generations.
 
 Examples:
 
 - Grandparents reunited with grandchildren they never met
 - Parents and children connected through restored portraits
 - Memorial family portraits
-- Generational legacy artwork
+- Generational heritage artwork
+
+These creations are artistic tributes designed to honor family relationships and preserve memories.
 
 ---
 
-## Website Features
+# Restoration Ethics
+
+TruePortrait Revival believes:
+
+**The person comes first.**
+
+Restoration should not replace someone's identity. It should honor the individual captured in the original photograph.
+
+Our approach focuses on:
+
+- Preserving facial features
+- Respecting original expressions
+- Honoring family memories
+- Maintaining authenticity
+- Treating every photograph with care
+
+---
+
+# Website Features
 
 ✅ Elegant luxury photography design  
-✅ Responsive desktop and mobile layout  
+✅ Responsive desktop and mobile experience  
 ✅ Before and after restoration gallery  
 ✅ Family legacy portrait showcase  
-✅ Restoration service pages  
+✅ Restoration service information  
 ✅ Consultation-based pricing approach  
-✅ GitHub Pages compatible static website  
+✅ Privacy and legal documentation  
+✅ Custom GitHub Pages website  
 
 ---
 
-## Website Pages
+# Website Pages
 
 | Page | Purpose |
 |---|---|
-| Home | Introduction and brand experience |
-| About | Story, mission, and restoration philosophy |
-| Gallery | Before and after restoration examples |
+| Home | Brand introduction and restoration vision |
+| About | Story, mission, and purpose |
+| Ethics | Restoration philosophy and commitment |
+| Gallery | Before and after restoration showcase |
 | Pricing | Restoration consultation options |
 | Contact | Restoration inquiries |
+| Copyright | Website and image ownership information |
+| Privacy | Information protection policy |
+| Terms | Service expectations |
+| 404 | Custom branded error page |
 
 ---
 
-## Design Inspiration
+# Design Inspiration
 
-TruePortrait Revival uses a timeless visual style inspired by:
+TruePortrait Revival combines:
 
 - Classic portrait photography
 - Heritage collections
-- Museum galleries
 - Fine art presentation
+- Modern restoration technology
 
-### Color Palette
+## Color Palette
 
 - Ivory
 - Antique Gold
 - Deep Navy
 - Warm Neutral Tones
 
-### Typography
+## Typography
 
 - Cinzel
 - Cormorant Garamond
@@ -123,7 +150,7 @@ TruePortrait Revival uses a timeless visual style inspired by:
 
 ---
 
-## Technology Used
+# Technology Used
 
 Built with:
 
@@ -135,4 +162,4 @@ Built with:
 
 ---
 
-## Project Structure
+# Project Structure
