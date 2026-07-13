@@ -1006,3 +1006,34 @@ height:350px;
 
 
 }
+
+img {
+
+opacity:0;
+
+transform:translateY(20px);
+
+transition:all .8s ease;
+
+}
+
+
+img.visible {
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+.navbar.scrolled {
+
+background:rgba(16,27,43,.95);
+
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+transition:.3s;
+
+}
