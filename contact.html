@@ -89,21 +89,38 @@ Every photograph has a story. Share the details behind your treasured image and 
 
 <form class="contact-form">
 
+<label for="name">
+Your Name
+</label>
+
 <input 
-type="text" 
+type="text"
+id="name"
+name="name"
 placeholder="Your Name"
 >
 
+
+<label for="email">
+Email Address
+</label>
+
 <input 
-type="email" 
+type="email"
+id="email"
+name="email"
 placeholder="Email Address"
 >
 
 
+<label for="service">
+Restoration Service
+</label>
+
 <select name="service" id="service">
 
 <option value="">
-Select Restoration Type
+Select Restoration Service
 </option>
 
 <option value="photo-restoration">
@@ -129,7 +146,13 @@ Memorial Portrait
 </select>
 
 
+<label for="message">
+Tell Us The Story Behind The Photograph
+</label>
+
 <textarea 
+id="message"
+name="message"
 rows="8"
 placeholder="Tell us about your photograph, family story, or restoration request">
 </textarea>
