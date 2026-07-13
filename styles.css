@@ -1180,3 +1180,57 @@ transform:rotate(-45deg) translate(6px,-6px);
 
 
 }
+
+.page-hero {
+
+height:500px;
+background:
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.35)
+),
+url("images/hero-banner.png");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+color:white;
+
+}
+
+
+.page-hero h1 {
+
+font-family:"Cormorant Garamond", serif;
+font-size:70px;
+
+}
+
+
+.legal-content {
+
+padding:100px 10%;
+max-width:1100px;
+margin:auto;
+
+}
+
+
+.legal-content h2 {
+
+margin-top:45px;
+
+}
+
+
+.legal-content p {
+
+font-size:18px;
+line-height:1.8;
+
+}
