@@ -1404,3 +1404,36 @@ gap:35px;
 
 }
 
+.legacy-feature {
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+padding:100px 8%;
+
+}
+
+
+.legacy-content {
+
+text-align:left;
+
+}
+
+
+.legacy-image img {
+
+width:100%;
+
+max-width:500px;
+
+display:block;
+
+margin:auto;
+
+}
