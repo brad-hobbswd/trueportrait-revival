@@ -50,13 +50,14 @@ z-index:10;
 font-family:Cinzel, serif;
 font-size:28px;
 letter-spacing:2px;
+color:var(--navy);
 
 }
 
 
 nav a {
 
-color:white;
+color:var(--navy);
 text-decoration:none;
 margin-left:30px;
 font-size:15px;
@@ -1014,17 +1015,7 @@ height:350px;
 
 }
 
-.gallery img,
-.gallery-box img,
-.photo-card img {
 
-opacity:0;
-
-transform:translateY(20px);
-
-transition:all .8s ease;
-
-}
 
 
 .gallery img.visible,
@@ -1034,15 +1025,6 @@ transition:all .8s ease;
 opacity:1;
 
 transform:translateY(0);
-
-}
-
-
-.legacy-image img {
-
-opacity:1;
-
-transform:none;
 
 }
 
@@ -1435,5 +1417,22 @@ max-width:500px;
 display:block;
 
 margin:auto;
+
+}
+
+@media(max-width:900px){
+
+.legacy-feature {
+
+grid-template-columns:1fr;
+
+}
+
+
+.legacy-content {
+
+text-align:center;
+
+}
 
 }
