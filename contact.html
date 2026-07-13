@@ -89,13 +89,10 @@ Every photograph has a story. Share the details behind your treasured image and 
 
 <form class="contact-form">
 
-
 <input 
 type="text" 
 placeholder="Your Name"
 >
-
-
 
 <input 
 type="email" 
@@ -103,31 +100,30 @@ placeholder="Email Address"
 >
 
 
+<select name="service" id="service">
 
-<input 
-type="text" 
-placeholder="Subject"
->
-<select name="service">
-
-<option>
+<option value="">
 Select Restoration Type
 </option>
 
-<option>
+<option value="photo-restoration">
 Photo Restoration
 </option>
 
-<option>
+<option value="color-detail-refinement">
 Color & Detail Refinement
 </option>
 
-<option>
+<option value="family-legacy-portrait">
 Family Legacy Portrait
 </option>
 
-<option>
+<option value="custom-portrait-creation">
 Custom Portrait Creation
+</option>
+
+<option value="memorial-portrait">
+Memorial Portrait
 </option>
 
 </select>
@@ -139,11 +135,9 @@ placeholder="Tell us about your photograph, family story, or restoration request
 </textarea>
 
 
-
 <button type="submit">
 Request Consultation
 </button>
-
 
 </form>
 
