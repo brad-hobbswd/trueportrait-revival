@@ -76,7 +76,13 @@ display:block;
 
 }
 
+.brand-intro .button {
 
+display:inline-block;
+
+margin-top:35px;
+
+}
 
 
 /* ================================
@@ -120,6 +126,8 @@ margin-top:20px;
 color:var(--gold);
 
 }
+
+
 
 
 .button {
