@@ -67,9 +67,18 @@ letter-spacing:1px;
 
 
 
+/* ================================
+   HERO BANNER FRAMED STYLE
+================================ */
+
 .hero {
 
-width:100%;
+width:90%;
+
+max-width:1400px;
+
+margin:40px auto 0;
+
 overflow:hidden;
 
 }
@@ -78,7 +87,9 @@ overflow:hidden;
 .hero img {
 
 display:block;
+
 width:100%;
+
 height:auto;
 
 }
