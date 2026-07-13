@@ -1509,3 +1509,46 @@ line-height:1.8;
 margin-top:35px;
 
 }
+
+/* ================================
+   GALLERY CONSULTATION SECTION
+================================ */
+
+.gallery-contact {
+
+padding:100px 10%;
+
+text-align:center;
+
+background:var(--navy);
+
+color:white;
+
+}
+
+
+.gallery-contact h2 {
+
+color:white;
+
+}
+
+
+.gallery-contact p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+
+.gallery-contact .button {
+
+margin-top:35px;
+
+}
