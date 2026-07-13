@@ -1234,3 +1234,151 @@ font-size:18px;
 line-height:1.8;
 
 }
+
+/* ================================
+   TRUEPORTRAIT REVIVAL FOOTER
+================================ */
+
+
+.site-footer {
+
+background:#101b2b;
+
+color:white;
+
+padding:70px 8% 30px;
+
+}
+
+
+
+.footer-brand {
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+
+.footer-brand h3 {
+
+font-family:Cinzel, serif;
+
+font-size:32px;
+
+color:#c8a45d;
+
+letter-spacing:2px;
+
+}
+
+
+
+.footer-brand p {
+
+font-family:"Cormorant Garamond", serif;
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+
+
+
+.footer-links {
+
+display:flex;
+
+justify-content:center;
+
+gap:80px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.footer-column {
+
+display:flex;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.footer-column h4 {
+
+font-family:Cinzel, serif;
+
+color:#c8a45d;
+
+margin-bottom:20px;
+
+font-size:18px;
+
+}
+
+
+
+.footer-column a {
+
+color:white;
+
+text-decoration:none;
+
+margin:8px 0;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+
+
+.footer-column a:hover {
+
+color:#c8a45d;
+
+}
+
+
+
+.footer-bottom {
+
+border-top:1px solid rgba(200,164,93,.4);
+
+padding-top:30px;
+
+text-align:center;
+
+font-size:14px;
+
+line-height:1.8;
+
+}
+
+
+
+@media(max-width:900px){
+
+
+.footer-links {
+
+flex-direction:column;
+
+gap:35px;
+
+}
+
+
+}
