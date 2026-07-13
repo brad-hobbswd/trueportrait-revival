@@ -26,15 +26,21 @@ color:var(--charcoal);
 
 .navbar {
 
-position:absolute;
-top:0;
+position:relative;
+
 width:100%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 padding:25px 8%;
+
+background:var(--ivory);
+
 z-index:10;
-color:white;
 
 }
 
@@ -62,7 +68,7 @@ letter-spacing:1px;
 
 .hero {
 
-height:auto;
+width:100%;
 overflow:hidden;
 
 }
@@ -70,9 +76,9 @@ overflow:hidden;
 
 .hero img {
 
+display:block;
 width:100%;
 height:auto;
-display:block;
 
 }
 
