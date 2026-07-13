@@ -1552,3 +1552,132 @@ line-height:1.8;
 margin-top:35px;
 
 }
+
+/* ================================
+   ETHICS PAGE
+================================ */
+
+.ethics-hero {
+
+height:600px;
+
+background:
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.35)
+),
+url("images/hero-banner.png");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+.ethics-hero h1 {
+
+font-family:"Cormorant Garamond", serif;
+
+font-size:80px;
+
+letter-spacing:3px;
+
+font-weight:600;
+
+}
+
+
+.ethics-hero p {
+
+font-family:Cinzel, serif;
+
+font-size:24px;
+
+margin-top:20px;
+
+}
+
+
+
+.ethics-content {
+
+padding:100px 10%;
+
+max-width:1100px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+
+.ethics-content h2 {
+
+font-family:"Cormorant Garamond", serif;
+
+font-size:55px;
+
+color:var(--navy);
+
+margin-top:55px;
+
+}
+
+
+.ethics-content p {
+
+font-size:20px;
+
+line-height:1.8;
+
+max-width:900px;
+
+margin:25px auto;
+
+}
+
+
+
+.final-message {
+
+padding:100px 10%;
+
+background:var(--navy);
+
+color:white;
+
+text-align:center;
+
+}
+
+
+.final-message h2 {
+
+color:white;
+
+}
+
+
+.final-message p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:22px;
+
+line-height:1.8;
+
+}
