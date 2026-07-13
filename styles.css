@@ -76,13 +76,7 @@ display:block;
 
 }
 
-.brand-intro .button {
 
-display:inline-block;
-
-margin-top:35px;
-
-}
 
 
 /* ================================
@@ -132,7 +126,8 @@ color:var(--gold);
 
 .button {
 
-margin-top:40px;
+display:inline-block;
+margin-top:35px;
 padding:16px 45px;
 background:var(--gold);
 color:white;
@@ -140,7 +135,6 @@ text-decoration:none;
 font-family:Cinzel, serif;
 
 }
-
 
 
 .intro {
@@ -183,7 +177,7 @@ background:white;
 .service-grid {
 
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 
 }
@@ -323,12 +317,6 @@ grid-template-columns:1fr;
 
 }
 
-
-.hero h1 {
-
-font-size:55px;
-
-}
 
 
 .steps {
@@ -1020,7 +1008,10 @@ height:350px;
 
 }
 
-img {
+.gallery img,
+.gallery-box img,
+.photo-card img,
+.legacy-image img {
 
 opacity:0;
 
@@ -1031,13 +1022,17 @@ transition:all .8s ease;
 }
 
 
-img.visible {
+.gallery img.visible,
+.gallery-box img.visible,
+.photo-card img.visible,
+.legacy-image img.visible {
 
 opacity:1;
 
 transform:translateY(0);
 
 }
+
 
 
 
@@ -1393,5 +1388,33 @@ gap:35px;
 
 }
 
+
+}
+
+.navbar {
+
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+z-index:10;
+background:rgba(247,240,230,.85);
+
+}
+
+
+.logo {
+
+color:var(--navy);
+
+}
+
+
+nav a {
+
+color:var(--navy);
 
 }
