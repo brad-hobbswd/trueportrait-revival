@@ -1466,3 +1466,46 @@ margin-top:20px;
 }
 
 }
+
+/* ================================
+   PRICING CONSULTATION SECTION
+================================ */
+
+.pricing-contact {
+
+padding:100px 10%;
+
+text-align:center;
+
+background:var(--navy);
+
+color:white;
+
+}
+
+
+.pricing-contact h2 {
+
+color:white;
+
+}
+
+
+.pricing-contact p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+
+.pricing-contact .button {
+
+margin-top:35px;
+
+}
