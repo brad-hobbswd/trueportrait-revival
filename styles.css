@@ -1016,8 +1016,7 @@ height:350px;
 
 .gallery img,
 .gallery-box img,
-.photo-card img,
-.legacy-image img {
+.photo-card img {
 
 opacity:0;
 
@@ -1030,12 +1029,20 @@ transition:all .8s ease;
 
 .gallery img.visible,
 .gallery-box img.visible,
-.photo-card img.visible,
-.legacy-image img.visible {
+.photo-card img.visible {
 
 opacity:1;
 
 transform:translateY(0);
+
+}
+
+
+.legacy-image img {
+
+opacity:1;
+
+transform:none;
 
 }
 
@@ -1397,30 +1404,3 @@ gap:35px;
 
 }
 
-.navbar {
-
-position:absolute;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-z-index:10;
-background:rgba(247,240,230,.85);
-
-}
-
-
-.logo {
-
-color:var(--navy);
-
-}
-
-
-nav a {
-
-color:var(--navy);
-
-}
