@@ -1681,3 +1681,39 @@ font-size:22px;
 line-height:1.8;
 
 }
+
+/* ================================
+   CONTACT CLOSING MESSAGE
+================================ */
+
+.closing-message {
+
+padding:100px 10%;
+
+background:var(--navy);
+
+color:white;
+
+text-align:center;
+
+}
+
+
+.closing-message h2 {
+
+color:white;
+
+}
+
+
+.closing-message p {
+
+max-width:800px;
+
+margin:25px auto;
+
+font-size:22px;
+
+line-height:1.8;
+
+}
