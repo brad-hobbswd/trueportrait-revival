@@ -50,6 +50,7 @@ link.addEventListener("click", function(){
 if(navigation){
 
 navigation.classList.remove("active");
+menuButton.classList.remove("open");
 
 }
 
@@ -213,7 +214,7 @@ year.textContent = new Date().getFullYear();
 ================================ */
 
 
-const form = document.querySelector(".contact-form");
+const form = document.querySelector("form");
 
 
 if(form){
