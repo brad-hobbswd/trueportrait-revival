@@ -1509,3 +1509,24 @@ line-height:1.8;
     }
 
 }
+
+.navbar.scrolled .logo,
+.navbar.scrolled .logo:visited{
+
+    color:white;
+
+}
+
+.navbar.scrolled nav a,
+.navbar.scrolled nav a:visited{
+
+    color:white;
+
+}
+
+.navbar.scrolled nav a:hover,
+.navbar.scrolled .logo:hover{
+
+    color:var(--gold);
+
+}
