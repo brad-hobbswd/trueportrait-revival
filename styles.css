@@ -45,18 +45,15 @@ z-index:10;
 }
 
 
-.logo{
+.logo,
+.logo:visited{
 
     font-family:Cinzel, serif;
-    .logo:visited{
     font-size:28px;
     letter-spacing:2px;
     color:var(--navy);
-
     text-decoration:none;
-
     display:inline-block;
-
     transition:.3s;
 
 }
@@ -67,7 +64,6 @@ z-index:10;
 
 }
 
-
 nav a,
 nav a:visited {
 
@@ -75,12 +71,13 @@ nav a:visited {
 
     color:var(--navy);
 
+    text-decoration:none;
+
     margin:15px 0;
 
     font-size:18px;
 
     letter-spacing:2px;
-
 }
 
 nav a:hover{
