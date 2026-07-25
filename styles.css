@@ -296,31 +296,19 @@ font-family:Cinzel, serif;
 
 
 
-footer {
-
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-
-}
-
 
 
 @media(max-width:900px){
 
-.service-grid,
-.gallery-grid {
+.service-grid{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
 }
 
+.steps{
 
-
-.steps {
-
-flex-direction:column;
+    flex-direction:column;
 
 }
 
@@ -398,16 +386,7 @@ margin-top:40px;
 
 
 
-@media(max-width:900px){
 
-.before-after,
-.gallery-grid {
-
-grid-template-columns:1fr;
-
-}
-
-}
 
 /* ================================
    TRUEPORTRAIT REVIVAL
@@ -544,80 +523,7 @@ margin-bottom:20px;
 }
 
 
-.restoration-section,
-.legacy-section,
-.category-gallery {
 
-padding:100px 8%;
-
-}
-
-
-
-.before-after {
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:50px;
-
-margin-top:50px;
-
-}
-
-
-
-.photo-card {
-
-background:white;
-
-padding:30px;
-
-border:1px solid #eee;
-
-box-shadow:
-0 12px 30px rgba(0,0,0,.12);
-
-}
-
-
-
-.photo-card img {
-
-width:100%;
-
-height:500px;
-
-object-fit:cover;
-
-}
-
-
-
-.photo-card h3 {
-
-font-family:Cinzel, serif;
-
-color:var(--gold);
-
-text-align:center;
-
-margin-bottom:25px;
-
-}
-
-
-
-.note {
-
-text-align:center;
-
-font-style:italic;
-
-margin-top:40px;
-
-}
 
 
 
@@ -889,18 +795,6 @@ height:350px;
 
 }
 
-
-
-
-.gallery img.visible,
-.gallery-box img.visible,
-.photo-card img.visible {
-
-opacity:1;
-
-transform:translateY(0);
-
-}
 
 
 
@@ -1537,92 +1431,71 @@ line-height:1.8;
    RESTORED MEMORIES GALLERY
 ========================================== */
 
-.gallery {
-
-    padding:100px 8%;
-
+.gallery{
+    padding:80px 6%;
 }
 
 .gallery h2{
-
     text-align:center;
-
-    margin-bottom:60px;
-
+    margin-bottom:40px;
 }
 
 .gallery-grid{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-
-    gap:40px;
-
-    align-items:start;
-
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
 }
 
 .gallery-item{
-
     background:#fff;
-
-    padding:18px;
-
-    border-radius:18px;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.10);
-
-    overflow:hidden;
-
-    transition:.35s;
-
+    padding:12px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    transition:.3s;
 }
 
 .gallery-item:hover{
-
-    transform:translateY(-8px);
-
+    transform:translateY(-6px);
 }
 
 .gallery-item img{
-
-    display:block;
-
     width:100%;
-
-    height:auto;
-
-    object-fit:contain;
-
-    border-radius:12px;
-
-}
-
-.gallery-item{
-
     aspect-ratio:2 / 3;
+    object-fit:contain;
+    display:block;
+}
 
-    background:#ffffff;
+/* Tablet */
 
-    padding:15px;
+@media (max-width:900px){
 
-    border-radius:18px;
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+    }
 
-    overflow:hidden;
+    .gallery{
+        padding:60px 5%;
+    }
 
-    box-shadow:0 12px 35px rgba(0,0,0,.10);
+    .gallery-item{
+        padding:8px;
+    }
 
 }
 
-.gallery-item img{
+/* Small Phones */
 
-    width:100%;
+@media (max-width:500px){
 
-    height:100%;
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
 
-    object-fit:contain;
-
-    display:block;
+    .gallery-item{
+        padding:6px;
+        border-radius:10px;
+    }
 
 }
