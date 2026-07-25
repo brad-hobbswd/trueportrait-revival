@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="styles.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
 
 </head>
 
@@ -19,9 +20,9 @@
 
 <header class="navbar">
 
-<div class="logo">
-TruePortrait Revival
-</div>
+<a href="index.html" class="logo">
+    TruePortrait Revival
+</a>
 
 
 <button class="menu-toggle" aria-label="Open Menu">
@@ -31,7 +32,7 @@ TruePortrait Revival
 </button>
 
 
-<nav>
+<nav aria-label="Primary Navigation">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -96,8 +97,11 @@ Explore Family Legacy Portraits
 
 <div class="legacy-image">
 
-<img src="B9B71621-AC28-4BAD-8383-5E095CC6F1B5.png" 
-alt="Family legacy portrait placeholder">
+<img
+    src="B9B71621-AC28-4BAD-8383-5E095CC6F1B5.png"
+    alt="Family legacy portrait"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
@@ -203,7 +207,7 @@ The Restoration Journey
 </h2>
 
 
-<div class="steps">
+<ol class="steps">
 
 <div>
 <span>01</span>
@@ -245,15 +249,38 @@ Every face has a story. Every photograph deserves a second chance.
 
 <form>
 
-<input type="text" placeholder="Your Name">
+    <label for="name">Your Name</label>
 
-<input type="email" placeholder="Email Address">
+    <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Your Name"
+        autocomplete="name"
+        required>
 
-<textarea placeholder="Tell us about your photograph"></textarea>
+    <label for="email">Email Address</label>
 
-<button>
-Submit Request
-</button>
+    <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Email Address"
+        autocomplete="email"
+        required>
+
+    <label for="message">Tell Us About Your Photograph</label>
+
+    <textarea
+        id="message"
+        name="message"
+        placeholder="Tell us about your photograph"
+        rows="6"
+        required></textarea>
+
+    <button type="submit">
+        Submit Request
+    </button>
 
 </form>
 
