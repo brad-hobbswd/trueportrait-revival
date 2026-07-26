@@ -472,6 +472,21 @@ nav a:hover{
 
 }
 
+.restoration-image h3{
+
+    margin-bottom:24px;
+
+    padding:18px;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    border-radius:10px;
+
+    font-size:1.1rem;
+
+}
 
 /* ==========================================
    LEGACY SECTION
