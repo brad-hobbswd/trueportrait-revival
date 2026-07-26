@@ -145,6 +145,12 @@ p{
     border-radius:6px;
 
     transition:var(--transition);
+    
+    display:inline-block;
+
+    width:100%;
+
+    max-width:100%;
 
 }
 
@@ -199,13 +205,16 @@ p{
 
     font-family:"Cinzel",serif;
 
-    font-size:1.8rem;
+    font-size:1.5rem;
 
     letter-spacing:2px;
 
     color:var(--navy);
 
     transition:var(--transition);
+    
+    white-space:nowrap;
+
 
 }
 
@@ -813,6 +822,10 @@ footer a:hover{
         padding:80px 6%;
 
     }
+    
+     .logo{
+
+        font-size:1.2rem;
 
 }
 
