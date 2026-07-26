@@ -674,6 +674,8 @@ footer{
 
     gap:40px;
 
+    margin-top:15px;
+
     margin-bottom:40px;
 
 }
@@ -700,30 +702,70 @@ footer{
 
 }
 
+/* ==========================================
+   FOOTER LINKS
+========================================== */
+
+.footer-column a,
+.footer-column a:visited{
+
+    color:var(--white);
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.footer-column a:hover,
+.footer-column a:focus{
+
+    color:var(--gold);
+
+}
+
+.footer-column a:active{
+
+    color:var(--gold);
+
+}
+
+.footer-bottom a,
+.footer-bottom a:visited{
+
+    color:var(--white);
+
+}
+
+.footer-bottom a:hover{
+
+    color:var(--gold);
+
+}
 
 /* ==========================================
    SMALL FOOTER DETAILS
 ========================================== */
 
-.footer-links{
 
-    margin-top:15px;
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:20px;
-
-}
 
 .footer-links a{
 
     font-size:.9rem;
 
     letter-spacing:.5px;
+
+    color:var(--white);
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--gold);
 
 }
 
