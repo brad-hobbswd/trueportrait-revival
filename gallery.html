@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,33 +8,35 @@
 
 <title>Gallery | TruePortrait Revival</title>
 
-<meta name="description" content="Explore TruePortrait Revival before and after photo restorations, family legacy portraits, and preserved memories.">
+<meta name="description" content="Explore professionally restored photographs, before and after restorations, custom family legacy portraits, and treasured memories preserved by TruePortrait Revival.">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="gallery.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
-<div class="logo">
-TruePortrait Revival
-</div>
+<a href="index.html" class="logo">
+    TruePortrait Revival
+</a>
 
+<button
+    class="menu-toggle"
+    aria-label="Open Menu"
+    aria-expanded="false"
+    aria-controls="primary-navigation">
 
-<button class="menu-toggle" aria-label="Open Menu">
-<span></span>
-<span></span>
-<span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
 </button>
 
-
-<nav>
+<nav id="primary-navigation" aria-label="Primary Navigation">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -44,14 +47,11 @@ TruePortrait Revival
 
 </nav>
 
-
 </header>
-
-
 
 <section class="gallery-hero">
 
-<div>
+<div class="hero-content">
 
 <h1>
 Restored Memories
@@ -65,8 +65,6 @@ Preserving the faces, stories, and connections that matter most.
 
 </section>
 
-
-
 <section class="gallery-intro">
 
 <h2>
@@ -74,72 +72,64 @@ Every Photograph Holds A Story
 </h2>
 
 <p>
-From faded family portraits to treasured photographs passed through generations, each restoration is handled with care, respect, and attention to the person captured within the image.
+Every restoration begins with a treasured memory. Whether repairing a damaged family photograph, restoring faded color, or creating a meaningful family legacy portrait, every image is treated with care, respect, and attention to the people whose stories deserve to be preserved.
 </p>
 
 </section>
-
-
-
 
 <section class="restoration-section">
 
 <h2>
-Before & After Restorations
+Before &amp; After Restorations
 </h2>
-
 
 <div class="before-after">
 
+<div class="photo-card">
+
+<h3>
+Original Photograph
+</h3>
+
+<img
+    src="images/before-family.jpg"
+    alt="Original damaged family photograph"
+    loading="lazy"
+    decoding="async">
+
+</div>
 
 <div class="photo-card">
 
 <h3>
-Before
+Professionally Restored
 </h3>
 
-<img src="images/before-family.jpg" alt="Original family photograph">
+<img
+    src="images/after-family.jpg"
+    alt="Professionally restored family photograph"
+    loading="lazy"
+    decoding="async">
 
 </div>
-
-
-
-<div class="photo-card">
-
-<h3>
-After
-</h3>
-
-<img src="images/after-family.jpg" alt="Restored family photograph">
-
-</div>
-
 
 </div>
 
 </section>
 
-
-
-
-
 <section class="legacy-section">
 
-
 <h2>
-Custom Legacy Portraits
+Custom Family Legacy Portraits
 </h2>
-
 
 <p class="section-text">
 
-Some meaningful moments were never captured in a single photograph. Through careful artistic composition, multiple photographs can be combined to create a new portrait that honors family connections, memories, and the people who matter most.
+Some family moments were never captured together in a single photograph. Through careful artistic restoration and composition, individual photographs can be combined into timeless portraits that celebrate relationships across generations while preserving the identity and dignity of every person.
 
 </p>
 
-
 <div class="before-after">
-
 
 <div class="photo-card">
 
@@ -147,58 +137,53 @@ Some meaningful moments were never captured in a single photograph. Through care
 Original Photographs
 </h3>
 
-<img src="images/family-originals.jpg" 
-alt="Multiple original family photographs">
-
+<img
+    src="images/family-originals.jpg"
+    alt="Collection of original family photographs"
+    loading="lazy"
+    decoding="async">
 
 </div>
-
-
 
 <div class="photo-card">
 
 <h3>
-Custom Legacy Portrait
+Completed Legacy Portrait
 </h3>
 
-<img src="images/family-composite.jpg"
-alt="Created family legacy portrait">
-
+<img
+    src="images/family-composite.jpg"
+    alt="Completed custom family legacy portrait"
+    loading="lazy"
+    decoding="async">
 
 </div>
 
-
 </div>
-
-
 
 <p class="note">
 
-Custom Legacy Portraits may include combining multiple photographs, updating clothing, changing scenery, and creating a new artistic setting based on the client's vision while preserving the identity and character of each person.
+Legacy Portraits may include combining multiple photographs, updating clothing, enhancing backgrounds, adjusting lighting, and creating artistic family compositions while preserving authentic facial features and family likenesses.
 
 </p>
 
-
 </section>
 
-
-
-
-
 <section class="category-gallery">
-
 
 <h2>
 Restoration Collections
 </h2>
 
-
 <div class="gallery-grid">
-
 
 <div class="gallery-box">
 
-<img src="images/family.jpg">
+<img
+    src="images/family.jpg"
+    alt="Restored family portraits"
+    loading="lazy"
+    decoding="async">
 
 <h3>
 Family Memories
@@ -206,11 +191,13 @@ Family Memories
 
 </div>
 
-
-
 <div class="gallery-box">
 
-<img src="images/children.jpg">
+<img
+    src="images/children.jpg"
+    alt="Restored childhood portraits"
+    loading="lazy"
+    decoding="async">
 
 <h3>
 Childhood Memories
@@ -218,11 +205,13 @@ Childhood Memories
 
 </div>
 
-
-
 <div class="gallery-box">
 
-<img src="images/military.jpg">
+<img
+    src="images/military.jpg"
+    alt="Restored military heritage photographs"
+    loading="lazy"
+    decoding="async">
 
 <h3>
 Military Heritage
@@ -230,11 +219,13 @@ Military Heritage
 
 </div>
 
-
-
 <div class="gallery-box">
 
-<img src="images/memorial.jpg">
+<img
+    src="images/memorial.jpg"
+    alt="Restored memorial portraits"
+    loading="lazy"
+    decoding="async">
 
 <h3>
 Memorial Portraits
@@ -242,15 +233,9 @@ Memorial Portraits
 
 </div>
 
-
-
 </div>
 
-
 </section>
-
-
-
 
 <section class="gallery-contact">
 
@@ -259,22 +244,16 @@ Preserve Your Family Story
 </h2>
 
 <p>
-Every photograph represents someone who mattered. Let us help preserve their story.
+Every photograph represents someone who mattered. Let TruePortrait Revival restore and preserve your treasured memories for future generations.
 </p>
 
-
 <a href="contact.html" class="button">
-Begin A Consultation
+Begin Your Restoration
 </a>
-
 
 </section>
 
-
-
-
 <footer class="site-footer">
-
 
 <div class="footer-brand">
 
@@ -288,10 +267,7 @@ Restoring the image. Preserving the person.
 
 </div>
 
-
-
 <div class="footer-links">
-
 
 <div class="footer-column">
 
@@ -308,9 +284,6 @@ Explore
 
 </div>
 
-
-
-
 <div class="footer-column">
 
 <h4>
@@ -323,10 +296,7 @@ Legal
 
 </div>
 
-
 </div>
-
-
 
 <div class="footer-bottom">
 
@@ -334,19 +304,16 @@ Legal
 © <span class="year"></span> TruePortrait Revival. All Rights Reserved.
 </p>
 
-
 <p>
 Preserving memories. Honoring legacies. Protecting stories.
 </p>
 
-
 </div>
-
-
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
