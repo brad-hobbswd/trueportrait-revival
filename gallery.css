@@ -477,6 +477,36 @@ nav a:hover{
 }
 
 /* ==========================================
+   LEGACY SECTION
+========================================== */
+
+.legacy-section{
+
+    padding:100px 8%;
+
+    background:var(--ivory);
+
+}
+
+.section-text{
+
+    width:min(92%,900px);
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.section-text p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+}
+
+/* ==========================================
    LEGACY SHOWCASE
 ========================================== */
 
@@ -916,13 +946,6 @@ nav a:hover{
 
     }
 
-    .restoration-showcase{
-
-    grid-template-columns:1fr;
-
-    }
-
-
     .restoration-showcase,
     .legacy-showcase{
 
@@ -1040,20 +1063,21 @@ nav a:hover{
    IMAGE ANIMATIONS
 ========================================== */
 
-.gallery-box img,
+.gallery-box img{
+
+    width:100%;
+
+    aspect-ratio:5/4;
+
+    object-fit:cover;
+
+}
 
 .restoration-image img,
-
 .legacy-image img{
 
-    opacity:0;
+    width:100%;
 
-    transform:translateY(20px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-        
     max-width:500px;
 
 }
@@ -1088,23 +1112,7 @@ button:focus{
    LEGACY SHOWCASE
 ========================================== */
 
-.legacy-showcase{
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
-
-    gap:80px;
-
-    margin-top:60px;
-
-    align-items:start;
-
-    max-width:1600px;
-
-    margin:60px auto 0;
-
-}
 
 .legacy-image{
 
@@ -1112,17 +1120,6 @@ button:focus{
 
 }
 
-.legacy-image img{
-
-    width:100%;
-
-    height:auto;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-}
 
 .legacy-image figcaption{
 
