@@ -4,322 +4,428 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Contact | TruePortrait Revival</title>
 
-<meta name="description" content="Contact TruePortrait Revival for photo restoration consultations, family legacy portraits, and treasured memory preservation.">
+<meta
+name="description"
+content="Contact TruePortrait Revival for professional photograph restoration, family legacy portraits, and restoration consultations.">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="contact.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+rel="stylesheet">
 
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
-<div class="logo">
+<a href="index.html"
+class="logo">
+
 TruePortrait Revival
-</div>
 
+</a>
 
-<button class="menu-toggle" aria-label="Open Menu">
+<button
+
+class="menu-toggle"
+
+aria-label="Open Menu"
+
+aria-expanded="false"
+
+aria-controls="primary-navigation">
+
 <span></span>
 <span></span>
 <span></span>
+
 </button>
 
+<nav
 
-<nav>
+id="primary-navigation"
+
+aria-label="Primary Navigation">
 
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="ethics.html">Ethics</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="pricing.html">Pricing</a>
+
 <a href="contact.html">Contact</a>
 
 </nav>
-
 
 </header>
 
 
 
-
 <section class="contact-hero">
 
-<div>
+<div class="hero-content">
 
 <h1>
+
 Begin Your Restoration Journey
+
 </h1>
 
 <p>
+
 Restoring the image. Preserving the person.
+
 </p>
 
 </div>
 
 </section>
-
-
 
 
 
 <section class="contact-section">
 
+<div class="container">
 
 <h2>
+
 Tell Us The Story Behind The Photograph
+
 </h2>
 
+<p class="section-intro">
 
-<p>
-
-Every photograph has a story. Share the details behind your treasured image and we will help determine the best restoration approach.
+Every treasured photograph tells a story. Share your family's history and restoration goals so we can recommend the best approach for preserving your memories.
 
 </p>
-
-
 
 <form class="contact-form">
 
 <label for="name">
+
 Your Name
+
 </label>
 
-<input 
-type="text"
-id="name"
-name="name"
-placeholder="Your Name"
->
+<input
 
+type="text"
+
+id="name"
+
+name="name"
+
+placeholder="Your Name"
+
+autocomplete="name"
+
+required>
 
 <label for="email">
+
 Email Address
+
 </label>
 
-<input 
-type="email"
-id="email"
-name="email"
-placeholder="Email Address"
->
+<input
 
+type="email"
+
+id="email"
+
+name="email"
+
+placeholder="Email Address"
+
+autocomplete="email"
+
+required>
 
 <label for="service">
+
 Restoration Service
+
 </label>
 
-<select name="service" id="service">
+<select
+
+id="service"
+
+name="service"
+
+required>
 
 <option value="">
+
 Select Restoration Service
+
 </option>
 
 <option value="photo-restoration">
+
 Photo Restoration
+
 </option>
 
 <option value="color-detail-refinement">
+
 Color & Detail Refinement
+
 </option>
 
 <option value="family-legacy-portrait">
+
 Family Legacy Portrait
+
 </option>
 
-<option value="custom-portrait-creation">
+<option value="custom-portrait">
+
 Custom Portrait Creation
+
 </option>
 
 <option value="memorial-portrait">
+
 Memorial Portrait
+
 </option>
 
 </select>
 
-
 <label for="message">
+
 Tell Us The Story Behind The Photograph
+
 </label>
 
-<textarea 
+<textarea
+
 id="message"
+
 name="message"
+
 rows="8"
-placeholder="Tell us about your photograph, family story, or restoration request">
+
+placeholder="Share the history behind your photograph and describe how you would like it restored."
+
+required>
+
 </textarea>
 
+<button
 
-<button type="submit">
+type="submit"
+
+class="button">
+
 Request Consultation
+
 </button>
 
 </form>
 
+</div>
 
 </section>
-
-
 
 
 
 <section class="contact-info">
 
+<div class="container">
 
 <h2>
-Helpful Details To Include
-</h2>
 
+Helpful Details To Include
+
+</h2>
 
 <div class="details">
 
+<article class="detail-card">
 
-<div>
-<h3>Photograph History</h3>
+<h3>
 
-<p>
-Approximate year, who is pictured, and any important family details.
-</p>
+Photograph History
 
-</div>
-
-
-
-<div>
-<h3>Restoration Needs</h3>
+</h3>
 
 <p>
-Color restoration, damage repair, lighting enhancement, or family composition requests.
+
+Approximate year, family relationships, and any historical details that help preserve the original story.
+
 </p>
 
-</div>
+</article>
 
+<article class="detail-card">
 
+<h3>
 
-<div>
-<h3>Family Legacy Portraits</h3>
+Restoration Needs
+
+</h3>
 
 <p>
-Explain the relationships you would like honored through a combined family portrait.
+
+Describe fading, tears, scratches, missing areas, color restoration, lighting improvements, or other restoration requests.
+
 </p>
 
+</article>
+
+<article class="detail-card">
+
+<h3>
+
+Legacy Portraits
+
+</h3>
+
+<p>
+
+Tell us about the family members you hope to bring together through a respectful custom legacy portrait.
+
+</p>
+
+</article>
+
 </div>
 
-
 </div>
-
 
 </section>
-
-
 
 
 
 <section class="closing-message">
 
+<div class="container">
 
 <h2>
-Every Face Has A Story
-</h2>
 
+Every Face Has A Story
+
+</h2>
 
 <p>
 
-Every photograph represents someone who mattered. Every memory deserves to be preserved.
+Every restored photograph protects a memory, celebrates a life, and preserves a legacy for generations yet to come.
 
 </p>
 
+<a
 
-<a href="gallery.html" class="button">
+href="gallery.html"
+
+class="button">
+
 Explore Our Restorations
+
 </a>
 
+</div>
 
 </section>
 
 
 
-
 <footer class="site-footer">
-
 
 <div class="footer-brand">
 
 <h3>
+
 TruePortrait Revival
+
 </h3>
 
 <p>
+
 Restoring the image. Preserving the person.
+
 </p>
 
 </div>
 
-
-
 <div class="footer-links">
-
 
 <div class="footer-column">
 
 <h4>
+
 Explore
+
 </h4>
 
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="ethics.html">Ethics</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="pricing.html">Pricing</a>
+
 <a href="contact.html">Contact</a>
 
 </div>
 
-
-
-
 <div class="footer-column">
 
 <h4>
+
 Legal
+
 </h4>
 
 <a href="privacy.html">Privacy Policy</a>
+
 <a href="terms.html">Terms of Service</a>
+
 <a href="copyright.html">Copyright</a>
 
 </div>
 
-
 </div>
-
-
 
 <div class="footer-bottom">
 
 <p>
-© <span class="year"></span> TruePortrait Revival. All Rights Reserved.
-</p>
 
+© <span class="year"></span> TruePortrait Revival. All Rights Reserved.
+
+</p>
 
 <p>
-Preserving memories. Honoring legacies. Protecting stories.
-</p>
 
+Preserving memories. Honoring legacies. Protecting stories.
+
+</p>
 
 </div>
 
-
-
 </footer>
+
 <script src="script.js"></script>
 
 </body>
