@@ -423,76 +423,52 @@ nav a:hover{
 
 
 /* ==========================================
-   BEFORE & AFTER SECTION
+   RESTORATION SHOWCASE
 ========================================== */
 
-.restoration-section{
-
-    padding:100px 8%;
-
-    background:var(--white);
-
-}
-
-.before-after{
+.restoration-showcase{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
 
-    gap:40px;
+    gap:60px;
 
     margin-top:60px;
 
+    align-items:start;
+
 }
 
-.photo-card{
-
-    background:var(--white);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
+.restoration-image{
 
     text-align:center;
 
 }
 
-.photo-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.photo-card h3{
-
-    padding:28px 20px;
-
-    background:var(--navy);
-
-    color:var(--white);
-
-    font-size:1.2rem;
-
-}
-
-.photo-card img{
+.restoration-image img{
 
     width:100%;
 
-    aspect-ratio:4 / 5;
+    height:auto;
 
-    object-fit:cover;
+    display:block;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
 
 }
 
-.photo-card p{
+.restoration-image figcaption{
 
-    padding:25px;
+    margin-top:20px;
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.1rem;
+
+    color:var(--navy);
 
 }
 
@@ -900,11 +876,17 @@ nav a:hover{
 
     }
 
-    .before-after{
+    .restoration-showcase{
 
-        grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
-    }
+}
+
+.legacy-showcase{
+
+    grid-template-columns:1fr;
+
+}
 
     .gallery-grid{
 
@@ -986,13 +968,15 @@ nav a:hover{
 
     }
 
-    .photo-card{
+    .restoration-image,
 
-        max-width:500px;
+.legacy-image{
 
-        margin:0 auto;
+    max-width:550px;
 
-    }
+    margin:0 auto;
+
+}
 
     .footer-brand h3{
 
@@ -1014,7 +998,9 @@ nav a:hover{
 
 .gallery-box img,
 
-.photo-card img{
+.restoration-image img,
+
+.legacy-image img{
 
     opacity:0;
 
@@ -1028,7 +1014,9 @@ nav a:hover{
 
 .gallery-box img.visible,
 
-.photo-card img.visible{
+.restoration-image img.visible,
+
+.legacy-image img.visible{
 
     opacity:1;
 
@@ -1097,6 +1085,8 @@ button:focus{
     font-size:1.1rem;
 
 }
+
+
 
 /* ==========================================
    END OF GALLERY STYLESHEET
