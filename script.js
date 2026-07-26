@@ -243,3 +243,43 @@ form.reset();
 
 
 });
+
+/* ================================
+   SECTION FADE-IN
+================================ */
+
+const animatedItems = document.querySelectorAll(
+
+".about-story, .philosophy, .generations, .promise, .value-card"
+
+);
+
+const sectionObserver = new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+animatedItems.forEach(item=>{
+
+sectionObserver.observe(item);
+
+});
