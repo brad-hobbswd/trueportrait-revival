@@ -17,8 +17,12 @@
     --charcoal:#222222;
     --white:#ffffff;
 
-    --shadow:0 15px 35px rgba(0,0,0,.10);
-    --transition:.3s ease;
+    --shadow:0 15px 35px rgba(0,0,0,.12);
+    --shadow-hover:0 25px 55px rgba(0,0,0,.18);
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
 
 }
 
@@ -46,12 +50,13 @@ html{
 body{
 
     font-family:"Inter",sans-serif;
-    font-size:16px;
+    font-size:1rem;
     line-height:1.8;
 
+    color:var(--charcoal);
     background:var(--ivory);
 
-    color:var(--charcoal);
+    overflow-x:hidden;
 
 }
 
@@ -66,13 +71,25 @@ img{
 a{
 
     text-decoration:none;
+    color:inherit;
 
 }
 
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================
+   GLOBAL CONTAINER
+========================================== */
+
 .container{
 
-    width:min(1100px,90%);
-    margin:auto;
+    width:min(92%,var(--max-width));
+    margin:0 auto;
 
 }
 
@@ -83,66 +100,64 @@ a{
 
 h1,
 h2,
-h3{
+h3,
+h4{
 
+    font-family:"Cinzel",serif;
+    font-weight:600;
     color:var(--navy);
+    line-height:1.25;
 
 }
 
 h1{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:5rem;
-    font-weight:600;
+    font-size:clamp(2.8rem,5vw,4.5rem);
 
 }
 
 h2{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:3.2rem;
-    font-weight:600;
-
-    text-align:center;
-
-    margin-bottom:30px;
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:1.5rem;
 
 }
 
 h3{
 
-    font-family:"Cinzel",serif;
-    font-size:1.35rem;
-    font-weight:600;
+    font-size:1.45rem;
+    margin-bottom:1rem;
 
 }
 
 p{
 
-    font-size:1.1rem;
+    margin-bottom:1.5rem;
+    color:#555;
 
 }
 
 
 /* ==========================================
-   BUTTON
+   BUTTONS
 ========================================== */
 
 .button{
 
-    display:inline-block;
+    display:inline-flex;
 
-    margin-top:40px;
+    justify-content:center;
+    align-items:center;
 
-    padding:16px 42px;
+    padding:15px 34px;
 
     background:var(--gold);
 
     color:var(--white);
 
-    font-family:"Cinzel",serif;
+    border-radius:50px;
 
-    border-radius:6px;
+    font-weight:600;
 
     transition:var(--transition);
 
@@ -150,13 +165,33 @@ p{
 
 .button:hover{
 
-    background:var(--navy);
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.button-outline{
+
+    background:transparent;
+
+    color:var(--gold);
+
+    border:2px solid var(--gold);
+
+}
+
+.button-outline:hover{
+
+    background:var(--gold);
+
+    color:var(--white);
 
 }
 
 
 /* ==========================================
-   HEADER
+   NAVIGATION
 ========================================== */
 
 .navbar{
@@ -173,37 +208,25 @@ p{
 
     align-items:center;
 
-    padding:24px 8%;
+    padding:22px 6%;
 
-    background:var(--ivory);
+    background:rgba(247,240,230,.96);
 
-    transition:var(--transition);
+    backdrop-filter:blur(12px);
 
-}
-
-.navbar.scrolled{
-
-    background:rgba(16,27,43,.95);
-
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    border-bottom:1px solid rgba(0,0,0,.08);
 
 }
 
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo,
-.logo:visited{
+.logo{
 
     font-family:"Cinzel",serif;
 
-    font-size:1.8rem;
-
-    letter-spacing:2px;
+    font-size:1.5rem;
 
     color:var(--navy);
+
+    letter-spacing:.08em;
 
     transition:var(--transition);
 
@@ -215,40 +238,39 @@ p{
 
 }
 
-.navbar.scrolled .logo,
-.navbar.scrolled .logo:visited{
-
-    color:var(--white);
-
-}
-
-.navbar.scrolled .logo:hover{
-
-    color:var(--gold);
-
-}
-
-
-/* ==========================================
-   NAVIGATION
-========================================== */
-
 nav{
 
     display:flex;
 
-    align-items:center;
-
-    gap:35px;
+    gap:32px;
 
 }
 
-nav a,
-nav a:visited{
+nav a{
 
-    font-family:"Cinzel",serif;
+    position:relative;
 
     color:var(--navy);
+
+    transition:var(--transition);
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
 
     transition:var(--transition);
 
@@ -260,16 +282,9 @@ nav a:hover{
 
 }
 
-.navbar.scrolled nav a,
-.navbar.scrolled nav a:visited{
+nav a:hover::after{
 
-    color:var(--white);
-
-}
-
-.navbar.scrolled nav a:hover{
-
-    color:var(--gold);
+    width:100%;
 
 }
 
@@ -282,51 +297,27 @@ nav a:hover{
 
     display:none;
 
+    flex-direction:column;
+
+    gap:6px;
+
+    cursor:pointer;
+
     background:none;
 
     border:none;
-
-    cursor:pointer;
 
 }
 
 .menu-toggle span{
 
-    display:block;
-
     width:28px;
 
     height:2px;
 
-    margin:6px 0;
-
     background:var(--navy);
 
     transition:var(--transition);
-
-}
-
-.navbar.scrolled .menu-toggle span{
-
-    background:var(--white);
-
-}
-
-.menu-toggle.open span:nth-child(1){
-
-    transform:rotate(45deg) translate(5px,5px);
-
-}
-
-.menu-toggle.open span:nth-child(2){
-
-    opacity:0;
-
-}
-
-.menu-toggle.open span:nth-child(3){
-
-    transform:rotate(-45deg) translate(6px,-6px);
 
 }
 
@@ -337,94 +328,91 @@ nav a:hover{
 
 .pricing-hero{
 
-    min-height:520px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    padding:130px 0 110px;
 
     text-align:center;
 
     background:
 
-    linear-gradient(
-
-        rgba(16,27,43,.60),
-
-        rgba(16,27,43,.60)
-
-    ),
-
-    url("images/pricing-hero.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    color:var(--white);
-
-}
-
-.pricing-hero div{
-
-    width:min(900px,90%);
+        linear-gradient(
+            rgba(247,240,230,.94),
+            rgba(247,240,230,.94)
+        );
 
 }
 
 .pricing-hero h1{
 
-    color:var(--white);
-
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
 .pricing-hero p{
 
-    font-family:"Cinzel",serif;
+    max-width:760px;
 
-    font-size:1.35rem;
+    margin:0 auto;
 
-    letter-spacing:1px;
+    font-size:1.15rem;
 
 }
 
+
 /* ==========================================
-   PRICING INTRODUCTION
+   SECTION DEFAULTS
 ========================================== */
 
-.pricing-intro{
+section{
 
-    padding:110px 8%;
+    padding:100px 0;
+
+}
+
+section:nth-of-type(even){
 
     background:var(--white);
+
+}
+
+section h2{
 
     text-align:center;
 
 }
 
-.pricing-intro p{
+section p{
 
-    max-width:850px;
+    max-width:820px;
 
-    margin:0 auto;
+    margin-left:auto;
+
+    margin-right:auto;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   SERVICES SECTION
+   Part 2
+========================================== */
+
+.services-section{
+
+    background:var(--white);
+
+}
+
+.services-section h2{
+
+    margin-bottom:60px;
 
 }
 
 
 /* ==========================================
-   RESTORATION PACKAGES
+   PRICING GRID
 ========================================== */
-
-.packages{
-
-    padding:110px 8%;
-
-    background:var(--ivory);
-
-}
 
 .pricing-grid{
 
@@ -432,9 +420,9 @@ nav a:hover{
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:35px;
+    gap:40px;
 
-    margin-top:60px;
+    align-items:stretch;
 
 }
 
@@ -445,81 +433,154 @@ nav a:hover{
 
 .price-card{
 
-    background:var(--white);
-
-    padding:45px 35px;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-    transition:
-
-        transform .3s ease,
-
-        box-shadow .3s ease;
-
     display:flex;
 
     flex-direction:column;
+
+    padding:45px;
+
+    background:var(--ivory);
+
+    border:1px solid rgba(0,0,0,.08);
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
 
 }
 
 .price-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    box-shadow:0 18px 40px rgba(0,0,0,.12);
+    box-shadow:var(--shadow-hover);
 
 }
 
+.price-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:var(--transition);
+
+}
+
+.price-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+
+/* ==========================================
+   FEATURED CARD
+========================================== */
+
+.featured{
+
+    border:2px solid var(--gold);
+
+    transform:scale(1.03);
+
+    background:linear-gradient(
+        to bottom,
+        #fbf7f0,
+        #ffffff
+    );
+
+}
+
+.featured::after{
+
+    content:"Most Requested";
+
+    position:absolute;
+
+    top:18px;
+
+    right:-38px;
+
+    padding:8px 40px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:.08em;
+
+    transform:rotate(45deg);
+
+}
+
+.featured:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
+
+
+/* ==========================================
+   CARD TYPOGRAPHY
+========================================== */
+
 .price-card h3{
 
-    margin-bottom:20px;
+    text-align:center;
 
     color:var(--navy);
+
+    margin-bottom:20px;
 
 }
 
 .price-card p{
 
-    margin-bottom:25px;
+    text-align:center;
+
+    margin-bottom:30px;
 
 }
 
 
 /* ==========================================
-   FEATURED PACKAGE
-========================================== */
-
-.price-card.featured{
-
-    border:3px solid var(--gold);
-
-    transform:scale(1.03);
-
-}
-
-.price-card.featured:hover{
-
-    transform:scale(1.03) translateY(-8px);
-
-}
-
-
-/* ==========================================
-   PACKAGE LIST
+   FEATURE LIST
 ========================================== */
 
 .price-card ul{
 
-    list-style:none;
+    display:flex;
 
-    margin:0 0 35px;
+    flex-direction:column;
 
-    padding:0;
+    gap:18px;
 
-    flex:1;
+    margin-bottom:40px;
 
 }
 
@@ -527,9 +588,9 @@ nav a:hover{
 
     position:relative;
 
-    padding-left:28px;
+    padding-left:34px;
 
-    margin-bottom:14px;
+    color:#555;
 
 }
 
@@ -541,9 +602,13 @@ nav a:hover{
 
     left:0;
 
+    top:0;
+
     color:var(--gold);
 
     font-weight:700;
+
+    font-size:1rem;
 
 }
 
@@ -552,55 +617,170 @@ nav a:hover{
    CARD BUTTONS
 ========================================== */
 
-.price-card a{
+.price-card .button{
 
-    display:inline-block;
+    margin-top:auto;
 
-    align-self:flex-start;
-
-    padding:14px 32px;
-
-    border-radius:6px;
-
-    background:var(--gold);
-
-    color:var(--white);
-
-    font-family:"Cinzel",serif;
-
-    transition:var(--transition);
+    width:100%;
 
 }
 
-.price-card a:hover{
 
-    background:var(--navy);
+/* ==========================================
+   CARD DIVIDERS
+========================================== */
+
+.price-card hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(0,0,0,.08);
+
+    margin:25px 0;
+
+}
+
+
+/* ==========================================
+   OVERVIEW SECTION
+========================================== */
+
+.pricing-overview{
+
+    background:var(--ivory);
+
+}
+
+.pricing-overview h2{
+
+    margin-bottom:30px;
+
+}
+
+.pricing-overview p{
+
+    max-width:860px;
+
+}
+
+
+/* ==========================================
+   SUBTLE SECTION ACCENT
+========================================== */
+
+.services-section .container::before{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:0 auto 30px;
+
+}
+
+
+/* ==========================================
+   CARD ANIMATION
+========================================== */
+
+.price-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.price-card:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.price-card:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
 
 /* ==========================================
-   GENERATIONS REUNITED
+   LEGACY FEATURE
+   Part 3
 ========================================== */
 
-.legacy-pricing{
+.legacy-feature{
 
-    padding:110px 8%;
-
-    background:var(--white);
-
-    text-align:center;
+    background:linear-gradient(
+        180deg,
+        var(--white) 0%,
+        #fcfaf6 100%
+    );
 
 }
 
-.legacy-pricing p{
+.legacy-feature .container{
 
     max-width:900px;
 
-    margin:0 auto 25px;
+}
+
+.legacy-feature h2{
+
+    margin-bottom:35px;
 
 }
 
-.legacy-pricing p:last-child{
+.legacy-feature h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:24px auto 0;
+
+    background:var(--gold);
+
+}
+
+.legacy-feature p{
+
+    margin-bottom:26px;
+
+    font-size:1.05rem;
+
+}
+
+.legacy-feature p:last-child{
 
     margin-bottom:0;
 
@@ -613,11 +793,20 @@ nav a:hover{
 
 .pricing-factors{
 
-    padding:110px 8%;
-
     background:var(--ivory);
 
 }
+
+.pricing-factors h2{
+
+    margin-bottom:60px;
+
+}
+
+
+/* ==========================================
+   FACTOR GRID
+========================================== */
 
 .factor-grid{
 
@@ -627,47 +816,115 @@ nav a:hover{
 
     gap:35px;
 
-    margin-top:60px;
-
 }
 
-.factor-grid div{
+
+/* ==========================================
+   FACTOR CARD
+========================================== */
+
+.factor-card{
 
     background:var(--white);
 
-    padding:40px 35px;
+    padding:40px;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    text-align:center;
+    border:1px solid rgba(0,0,0,.08);
 
     box-shadow:var(--shadow);
 
-    transition:
+    text-align:center;
 
-        transform .3s ease,
+    transition:var(--transition);
 
-        box-shadow .3s ease;
+    position:relative;
+
+    overflow:hidden;
 
 }
 
-.factor-grid div:hover{
+.factor-card:hover{
 
     transform:translateY(-8px);
 
-    box-shadow:0 18px 40px rgba(0,0,0,.12);
+    box-shadow:var(--shadow-hover);
 
 }
 
-.factor-grid h3{
+.factor-card::before{
 
-    margin-bottom:18px;
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:var(--transition);
+
+}
+
+.factor-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+
+/* ==========================================
+   FACTOR ICON
+========================================== */
+
+.factor-card h3{
+
+    margin-bottom:20px;
 
     color:var(--navy);
 
 }
 
-.factor-grid p{
+.factor-card h3::before{
+
+    display:block;
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+}
+
+.factor-card:nth-child(1) h3::before{
+
+    content:"🖼️";
+
+}
+
+.factor-card:nth-child(2) h3::before{
+
+    content:"🎨";
+
+}
+
+.factor-card:nth-child(3) h3::before{
+
+    content:"✨";
+
+}
+
+.factor-card p{
 
     margin:0;
 
@@ -675,36 +932,20 @@ nav a:hover{
 
 
 /* ==========================================
-   RESTORATION CONSULTATION
+   CONSULTATION CTA
 ========================================== */
 
-.pricing-contact{
+.consultation-cta{
 
-    padding:120px 8%;
-
-    text-align:center;
-
-    background:
-
-    linear-gradient(
-
-        rgba(16,27,43,.92),
-
-        rgba(16,27,43,.92)
-
-    ),
-
-    url("images/contact-banner.jpg");
-
-    background-size:cover;
-
-    background-position:center;
+    background:var(--navy);
 
     color:var(--white);
 
+    text-align:center;
+
 }
 
-.pricing-contact h2{
+.consultation-cta h2{
 
     color:var(--white);
 
@@ -712,41 +953,107 @@ nav a:hover{
 
 }
 
-.pricing-contact p{
+.consultation-cta h2::after{
 
-    max-width:760px;
+    content:"";
 
-    margin:0 auto 45px;
+    display:block;
 
-    color:rgba(255,255,255,.92);
+    width:90px;
 
-}
+    height:2px;
 
-.pricing-contact .button{
+    margin:24px auto 0;
 
     background:var(--gold);
 
 }
 
-.pricing-contact .button:hover{
+.consultation-cta p{
 
-    background:var(--white);
+    max-width:760px;
 
-    color:var(--navy);
+    margin:0 auto 45px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:1.05rem;
+
+}
+
+
+/* ==========================================
+   CTA BUTTON
+========================================== */
+
+.consultation-cta .button{
+
+    font-size:1rem;
+
+    padding:16px 38px;
+
+}
+
+.consultation-cta .button:hover{
+
+    background:#d4b06a;
+
+}
+
+
+/* ==========================================
+   SECTION DIVIDERS
+========================================== */
+
+.pricing-overview::after,
+.services-section::after,
+.legacy-feature::after{
+
+    content:"";
+
+    display:block;
+
+    width:140px;
+
+    height:2px;
+
+    margin:90px auto 0;
+
+    background:rgba(200,164,93,.35);
+
+}
+
+
+/* ==========================================
+   SPACING REFINEMENTS
+========================================== */
+
+.pricing-overview p:last-child,
+.legacy-feature p:last-child{
+
+    margin-bottom:0;
+
+}
+
+.factor-card,
+.price-card{
+
+    min-height:100%;
 
 }
 
 /* ==========================================
    FOOTER
+   Part 4
 ========================================== */
 
 .site-footer{
 
     background:var(--navy);
 
-    color:rgba(255,255,255,.90);
+    color:rgba(255,255,255,.85);
 
-    padding:90px 8% 40px;
+    padding:80px 6% 35px;
 
 }
 
@@ -760,7 +1067,7 @@ nav a:hover{
 
 .footer-brand h3{
 
-    color:var(--white);
+    color:var(--gold);
 
     margin-bottom:15px;
 
@@ -770,19 +1077,19 @@ nav a:hover{
 
     color:rgba(255,255,255,.75);
 
+    margin:0;
+
 }
 
 .footer-links{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:60px;
+    gap:50px;
 
-    max-width:700px;
-
-    margin:0 auto 60px;
+    margin-bottom:60px;
 
 }
 
@@ -798,15 +1105,15 @@ nav a:hover{
 
 .footer-column h4{
 
-    color:var(--white);
+    color:var(--gold);
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
 
 .footer-column a{
 
-    color:var(--gold);
+    color:rgba(255,255,255,.8);
 
     transition:var(--transition);
 
@@ -814,15 +1121,17 @@ nav a:hover{
 
 .footer-column a:hover{
 
-    color:var(--white);
+    color:var(--gold);
+
+    padding-left:6px;
 
 }
 
 .footer-bottom{
 
-    border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(255,255,255,.12);
 
-    padding-top:35px;
+    padding-top:30px;
 
     text-align:center;
 
@@ -830,79 +1139,85 @@ nav a:hover{
 
 .footer-bottom p{
 
-    margin:10px 0;
+    color:rgba(255,255,255,.65);
 
-    font-size:.95rem;
+    margin-bottom:10px;
+
+}
+
+.footer-bottom p:last-child{
+
+    margin-bottom:0;
 
 }
 
 
 /* ==========================================
-   RESPONSIVE DESIGN
+   FADE IN ANIMATION
 ========================================== */
 
-@media (max-width:992px){
+@keyframes fadeIn{
 
-    .pricing-grid{
+    from{
 
-        grid-template-columns:1fr;
+        opacity:0;
 
-    }
-
-    .factor-grid{
-
-        grid-template-columns:1fr;
+        transform:translateY(35px);
 
     }
 
-    .price-card.featured{
+    to{
 
-        transform:none;
+        opacity:1;
 
-    }
-
-    .price-card.featured:hover{
-
-        transform:translateY(-8px);
-
-    }
-
-    h1{
-
-        font-size:4rem;
-
-    }
-
-    h2{
-
-        font-size:2.8rem;
+        transform:translateY(0);
 
     }
 
 }
 
+.pricing-overview,
+.services-section,
+.legacy-feature,
+.pricing-factors,
+.consultation-cta{
 
-@media (max-width:768px){
+    animation:fadeIn .9s ease both;
 
-    .navbar{
+}
 
-        padding:20px 6%;
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1100px){
+
+    .pricing-grid{
+
+        grid-template-columns:repeat(2,1fr);
 
     }
 
-    .logo{
+    .factor-grid{
 
-        font-size:1.25rem;
+        grid-template-columns:repeat(2,1fr);
 
-        white-space:nowrap;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .navbar{
+
+        padding:20px 5%;
 
     }
 
     .menu-toggle{
 
-        display:block;
-
-        z-index:1001;
+        display:flex;
 
     }
 
@@ -916,127 +1231,181 @@ nav a:hover{
 
         width:100%;
 
-        background:var(--navy);
-
-        display:flex;
+        display:none;
 
         flex-direction:column;
 
-        align-items:center;
+        background:var(--white);
 
-        gap:25px;
+        padding:30px;
 
-        padding:35px 0;
+        gap:22px;
 
-        opacity:0;
+        box-shadow:var(--shadow);
 
-        visibility:hidden;
-
-        transform:translateY(-10px);
-
-        transition:var(--transition);
+        border-top:1px solid rgba(0,0,0,.08);
 
     }
 
     nav.active{
 
-        opacity:1;
-
-        visibility:visible;
-
-        transform:translateY(0);
-
-    }
-
-    nav a,
-    nav a:visited{
-
-        color:var(--white);
+        display:flex;
 
     }
 
     .pricing-hero{
 
-        min-height:420px;
-
-        padding:80px 20px;
+        padding:110px 0 90px;
 
     }
 
-    h1{
+    section{
 
-        font-size:3rem;
-
-    }
-
-    h2{
-
-        font-size:2.3rem;
-
-    }
-
-    .pricing-intro,
-    .packages,
-    .legacy-pricing,
-    .pricing-factors,
-    .pricing-contact{
-
-        padding:80px 6%;
-
-    }
-
-    .footer-links{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-
-        gap:40px;
+        padding:80px 0;
 
     }
 
 }
 
+@media(max-width:768px){
 
-@media (max-width:480px){
+    .pricing-grid{
 
-    h1{
-
-        font-size:2.4rem;
-
-    }
-
-    h2{
-
-        font-size:2rem;
+        grid-template-columns:1fr;
 
     }
 
-    p{
+    .factor-grid{
 
-        font-size:1rem;
+        grid-template-columns:1fr;
+
+    }
+
+    .featured{
+
+        transform:none;
+
+    }
+
+    .featured:hover{
+
+        transform:translateY(-8px);
+
+    }
+
+    .featured::after{
+
+        display:none;
 
     }
 
     .price-card{
 
-        padding:35px 25px;
+        padding:35px;
 
     }
 
-    .factor-grid div{
+    .factor-card{
 
-        padding:35px 25px;
+        padding:35px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+
+        padding:18px 5%;
+
+    }
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
+    .pricing-hero{
+
+        padding:90px 0 70px;
+
+    }
+
+    .pricing-hero h1{
+
+        font-size:2.5rem;
+
+    }
+
+    h2{
+
+        font-size:1.9rem;
+
+    }
+
+    h3{
+
+        font-size:1.25rem;
+
+    }
+
+    p{
+
+        font-size:.97rem;
+
+    }
+
+    .price-card{
+
+        padding:30px 24px;
+
+    }
+
+    .factor-card{
+
+        padding:30px 24px;
 
     }
 
     .button{
 
-        display:block;
-
         width:100%;
 
+    }
+
+    .footer-links{
+
         text-align:center;
+
+    }
+
+    .footer-column{
+
+        align-items:center;
+
+    }
+
+}
+
+@media(max-width:420px){
+
+    .pricing-hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .price-card{
+
+        border-radius:16px;
+
+    }
+
+    .factor-card{
+
+        border-radius:16px;
 
     }
 
@@ -1056,46 +1425,52 @@ button:focus-visible{
 
 }
 
+.button,
+nav a,
+.footer-column a{
+
+    transition:
+
+        color .3s ease,
+
+        background .3s ease,
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
 
 /* ==========================================
-   TEXT SELECTION
+   PRINT
 ========================================== */
 
-::selection{
+@media print{
 
-    background:var(--gold);
+    .navbar,
+    .menu-toggle,
+    .button,
+    .site-footer{
 
-    color:var(--white);
+        display:none;
 
-}
+    }
 
+    body{
 
-/* ==========================================
-   SCROLLBAR
-========================================== */
+        background:#fff;
 
-::-webkit-scrollbar{
+        color:#000;
 
-    width:10px;
+    }
 
-}
+    section{
 
-::-webkit-scrollbar-track{
+        padding:30px 0;
 
-    background:var(--ivory);
+        page-break-inside:avoid;
 
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--gold);
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--navy);
+    }
 
 }
