@@ -374,38 +374,6 @@ nav a:hover{
 }
 
 
-/* ==========================================
-   MOBILE MENU
-========================================== */
-
-.menu-toggle{
-
-    display:none;
-
-    flex-direction:column;
-
-    gap:6px;
-
-    cursor:pointer;
-
-    background:none;
-
-    border:none;
-
-}
-
-.menu-toggle span{
-
-    width:28px;
-
-    height:2px;
-
-    background:var(--navy);
-
-    transition:var(--transition);
-
-}
-
 
 /* ==========================================
    HERO
@@ -449,7 +417,7 @@ nav a:hover{
 
 section{
 
-    padding:100px 0;
+    padding:90px 8%;
 
 }
 
@@ -1102,7 +1070,7 @@ section p{
 
     height:2px;
 
-    margin:90px auto 0;
+    margin:40px auto 0;
 
     background:rgba(200,164,93,.35);
 
