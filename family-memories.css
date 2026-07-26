@@ -1166,23 +1166,23 @@ nav a:hover{
 
 .benefit-card{
 
-    opacity:0;
+    background:var(--ivory);
 
-    transform:translateY(20px);
+    padding:45px 35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
 
     transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
-
-}
-
-.benefit-card.visible{
+        transform .35s ease,
+        box-shadow .35s ease;
 
     opacity:1;
 
-    transform:translateY(0);
+    transform:none;
 
 }
 
