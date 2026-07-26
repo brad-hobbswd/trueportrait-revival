@@ -428,13 +428,15 @@ nav a:hover{
 
 .restoration-showcase{
 
+    max-width:1600px;
+
+    margin:60px auto 0;
+
     display:grid;
 
     grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
 
-    gap:60px;
-
-    margin-top:60px;
+    gap:80px;
 
     align-items:start;
 
@@ -526,6 +528,23 @@ nav a:hover{
 
 }
 
+/* ==========================================
+   SECTION DIVIDER
+========================================== */
+
+.section-divider{
+
+    width:140px;
+
+    height:2px;
+
+    margin:90px auto;
+
+    border:none;
+
+    background:rgba(200,164,93,.35);
+
+}
 
 /* ==========================================
    PHOTO ANIMATION
@@ -1063,11 +1082,15 @@ button:focus{
 
     grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
 
-    gap:60px;
+    gap:80px;
 
     margin-top:60px;
 
     align-items:start;
+
+    max-width:1600px;
+
+    margin:60px auto 0;
 
 }
 
