@@ -616,7 +616,7 @@ nav a:hover{
 
     width:100%;
 
-    aspect-ratio:4 / 5;
+    aspect-ratio:5 / 4;
 
     object-fit:cover;
 
@@ -919,6 +919,12 @@ nav a:hover{
         gap:50px;
 
     }
+    
+    .legacy-showcase{
+
+    grid-template-columns:1fr;
+
+}
 
 }
 
@@ -1041,6 +1047,54 @@ button:focus{
     outline:3px solid rgba(200,164,93,.45);
 
     outline-offset:3px;
+
+}
+
+/* ==========================================
+   LEGACY SHOWCASE
+========================================== */
+
+.legacy-showcase{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:60px;
+
+    margin-top:60px;
+
+    align-items:start;
+
+}
+
+.legacy-image{
+
+    text-align:center;
+
+}
+
+.legacy-image img{
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.legacy-image figcaption{
+
+    margin-top:20px;
+
+    font-family:"Cinzel",serif;
+
+    color:var(--navy);
+
+    font-size:1.1rem;
 
 }
 
