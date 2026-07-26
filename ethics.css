@@ -145,10 +145,8 @@ p{
     border-radius:6px;
 
     transition:var(--transition);
-    
-    display:inline-block;
 
-    width:100%;
+    width:auto;
 
     max-width:100%;
 
@@ -828,10 +826,22 @@ footer a:hover{
         font-size:1.2rem;
 
 }
+}
 
 
 @media (max-width:480px){
 
+    .button{
+
+        display:block;
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    
     h1{
 
         font-size:2.5rem;
