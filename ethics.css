@@ -759,10 +759,25 @@ footer{
 
     }
 
-}
+    .navbar{
 
+        padding:20px 6%;
 
-@media (max-width:768px){
+    }
+
+    .logo{
+
+        font-size:1.5rem;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        z-index:1001;
+
+    }
 
     nav{
 
@@ -774,21 +789,27 @@ footer{
 
         width:100%;
 
-        background:rgba(16,27,43,.98);
+        background:var(--ivory);
 
-        backdrop-filter:blur(12px);
+        display:flex;
 
         flex-direction:column;
 
-        padding:35px 0;
+        align-items:center;
 
-        gap:25px;
+        gap:0;
+
+        padding:30px 0;
+
+        border-top:1px solid rgba(200,164,93,.25);
 
         opacity:0;
 
         visibility:hidden;
 
-        transform:translateY(-10px);
+        transform:translateY(-15px);
+
+        transition:var(--transition);
 
     }
 
@@ -802,8 +823,23 @@ footer{
 
     }
 
-    nav a,
-    nav a:visited{
+    nav a{
+
+        width:100%;
+
+        text-align:center;
+
+        padding:15px 0;
+
+    }
+
+    .navbar.scrolled nav{
+
+        background:var(--navy);
+
+    }
+
+    .navbar.scrolled nav a{
 
         color:var(--white);
 
@@ -817,18 +853,6 @@ footer{
 
     }
 
-    h1{
-
-        font-size:3rem;
-
-    }
-
-    h2{
-
-        font-size:2.3rem;
-
-    }
-
     .ethics-content,
     .promise,
     .cta{
@@ -836,28 +860,11 @@ footer{
         padding:80px 6%;
 
     }
-    
-     .logo{
-
-        font-size:1.2rem;
 
 }
-}
-
 
 @media (max-width:480px){
 
-    .button{
-
-        display:block;
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-    
     h1{
 
         font-size:2.5rem;
@@ -876,6 +883,12 @@ footer{
 
     }
 
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
     .ethics-card{
 
         padding:35px 25px;
@@ -883,6 +896,8 @@ footer{
     }
 
     .button{
+
+        display:block;
 
         width:100%;
 
