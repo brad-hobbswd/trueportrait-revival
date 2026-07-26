@@ -165,25 +165,25 @@ p{
 
 .navbar{
 
-    position:fixed;
-
-    top:0;
-    left:0;
-
     width:100%;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:20px 6%;
+    padding:24px 8%;
 
-    background:transparent;
+    background:var(--ivory);
 
-    transition:background .35s ease,
-               box-shadow .35s ease;
+    position:sticky;
+
+    top:0;
 
     z-index:1000;
+
+    transition:var(--transition);
 
 }
 
@@ -191,9 +191,7 @@ p{
 
     background:rgba(16,27,43,.95);
 
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 8px 25px rgba(0,0,0,.18);
+    box-shadow:0 5px 20px rgba(0,0,0,.18);
 
 }
 
@@ -207,16 +205,15 @@ p{
 
     font-family:"Cinzel",serif;
 
-    font-size:1.5rem;
+    font-size:1.8rem;
+
+    font-weight:600;
 
     letter-spacing:2px;
 
     color:var(--navy);
 
     transition:var(--transition);
-    
-    white-space:nowrap;
-
 
 }
 
@@ -239,7 +236,6 @@ p{
 
 }
 
-
 /* ==========================================
    NAVIGATION
 ========================================== */
@@ -250,27 +246,22 @@ nav{
 
     align-items:center;
 
-    gap:2rem;
-    
-    transition:.35s ease;
+    gap:35px;
 
 }
 
-nav a{
-
-    position:relative;
-
-    color:var(--navy);
+nav a,
+nav a:visited{
 
     font-family:"Cinzel",serif;
 
+    color:var(--navy);
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
     transition:var(--transition);
-
-}
-
-.navbar.scrolled nav a{
-
-    color:var(--white);
 
 }
 
@@ -286,21 +277,22 @@ nav a.active{
 
 }
 
-nav a.active::after{
+.navbar.scrolled nav a,
+.navbar.scrolled nav a:visited{
 
-    content:"";
+    color:var(--white);
 
-    position:absolute;
+}
 
-    left:0;
+.navbar.scrolled nav a.active{
 
-    bottom:-8px;
+    color:var(--gold);
 
-    width:100%;
+}
 
-    height:2px;
+.navbar.scrolled nav a:hover{
 
-    background:var(--gold);
+    color:var(--gold);
 
 }
 
@@ -331,9 +323,9 @@ nav a.active::after{
 
     height:2px;
 
-    margin:6px 0;
-
     background:var(--navy);
+
+    margin:6px 0;
 
     transition:var(--transition);
 
@@ -741,24 +733,6 @@ footer{
 
 @media (max-width:992px){
 
-    .ethics-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    h1{
-
-        font-size:4rem;
-
-    }
-
-    h2{
-
-        font-size:2.8rem;
-
-    }
-
     .navbar{
 
         padding:20px 6%;
@@ -845,11 +819,27 @@ footer{
 
     }
 
+    .ethics-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
     .ethics-hero{
 
-        min-height:430px;
+        padding:80px 6%;
 
-        padding:80px 20px;
+    }
+
+    h1{
+
+        font-size:4rem;
+
+    }
+
+    h2{
+
+        font-size:2.8rem;
 
     }
 
@@ -863,7 +853,13 @@ footer{
 
 }
 
-@media (max-width:480px){
+@media (max-width:600px){
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
 
     h1{
 
@@ -880,12 +876,6 @@ footer{
     p{
 
         font-size:1rem;
-
-    }
-
-    .logo{
-
-        font-size:1.2rem;
 
     }
 
