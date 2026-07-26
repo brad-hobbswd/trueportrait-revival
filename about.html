@@ -8,33 +8,40 @@
 
 <title>About | TruePortrait Revival</title>
 
-<meta name="description" content="Learn about TruePortrait Revival and our mission to restore treasured photographs while preserving the identity and memories behind every face.">
+<meta name="description" content="Learn about TruePortrait Revival and our mission to restore treasured photographs while preserving the identity, memories, and legacy behind every face.">
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="about.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
-<div class="logo">
+<a href="index.html" class="logo">
 TruePortrait Revival
-</div>
+</a>
 
+<button
+class="menu-toggle"
+aria-label="Open Menu"
+aria-expanded="false"
+aria-controls="primary-navigation">
 
-<button class="menu-toggle" aria-label="Open Menu">
 <span></span>
 <span></span>
 <span></span>
+
 </button>
 
-
-<nav>
+<nav
+id="primary-navigation"
+aria-label="Primary Navigation">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -45,14 +52,11 @@ TruePortrait Revival
 
 </nav>
 
-
 </header>
-
-
 
 <section class="about-hero">
 
-<div>
+<div class="hero-content">
 
 <h1>
 About TruePortrait Revival
@@ -66,146 +70,157 @@ Restoring the image. Preserving the person.
 
 </section>
 
-
-
 <section class="about-story">
 
+<div class="container">
 
 <h2>
 Every Photograph Holds A Story
 </h2>
 
-
 <p>
 
-A photograph is more than an image. It is a connection to the people, moments, and memories that shaped our lives.
+A photograph is far more than paper and ink. It is a window into a moment that can never be recreated, preserving the faces, relationships, and memories that define a family's history.
 
 </p>
 
-
 <p>
 
-At TruePortrait Revival, we believe every face deserves to be remembered. Through careful restoration, color refinement, lighting enhancement, and thoughtful detail preservation, we help bring treasured photographs back to life while honoring the person captured within them.
+At TruePortrait Revival, every restoration begins with respect. We carefully repair damage, restore faded colors, refine lighting, and recover missing detail while preserving the authentic features that make every portrait unique.
 
 </p>
 
+<p>
+
+Our purpose is not simply to make photographs look new. It is to help families reconnect with the people they love and preserve those memories for future generations.
+
+</p>
+
+</div>
 
 </section>
 
-
-
-
 <section class="philosophy">
 
+<div class="container">
 
 <h2>
 The Person Comes First
 </h2>
 
+<p class="section-intro">
 
-<p>
-
-Restoration is not about replacing someone. It is about respecting who they were.
+Every decision we make during restoration is guided by one principle: honor the individual who appears in the photograph.
 
 </p>
-
 
 <div class="values">
 
+<article class="value-card">
 
-<div>
-<h3>Authenticity</h3>
+<h3>
+Authenticity
+</h3>
+
 <p>
-Preserving the true features, expressions, and character of every person.
+
+Every facial feature, expression, and personal characteristic is preserved with care. We enhance photographs without changing the identity of the person.
+
 </p>
-</div>
 
+</article>
 
-<div>
-<h3>Craftsmanship</h3>
+<article class="value-card">
+
+<h3>
+Craftsmanship
+</h3>
+
 <p>
-Careful attention to details, lighting, color, and composition.
+
+From repairing tears and scratches to restoring color and clarity, every photograph receives detailed attention and professional care.
+
 </p>
-</div>
 
+</article>
 
-<div>
-<h3>Legacy</h3>
+<article class="value-card">
+
+<h3>
+Legacy
+</h3>
+
 <p>
-Creating portraits that families can treasure for generations.
+
+Our work helps preserve family history through heirloom quality restorations designed to be cherished for generations.
+
 </p>
+
+</article>
+
 </div>
 
-
 </div>
-
 
 </section>
 
-
-
-
 <section class="generations">
 
+<div class="container">
 
 <h2>
 Generations Reunited
 </h2>
 
-
 <p>
 
-Some of the most meaningful photographs are the ones that life never had the chance to capture.
+Some of the most meaningful family portraits are the ones that never had the opportunity to be taken.
 
 </p>
 
-
 <p>
 
-A grandmother who passed away before meeting her grandchild. A parent who never had the opportunity to hold their child. Loved ones separated by time but forever connected through family.
+A grandparent who passed away before meeting a grandchild. A parent whose life ended too soon. Brothers, sisters, and loved ones separated by time yet forever connected through family.
 
 </p>
 
-
 <p>
 
-TruePortrait Revival carefully combines individual photographs to create meaningful family legacy portraits that honor relationships, memories, and the bonds that continue across generations.
+TruePortrait Revival carefully combines individual photographs into beautiful legacy portraits that respectfully bring generations together while preserving the authenticity of every person represented.
 
 </p>
 
+</div>
 
 </section>
 
-
-
-
 <section class="promise">
 
+<div class="container">
 
 <h2>
 Our Restoration Promise
 </h2>
 
-
 <p>
 
-Every photograph receives thoughtful care and respect. Our goal is not simply to improve an image, but to preserve the story behind it.
+Every photograph entrusted to us is treated as if it were part of our own family's history. We are committed to preserving identity, respecting memory, and delivering restorations that families can proudly display for years to come.
 
 </p>
 
+<a
+href="contact.html"
+class="button">
 
-<a href="contact.html" class="button">
 Begin Your Restoration Journey
+
 </a>
 
+</div>
 
 </section>
 
-
-
-
 <footer class="site-footer">
-
 
 <div class="footer-brand">
 
@@ -219,10 +234,7 @@ Restoring the image. Preserving the person.
 
 </div>
 
-
-
 <div class="footer-links">
-
 
 <div class="footer-column">
 
@@ -239,9 +251,6 @@ Explore
 
 </div>
 
-
-
-
 <div class="footer-column">
 
 <h4>
@@ -254,10 +263,7 @@ Legal
 
 </div>
 
-
 </div>
-
-
 
 <div class="footer-bottom">
 
@@ -265,19 +271,16 @@ Legal
 © <span class="year"></span> TruePortrait Revival. All Rights Reserved.
 </p>
 
-
 <p>
 Preserving memories. Honoring legacies. Protecting stories.
 </p>
 
-
 </div>
-
-
 
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 
 </html>
