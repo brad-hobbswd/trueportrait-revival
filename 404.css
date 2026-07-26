@@ -1,0 +1,552 @@
+/* ==========================================
+   TRUEPORTRAIT REVIVAL
+   404 PAGE STYLESHEET
+========================================== */
+
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --ivory:#f7f0e6;
+    --gold:#c8a45d;
+    --navy:#101b2b;
+    --charcoal:#222222;
+    --white:#ffffff;
+
+    --shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--ivory);
+
+    color:var(--charcoal);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 8%;
+
+    background:var(--white);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.5rem;
+
+    color:var(--navy);
+
+    letter-spacing:.08em;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:var(--navy);
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* ==========================================
+   MOBILE MENU BUTTON
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    display:block;
+
+    width:26px;
+
+    height:2px;
+
+    margin:6px 0;
+
+    background:var(--navy);
+
+}
+
+
+/* ==========================================
+   ERROR PAGE
+========================================== */
+
+.error-page{
+
+    min-height:85vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:100px 8%;
+
+}
+
+.error-content{
+
+    width:100%;
+
+    max-width:850px;
+
+}
+
+.error-frame{
+
+    background:var(--white);
+
+    border:2px solid rgba(200,164,93,.35);
+
+    border-radius:18px;
+
+    padding:70px 55px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.error-frame::before{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:0 auto 40px;
+
+    background:var(--gold);
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+.error-number{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:7rem;
+
+    color:var(--gold);
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+}
+
+.error-frame h1{
+
+    font-family:"Cinzel",serif;
+
+    font-size:2.4rem;
+
+    color:var(--navy);
+
+    margin-bottom:25px;
+
+}
+
+.tagline{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.4rem;
+
+    font-style:italic;
+
+    color:var(--gold);
+
+    margin-bottom:35px;
+
+}
+
+.error-description{
+
+    max-width:620px;
+
+    margin:0 auto 45px;
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.error-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.button-outline{
+
+    background:transparent;
+
+    color:var(--gold);
+
+    border:2px solid var(--gold);
+
+}
+
+.button-outline:hover{
+
+    background:var(--gold);
+
+    color:var(--white);
+
+}
+
+
+/* ==========================================
+   QUICK LINKS
+========================================== */
+
+.quick-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:40px;
+
+    color:#777;
+
+}
+
+.quick-links a{
+
+    color:var(--navy);
+
+    transition:.3s;
+
+}
+
+.quick-links a:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* ==========================================
+   QUOTE
+========================================== */
+
+.memory-quote{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.5rem;
+
+    font-style:italic;
+
+    color:var(--navy);
+
+    margin-top:20px;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    background:var(--navy);
+
+    color:rgba(255,255,255,.85);
+
+    padding:70px 8% 30px;
+
+}
+
+.footer-brand{
+
+    margin-bottom:40px;
+
+}
+
+.footer-brand h3{
+
+    font-family:"Cinzel",serif;
+
+    color:var(--gold);
+
+    margin-bottom:12px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:50px;
+
+    margin-bottom:50px;
+
+}
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-column h4{
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+    font-family:"Cinzel",serif;
+
+}
+
+.footer-column a{
+
+    color:rgba(255,255,255,.85);
+
+    transition:.3s;
+
+}
+
+.footer-column a:hover{
+
+    color:var(--gold);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+.footer-bottom p + p{
+
+    margin-top:10px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .error-frame{
+
+        padding:50px 30px;
+
+    }
+
+    .error-number{
+
+        font-size:5.5rem;
+
+    }
+
+    .error-frame h1{
+
+        font-size:2rem;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .error-frame{
+
+        padding:40px 25px;
+
+    }
+
+    .error-number{
+
+        font-size:4.5rem;
+
+    }
+
+    .error-frame h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .tagline{
+
+        font-size:1.2rem;
+
+    }
+
+    .memory-quote{
+
+        font-size:1.25rem;
+
+    }
+
+}
