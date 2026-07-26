@@ -536,21 +536,7 @@ nav a:hover{
    SUBTLE ANIMATION
 ========================================== */
 
-.value-card{
 
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease,
-
-        box-shadow .3s ease;
-
-}
 
 .value-card.visible{
 
@@ -763,37 +749,7 @@ nav a:hover{
 }
 
 
-/* ==========================================
-   FADE IN SUPPORT
-========================================== */
 
-.about-story,
-.philosophy,
-.generations,
-.promise{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
-
-}
-
-.about-story.visible,
-.philosophy.visible,
-.generations.visible,
-.promise.visible{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
 
 /* ==========================================
    RESPONSIVE DESIGN
