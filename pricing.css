@@ -1,0 +1,1101 @@
+/* ==========================================
+   TRUEPORTRAIT REVIVAL
+   PRICING PAGE STYLESHEET
+   Part 1
+========================================== */
+
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --ivory:#f7f0e6;
+    --gold:#c8a45d;
+    --navy:#101b2b;
+    --charcoal:#222222;
+    --white:#ffffff;
+
+    --shadow:0 15px 35px rgba(0,0,0,.10);
+    --transition:.3s ease;
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+    font-size:16px;
+    line-height:1.8;
+
+    background:var(--ivory);
+
+    color:var(--charcoal);
+
+}
+
+img{
+
+    display:block;
+    max-width:100%;
+    height:auto;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+.container{
+
+    width:min(1100px,90%);
+    margin:auto;
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3{
+
+    color:var(--navy);
+
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:5rem;
+    font-weight:600;
+
+}
+
+h2{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:3.2rem;
+    font-weight:600;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+h3{
+
+    font-family:"Cinzel",serif;
+    font-size:1.35rem;
+    font-weight:600;
+
+}
+
+p{
+
+    font-size:1.1rem;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.button{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:16px 42px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-family:"Cinzel",serif;
+
+    border-radius:6px;
+
+    transition:var(--transition);
+
+}
+
+.button:hover{
+
+    background:var(--navy);
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 8%;
+
+    background:var(--ivory);
+
+    transition:var(--transition);
+
+}
+
+.navbar.scrolled{
+
+    background:rgba(16,27,43,.95);
+
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo,
+.logo:visited{
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.8rem;
+
+    letter-spacing:2px;
+
+    color:var(--navy);
+
+    transition:var(--transition);
+
+}
+
+.logo:hover{
+
+    color:var(--gold);
+
+}
+
+.navbar.scrolled .logo,
+.navbar.scrolled .logo:visited{
+
+    color:var(--white);
+
+}
+
+.navbar.scrolled .logo:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+nav a,
+nav a:visited{
+
+    font-family:"Cinzel",serif;
+
+    color:var(--navy);
+
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:var(--gold);
+
+}
+
+.navbar.scrolled nav a,
+.navbar.scrolled nav a:visited{
+
+    color:var(--white);
+
+}
+
+.navbar.scrolled nav a:hover{
+
+    color:var(--gold);
+
+}
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    display:block;
+
+    width:28px;
+
+    height:2px;
+
+    margin:6px 0;
+
+    background:var(--navy);
+
+    transition:var(--transition);
+
+}
+
+.navbar.scrolled .menu-toggle span{
+
+    background:var(--white);
+
+}
+
+.menu-toggle.open span:nth-child(1){
+
+    transform:rotate(45deg) translate(5px,5px);
+
+}
+
+.menu-toggle.open span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.open span:nth-child(3){
+
+    transform:rotate(-45deg) translate(6px,-6px);
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.pricing-hero{
+
+    min-height:520px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+
+        rgba(16,27,43,.60),
+
+        rgba(16,27,43,.60)
+
+    ),
+
+    url("images/pricing-hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:var(--white);
+
+}
+
+.pricing-hero div{
+
+    width:min(900px,90%);
+
+}
+
+.pricing-hero h1{
+
+    color:var(--white);
+
+    margin-bottom:20px;
+
+}
+
+.pricing-hero p{
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.35rem;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+   PRICING INTRODUCTION
+========================================== */
+
+.pricing-intro{
+
+    padding:110px 8%;
+
+    background:var(--white);
+
+    text-align:center;
+
+}
+
+.pricing-intro p{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+}
+
+
+/* ==========================================
+   RESTORATION PACKAGES
+========================================== */
+
+.packages{
+
+    padding:110px 8%;
+
+    background:var(--ivory);
+
+}
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+
+/* ==========================================
+   PRICE CARD
+========================================== */
+
+.price-card{
+
+    background:var(--white);
+
+    padding:45px 35px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.price-card h3{
+
+    margin-bottom:20px;
+
+    color:var(--navy);
+
+}
+
+.price-card p{
+
+    margin-bottom:25px;
+
+}
+
+
+/* ==========================================
+   FEATURED PACKAGE
+========================================== */
+
+.price-card.featured{
+
+    border:3px solid var(--gold);
+
+    transform:scale(1.03);
+
+}
+
+.price-card.featured:hover{
+
+    transform:scale(1.03) translateY(-8px);
+
+}
+
+
+/* ==========================================
+   PACKAGE LIST
+========================================== */
+
+.price-card ul{
+
+    list-style:none;
+
+    margin:0 0 35px;
+
+    padding:0;
+
+    flex:1;
+
+}
+
+.price-card li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:14px;
+
+}
+
+.price-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+   CARD BUTTONS
+========================================== */
+
+.price-card a{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    padding:14px 32px;
+
+    border-radius:6px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-family:"Cinzel",serif;
+
+    transition:var(--transition);
+
+}
+
+.price-card a:hover{
+
+    background:var(--navy);
+
+}
+
+/* ==========================================
+   GENERATIONS REUNITED
+========================================== */
+
+.legacy-pricing{
+
+    padding:110px 8%;
+
+    background:var(--white);
+
+    text-align:center;
+
+}
+
+.legacy-pricing p{
+
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+}
+
+.legacy-pricing p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================
+   PRICING FACTORS
+========================================== */
+
+.pricing-factors{
+
+    padding:110px 8%;
+
+    background:var(--ivory);
+
+}
+
+.factor-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.factor-grid div{
+
+    background:var(--white);
+
+    padding:40px 35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+.factor-grid div:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.factor-grid h3{
+
+    margin-bottom:18px;
+
+    color:var(--navy);
+
+}
+
+.factor-grid p{
+
+    margin:0;
+
+}
+
+
+/* ==========================================
+   RESTORATION CONSULTATION
+========================================== */
+
+.pricing-contact{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(
+
+        rgba(16,27,43,.92),
+
+        rgba(16,27,43,.92)
+
+    ),
+
+    url("images/contact-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:var(--white);
+
+}
+
+.pricing-contact h2{
+
+    color:var(--white);
+
+    margin-bottom:25px;
+
+}
+
+.pricing-contact p{
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.pricing-contact .button{
+
+    background:var(--gold);
+
+}
+
+.pricing-contact .button:hover{
+
+    background:var(--white);
+
+    color:var(--navy);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    background:var(--navy);
+
+    color:rgba(255,255,255,.90);
+
+    padding:90px 8% 40px;
+
+}
+
+.footer-brand{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.footer-brand h3{
+
+    color:var(--white);
+
+    margin-bottom:15px;
+
+}
+
+.footer-brand p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.footer-links{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:60px;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+}
+
+.footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.footer-column h4{
+
+    color:var(--white);
+
+    margin-bottom:12px;
+
+}
+
+.footer-column a{
+
+    color:var(--gold);
+
+    transition:var(--transition);
+
+}
+
+.footer-column a:hover{
+
+    color:var(--white);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:35px;
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    margin:10px 0;
+
+    font-size:.95rem;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width:992px){
+
+    .pricing-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .factor-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .price-card.featured{
+
+        transform:none;
+
+    }
+
+    .price-card.featured:hover{
+
+        transform:translateY(-8px);
+
+    }
+
+    h1{
+
+        font-size:4rem;
+
+    }
+
+    h2{
+
+        font-size:2.8rem;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .navbar{
+
+        padding:20px 6%;
+
+    }
+
+    .logo{
+
+        font-size:1.25rem;
+
+        white-space:nowrap;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        z-index:1001;
+
+    }
+
+    nav{
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:var(--navy);
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        padding:35px 0;
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transform:translateY(-10px);
+
+        transition:var(--transition);
+
+    }
+
+    nav.active{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:translateY(0);
+
+    }
+
+    nav a,
+    nav a:visited{
+
+        color:var(--white);
+
+    }
+
+    .pricing-hero{
+
+        min-height:420px;
+
+        padding:80px 20px;
+
+    }
+
+    h1{
+
+        font-size:3rem;
+
+    }
+
+    h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .pricing-intro,
+    .packages,
+    .legacy-pricing,
+    .pricing-factors,
+    .pricing-contact{
+
+        padding:80px 6%;
+
+    }
+
+    .footer-links{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:2.4rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    .price-card{
+
+        padding:35px 25px;
+
+    }
+
+    .factor-grid div{
+
+        padding:35px 25px;
+
+    }
+
+    .button{
+
+        display:block;
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+a:focus-visible,
+button:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+
+}
+
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:var(--gold);
+
+    color:var(--white);
+
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--ivory);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--navy);
+
+}
