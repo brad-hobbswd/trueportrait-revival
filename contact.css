@@ -796,31 +796,7 @@ nav a:hover{
 /* ==========================================
    RESPONSIVE DESIGN
 ========================================== */
-
-@media (max-width:992px){
-
-    .details{
-
-        grid-template-columns:1fr;
-
-    }
-
-    h1{
-
-        font-size:4rem;
-
-    }
-
-    h2{
-
-        font-size:2.8rem;
-
-    }
-
-}
-
-
-@media (max-width:768px){
+@media (max-width:992px)
 
     .navbar{
 
@@ -928,6 +904,24 @@ nav a:hover{
         text-align:center;
 
         gap:40px;
+
+    }
+    
+     .details{
+
+        grid-template-columns:1fr;
+
+    }
+
+    h1{
+
+        font-size:4rem;
+
+    }
+
+    h2{
+
+        font-size:2.8rem;
 
     }
 
