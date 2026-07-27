@@ -712,6 +712,8 @@ nav a:hover{
 
 .contact-form input,
 
+.contact-form select,
+
 .contact-form textarea{
 
     width:100%;
@@ -721,6 +723,8 @@ nav a:hover{
     font-family:"Inter", sans-serif;
 
     font-size:1rem;
+
+    color:var(--charcoal);
 
     border:1px solid #d9d9d9;
 
@@ -733,6 +737,8 @@ nav a:hover{
 }
 
 .contact-form input:focus,
+
+.contact-form select:focus,
 
 .contact-form textarea:focus{
 
@@ -781,6 +787,12 @@ nav a:hover{
 .contact-form button:hover{
 
     background:var(--gold);
+
+}
+
+.contact-form select{
+
+    cursor:pointer;
 
 }
 
@@ -1123,11 +1135,13 @@ nav a:hover{
 
     .contact-form input,
 
+    .contact-form select,
+
     .contact-form textarea{
 
-        padding:16px;
+    padding:16px;
 
-    }
+}
 
     .contact-form button{
 
