@@ -989,49 +989,51 @@ section p{
 ========================================== */
 
 .consultation-cta{
-
     background:var(--navy);
-
     color:var(--white);
-
     text-align:center;
+    padding:90px 8%;
+}
 
+.consultation-cta .container{
+    max-width:850px;
+    margin:0 auto;
 }
 
 .consultation-cta h2{
-
+    display:block;
     color:var(--white);
-
+    font-family:"Cinzel",serif;
+    font-size:clamp(2rem,4vw,3rem);
     margin-bottom:25px;
-
+    opacity:1;
+    visibility:visible;
 }
 
 .consultation-cta h2::after{
-
     content:"";
-
     display:block;
-
     width:90px;
-
     height:2px;
-
-    margin:24px auto 0;
-
+    margin:24px auto;
     background:var(--gold);
-
 }
 
 .consultation-cta p{
-
+    display:block;
+    color:rgba(255,255,255,.88);
     max-width:760px;
-
     margin:0 auto 45px;
-
-    color:rgba(255,255,255,.85);
-
     font-size:1.05rem;
+    opacity:1;
+    visibility:visible;
+}
 
+.consultation-cta .button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 38px;
 }
 
 
