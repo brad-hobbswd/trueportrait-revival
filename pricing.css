@@ -985,55 +985,77 @@ section p{
 
 
 /* ==========================================
-   CONSULTATION CTA
+   CONSULTATION CALL TO ACTION
 ========================================== */
 
 .consultation-cta{
-    background:var(--navy);
-    color:var(--white);
+
+    background:linear-gradient(
+        135deg,
+        var(--navy) 0%,
+        #16263d 100%
+    );
+
+    padding:110px 8%;
     text-align:center;
-    padding:90px 8%;
+
 }
 
 .consultation-cta .container{
-    max-width:850px;
+
+    max-width:900px;
     margin:0 auto;
+
 }
 
 .consultation-cta h2{
-    display:block;
-    color:var(--white);
+
     font-family:"Cinzel",serif;
-    font-size:clamp(2rem,4vw,3rem);
-    margin-bottom:25px;
-    opacity:1;
-    visibility:visible;
+    font-size:clamp(2.4rem,4vw,3.4rem);
+    color:#ffffff !important;
+    margin-bottom:30px;
+    line-height:1.2;
+
 }
 
 .consultation-cta h2::after{
+
     content:"";
     display:block;
-    width:90px;
-    height:2px;
-    margin:24px auto;
+    width:100px;
+    height:3px;
+    margin:25px auto 0;
     background:var(--gold);
+
 }
 
 .consultation-cta p{
-    display:block;
-    color:rgba(255,255,255,.88);
+
+    font-size:1.1rem;
+    line-height:1.9;
+    color:rgba(255,255,255,.88) !important;
     max-width:760px;
-    margin:0 auto 45px;
-    font-size:1.05rem;
-    opacity:1;
-    visibility:visible;
+    margin:35px auto 50px;
+
 }
 
 .consultation-cta .button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px 38px;
+
+    display:inline-block;
+    background:var(--gold);
+    color:#ffffff;
+    padding:18px 42px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s ease;
+
+}
+
+.consultation-cta .button:hover{
+
+    transform:translateY(-4px);
+    background:#d6b06a;
+
 }
 
 
