@@ -985,75 +985,69 @@ section p{
 
 
 /* ==========================================
-   CONSULTATION CALL TO ACTION
+   CONSULTATION PANEL
 ========================================== */
 
-.consultation-cta{
+.consultation-panel{
 
-    background:linear-gradient(
-        135deg,
-        var(--navy) 0%,
-        #16263d 100%
-    );
+    background:var(--navy);
 
-    padding:110px 8%;
+    padding:100px 20px;
+
+}
+
+.consultation-box{
+
+    max-width:850px;
+
+    margin:0 auto;
+
     text-align:center;
 
 }
 
-.consultation-cta .container{
-
-    max-width:900px;
-    margin:0 auto;
-
-}
-
-.consultation-cta h2{
+.consultation-box h2{
 
     font-family:"Cinzel",serif;
-    font-size:clamp(2.4rem,4vw,3.4rem);
-    color:#ffffff !important;
-    margin-bottom:30px;
-    line-height:1.2;
+
+    font-size:3rem;
+
+    color:#ffffff;
+
+    margin-bottom:25px;
 
 }
 
-.consultation-cta h2::after{
+.consultation-box p{
 
-    content:"";
-    display:block;
-    width:100px;
-    height:3px;
-    margin:25px auto 0;
-    background:var(--gold);
-
-}
-
-.consultation-cta p{
+    color:rgba(255,255,255,.90);
 
     font-size:1.1rem;
+
     line-height:1.9;
-    color:rgba(255,255,255,.88) !important;
-    max-width:760px;
-    margin:35px auto 50px;
+
+    margin-bottom:45px;
 
 }
 
-.consultation-cta .button{
+.consultation-box .button{
 
     display:inline-block;
+
     background:var(--gold);
-    color:#ffffff;
+
+    color:#fff;
+
     padding:18px 42px;
+
     border-radius:50px;
+
     font-weight:600;
-    transition:.35s ease;
 
 }
 
-.consultation-cta .button:hover{
+.consultation-box .button:hover{
 
-    transform:translateY(-4px);
     background:#d6b06a;
 
 }
