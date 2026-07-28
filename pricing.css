@@ -990,14 +990,19 @@ section p{
 
 .consultation-panel{
 
-    background:var(--navy);
+    background:linear-gradient(
+        135deg,
+        var(--navy),
+        #16263d
+    );
+
     padding:100px 8%;
 
 }
 
 .consultation-box{
 
-    max-width:800px;
+    width:min(92%,800px);
     margin:0 auto;
     text-align:center;
 
@@ -1005,102 +1010,76 @@ section p{
 
 .consultation-box h2{
 
-    color:#fff;
     font-family:"Cinzel",serif;
-    font-size:clamp(2.3rem,4vw,3.2rem);
-    margin-bottom:20px;
+    font-size:clamp(2.2rem,4vw,3.2rem);
+    color:#ffffff;
+    margin-bottom:25px;
+
+}
+
+.consultation-box h2::after{
+
+    content:"";
+    display:block;
+    width:90px;
+    height:2px;
+    margin:22px auto 0;
+    background:var(--gold);
 
 }
 
 .consultation-box p{
 
     color:rgba(255,255,255,.88);
+    font-size:1.1rem;
+    line-height:1.9;
     max-width:700px;
-    margin:0 auto 40px;
-    line-height:1.8;
+    margin:30px auto 45px;
 
 }
 
+.consultation-box .button{
 
-/* ==========================================
-   CTA BUTTON
-========================================== */
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-.consultation-cta .button{
+    background:var(--gold);
+    color:#ffffff;
 
-    font-size:1rem;
+    padding:16px 40px;
 
-    padding:16px 38px;
+    border-radius:50px;
 
-}
+    font-weight:600;
 
-.consultation-cta .button:hover{
-
-    background:#d4b06a;
-
-}
-
-
-/* ==========================================
-   SECTION DIVIDERS
-========================================== */
-
-.pricing-overview::after,
-.services-section::after,
-.legacy-feature::after{
-
-    content:"";
-
-    display:block;
-
-    width:140px;
-
-    height:2px;
-
-    margin:40px auto 0;
-
-    background:rgba(200,164,93,.35);
+    transition:.35s ease;
 
 }
 
+.consultation-box .button:hover{
 
-/* ==========================================
-   SPACING REFINEMENTS
-========================================== */
-
-.pricing-overview p:last-child,
-.legacy-feature p:last-child{
-
-    margin-bottom:0;
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-hover);
 
 }
 
-.factor-card,
-.price-card{
-
-    min-height:100%;
-
-}
 
 /* ==========================================
    FOOTER
-   Part 4
 ========================================== */
 
 .site-footer{
 
     background:var(--navy);
-
     color:rgba(255,255,255,.85);
-
-    padding:80px 6% 35px;
+    padding:80px 8% 40px;
 
 }
 
 .footer-brand{
 
     text-align:center;
-
     margin-bottom:60px;
 
 }
@@ -1108,7 +1087,6 @@ section p{
 .footer-brand h3{
 
     color:var(--gold);
-
     margin-bottom:15px;
 
 }
@@ -1117,18 +1095,13 @@ section p{
 
     color:rgba(255,255,255,.75);
 
-    margin:0;
-
 }
 
 .footer-links{
 
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
     gap:50px;
-
     margin-bottom:60px;
 
 }
@@ -1136,33 +1109,28 @@ section p{
 .footer-column{
 
     display:flex;
-
     flex-direction:column;
-
-    gap:15px;
+    gap:14px;
 
 }
 
 .footer-column h4{
 
     color:var(--gold);
-
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
 
 .footer-column a{
 
     color:rgba(255,255,255,.8);
-
-    transition:var(--transition);
+    transition:.3s ease;
 
 }
 
 .footer-column a:hover{
 
     color:var(--gold);
-
     padding-left:6px;
 
 }
@@ -1170,9 +1138,7 @@ section p{
 .footer-bottom{
 
     border-top:1px solid rgba(255,255,255,.12);
-
     padding-top:30px;
-
     text-align:center;
 
 }
@@ -1180,39 +1146,30 @@ section p{
 .footer-bottom p{
 
     color:rgba(255,255,255,.65);
-
     margin-bottom:10px;
-
-}
-
-.footer-bottom p:last-child{
-
-    margin-bottom:0;
 
 }
 
 
 /* ==========================================
-   FADE IN ANIMATION
+   FADE IN
 ========================================== */
 
 @keyframes fadeIn{
 
-    from{
+from{
 
-        opacity:0;
+    opacity:0;
+    transform:translateY(30px);
 
-        transform:translateY(35px);
+}
 
-    }
+to{
 
-    to{
+    opacity:1;
+    transform:translateY(0);
 
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+}
 
 }
 
@@ -1220,118 +1177,18 @@ section p{
 .services-section,
 .legacy-feature,
 .pricing-factors,
-.consultation-cta{
+.consultation-panel{
 
-    animation:fadeIn .9s ease both;
+    animation:fadeIn .8s ease both;
 
 }
 
 
 /* ==========================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================================== */
 
-/* ---------- Tablets ---------- */
-
 @media (max-width:992px){
-
-    h1{
-
-        font-size:4rem;
-
-    }
-
-    h2{
-
-        font-size:2.8rem;
-
-    }
-
-    .navbar{
-
-        padding:20px 6%;
-
-    }
-
-    .logo{
-
-        font-size:1.5rem;
-
-    }
-
-    .menu-toggle{
-
-        display:block;
-
-        z-index:1001;
-
-    }
-
-    nav{
-
-        position:absolute;
-
-        top:100%;
-
-        left:0;
-
-        width:100%;
-
-        background:var(--ivory);
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:0;
-
-        padding:30px 0;
-
-        border-top:1px solid rgba(200,164,93,.25);
-
-        opacity:0;
-
-        visibility:hidden;
-
-        transform:translateY(-15px);
-
-        transition:var(--transition);
-
-    }
-
-    nav.active{
-
-        opacity:1;
-
-        visibility:visible;
-
-        transform:translateY(0);
-
-    }
-
-    nav a{
-
-        width:100%;
-
-        text-align:center;
-
-        padding:16px 0;
-
-    }
-
-    .navbar.scrolled nav{
-
-        background:var(--navy);
-
-    }
-
-    .navbar.scrolled nav a{
-
-        color:var(--white);
-
-    }
 
     .pricing-grid{
 
@@ -1345,88 +1202,39 @@ section p{
 
     }
 
-    .footer-links{
-
-        flex-direction:column;
-
-        gap:50px;
-
-    }
-
 }
-
-
-/* ---------- Phones ---------- */
 
 @media (max-width:600px){
 
-    h1{
-
-        font-size:3rem;
-
-    }
-
-    h2{
-
-        font-size:2.2rem;
-
-    }
-
-    p{
-
-        font-size:1rem;
-
-    }
-
-    .pricing-hero{
-
-        padding:90px 6%;
-
-    }
-
-    .pricing-overview,
-
-    .services-section,
-
-    .legacy-feature,
-
-    .pricing-factors,
-
-    .consultation-cta{
+    .consultation-panel{
 
         padding:70px 6%;
 
     }
 
-    .price-card,
+    .consultation-box h2{
 
+        font-size:2.2rem;
+
+    }
+
+    .consultation-box p{
+
+        font-size:1rem;
+
+    }
+
+    .consultation-box .button{
+
+        width:auto;
+
+    }
+
+    .price-card,
     .factor-card{
 
         max-width:420px;
-
         margin:0 auto;
-
-        padding:35px;
-
-    }
-
-    .button{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
-    .footer-brand h3{
-
-        font-size:1.7rem;
-
-    }
-
-    .footer-brand p{
-
-        font-size:1.25rem;
 
     }
 
@@ -1441,7 +1249,6 @@ a:focus-visible,
 button:focus-visible{
 
     outline:3px solid var(--gold);
-
     outline-offset:4px;
 
 }
@@ -1451,13 +1258,9 @@ nav a,
 .footer-column a{
 
     transition:
-
         color .3s ease,
-
         background .3s ease,
-
         transform .3s ease,
-
         box-shadow .3s ease;
 
 }
