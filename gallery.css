@@ -170,9 +170,11 @@ p{
 
 .container{
 
-    width:min(92%,var(--max-width));
+    width:min(1200px,92%);
 
-    margin:auto;
+    margin:0 auto;
+
+    padding:0 15px;
 
 }
 
@@ -184,7 +186,15 @@ p{
 
 section{
 
-    padding:110px 0;
+    padding:120px 0;
+
+}
+
+section{
+
+    width:100%;
+
+    overflow:hidden;
 
 }
 
@@ -666,7 +676,7 @@ nav a.active::after{
 
     display:grid;
 
-    grid-template-columns:420px 1fr;
+grid-template-columns:minmax(320px,420px) 1fr;
 
     gap:70px;
 
@@ -1457,62 +1467,88 @@ nav a.active::after{
 
 @media (max-width:768px){
 
+    .gallery-hero{
+
+        min-height:75vh;
+
+        background-position:center;
+
+    }
+
+    .hero-overlay{
+
+        padding:135px 25px 70px;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+    }
+
+    .hero-text{
+
+        max-width:100%;
+
+    }
+    
     .menu-toggle{
 
-        display:block;
+    display:block;
 
-        z-index:1001;
+    z-index:1001;
 
-    }
+}
 
-    nav{
+nav{
 
-        position:absolute;
+    position:absolute;
 
-        top:100%;
-        left:0;
+    top:100%;
+    left:0;
 
-        width:100%;
+    width:100%;
 
-        background:var(--navy);
+    background:var(--navy);
 
-        flex-direction:column;
+    flex-direction:column;
 
-        align-items:center;
+    align-items:center;
 
-        gap:0;
+    gap:0;
 
-        overflow:hidden;
+    overflow:hidden;
 
-        max-height:0;
+    max-height:0;
 
-        transition:.45s ease;
+    transition:.4s ease;
 
-    }
+}
 
-    nav.open{
+nav.open{
 
-        max-height:600px;
+    max-height:600px;
 
-        padding:20px 0;
+    padding:20px 0;
 
-    }
+}
 
-    nav a{
+nav a{
 
-        width:100%;
+    width:100%;
 
-        padding:18px;
+    text-align:center;
 
-        text-align:center;
+    padding:18px;
 
-    }
+}
 
-    nav a::after{
+nav a::after{
 
-        display:none;
+    display:none;
 
-    }
+}
 
 }
 
@@ -1524,7 +1560,7 @@ nav a.active::after{
 
     section{
 
-        padding:80px 0;
+        padding:90px 0;
 
     }
 
@@ -1618,15 +1654,19 @@ nav a.active::after{
 
     }
 
-    .story-card,
-    .comparison-card,
-    .service-card,
-    .promise-card,
-    .collection-card{
+  .story-card{
 
-        padding:25px;
+    padding:30px;
 
-    }
+}
+
+.service-card,
+.promise-card,
+.collection-card{
+
+    padding:30px;
+
+}
 
     .collection-content{
 
@@ -1766,6 +1806,13 @@ button:focus-visible{
 
 }
 
+.philosophy-image,
+.legacy-image,
+.founder-image{
+
+    margin:auto;
+
+}
 /* ==========================================
    END OF GALLERY PAGE STYLESHEET
 ========================================== */
