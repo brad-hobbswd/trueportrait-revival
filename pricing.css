@@ -1021,31 +1021,6 @@ section p{
 
 }
 
-.consultation-box .button{
-
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-
-    background:var(--gold);
-    color:#fff;
-
-    padding:16px 38px;
-
-    border-radius:999px;
-
-    width:auto;
-
-    margin:0 auto;
-
-}
-
-.consultation-box .button:hover{
-
-    transform:translateY(-3px);
-
-}
-
 
 /* ==========================================
    CTA BUTTON
