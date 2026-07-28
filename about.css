@@ -1,9 +1,8 @@
 /* ==========================================
    TRUEPORTRAIT REVIVAL
    ABOUT PAGE STYLESHEET
-   Part 1
+   PART 1
 ========================================== */
-
 
 /* ==========================================
    CSS VARIABLES
@@ -13,15 +12,23 @@
 
     --ivory:#f7f0e6;
     --gold:#c8a45d;
+    --gold-light:#d8bb7d;
     --navy:#101b2b;
     --charcoal:#222222;
+    --gray:#666666;
+    --light-gray:#f3f3f3;
     --white:#ffffff;
 
-    --shadow:0 15px 35px rgba(0,0,0,.10);
-    --transition:.3s ease;
+    --shadow:0 18px 40px rgba(0,0,0,.12);
+    --shadow-hover:0 25px 60px rgba(0,0,0,.18);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
 
 }
-
 
 /* ==========================================
    RESET
@@ -46,36 +53,32 @@ html{
 body{
 
     font-family:"Inter",sans-serif;
-    font-size:16px;
-    line-height:1.8;
-
     background:var(--ivory);
-
     color:var(--charcoal);
+    line-height:1.8;
+    overflow-x:hidden;
 
 }
 
 img{
 
     display:block;
-    max-width:100%;
-    height:auto;
+    width:100%;
 
 }
 
 a{
 
+    color:inherit;
     text-decoration:none;
 
 }
 
-.container{
+ul{
 
-    width:min(1100px,90%);
-    margin:auto;
+    list-style:none;
 
 }
-
 
 /* ==========================================
    TYPOGRAPHY
@@ -83,45 +86,102 @@ a{
 
 h1,
 h2,
-h3{
+h3,
+h4{
 
+    font-family:"Cinzel",serif;
     color:var(--navy);
+    line-height:1.2;
 
 }
 
 h1{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:5rem;
-    font-weight:600;
+    font-size:clamp(3rem,6vw,5rem);
 
 }
 
 h2{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:3.25rem;
-    font-weight:600;
-
-    text-align:center;
-
-    margin-bottom:30px;
+    font-size:clamp(2rem,4vw,3.2rem);
+    margin-bottom:24px;
 
 }
 
 h3{
 
-    font-family:"Cinzel",serif;
-    font-size:1.35rem;
+    font-size:1.45rem;
 
 }
 
 p{
 
-    font-size:1.1rem;
+    margin-bottom:20px;
+    color:#555;
 
 }
 
+blockquote{
+
+    margin-top:40px;
+    padding:30px;
+    border-left:5px solid var(--gold);
+    background:#fff;
+    border-radius:12px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    font-style:italic;
+    color:var(--navy);
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container{
+
+    width:min(92%,var(--max-width));
+    margin:auto;
+
+}
+
+.container.narrow{
+
+    max-width:850px;
+
+}
+
+section{
+
+    padding:110px 0;
+
+}
+
+/* ==========================================
+   SECTION LABELS
+========================================== */
+
+.section-label{
+
+    font-size:.85rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:18px;
+
+}
+
+.section-introduction{
+
+    max-width:760px;
+    margin:0 auto 60px;
+    text-align:center;
+    font-size:1.1rem;
+
+}
 
 /* ==========================================
    BUTTONS
@@ -129,125 +189,121 @@ p{
 
 .button{
 
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-    margin-top:40px;
-
-    padding:16px 42px;
+    padding:18px 38px;
 
     background:var(--gold);
-
     color:var(--white);
 
-    font-family:"Cinzel",serif;
+    border-radius:999px;
 
-    border-radius:6px;
+    font-weight:600;
 
     transition:var(--transition);
+
+    box-shadow:var(--shadow);
 
 }
 
 .button:hover{
 
     background:var(--navy);
+    transform:translateY(-4px);
 
 }
 
+.button.secondary{
 
-/* ==========================================
-   HEADER
-========================================== */
-
-.navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:24px 8%;
-
-    background:var(--ivory);
-
-    transition:var(--transition);
-
-}
-
-.navbar.scrolled{
-
-    background:rgba(16,27,43,.95);
-
-    box-shadow:0 6px 18px rgba(0,0,0,.15);
-
-}
-
-
-/* ==========================================
-   LOGO
-========================================== */
-
-.logo,
-.logo:visited{
-
-    font-family:"Cinzel",serif;
-
-    font-size:1.8rem;
-
-    letter-spacing:2px;
-
+    background:transparent;
     color:var(--navy);
-
-    transition:var(--transition);
-
-}
-
-.logo:hover{
-
-    color:var(--gold);
+    border:2px solid var(--gold);
 
 }
 
-.navbar.scrolled .logo,
-.navbar.scrolled .logo:visited{
+.button.secondary:hover{
 
+    background:var(--gold);
     color:var(--white);
 
 }
-
-.navbar.scrolled .logo:hover{
-
-    color:var(--gold);
-
-}
-
 
 /* ==========================================
    NAVIGATION
 ========================================== */
 
-nav{
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:22px 5%;
 
     display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    gap:35px;
+    background:rgba(16,27,43,.96);
+
+    backdrop-filter:blur(14px);
+
+    z-index:1000;
+
+    box-shadow:0 6px 30px rgba(0,0,0,.15);
 
 }
 
-nav a,
-nav a:visited{
-
-    color:var(--navy);
+.logo{
 
     font-family:"Cinzel",serif;
+    font-size:1.6rem;
+    color:var(--gold);
+    letter-spacing:1px;
+
+}
+
+nav{
+
+    display:flex;
+    gap:32px;
+
+}
+
+nav a{
+
+    color:var(--white);
+    font-weight:500;
+    position:relative;
+    transition:var(--transition);
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:var(--gold);
 
     transition:var(--transition);
+
+}
+
+nav a:hover::after,
+nav a.active::after{
+
+    width:100%;
 
 }
 
@@ -257,22 +313,8 @@ nav a:hover{
 
 }
 
-.navbar.scrolled nav a,
-.navbar.scrolled nav a:visited{
-
-    color:var(--white);
-
-}
-
-.navbar.scrolled nav a:hover{
-
-    color:var(--gold);
-
-}
-
-
 /* ==========================================
-   MOBILE MENU
+   MOBILE MENU BUTTON
 ========================================== */
 
 .menu-toggle{
@@ -280,7 +322,6 @@ nav a:hover{
     display:none;
 
     background:none;
-
     border:none;
 
     cursor:pointer;
@@ -292,41 +333,15 @@ nav a:hover{
     display:block;
 
     width:28px;
+    height:3px;
 
-    height:2px;
+    background:var(--white);
 
     margin:6px 0;
-
-    background:var(--navy);
 
     transition:var(--transition);
 
 }
-
-.navbar.scrolled .menu-toggle span{
-
-    background:var(--white);
-
-}
-
-.menu-toggle.open span:nth-child(1){
-
-    transform:rotate(45deg) translate(5px,5px);
-
-}
-
-.menu-toggle.open span:nth-child(2){
-
-    opacity:0;
-
-}
-
-.menu-toggle.open span:nth-child(3){
-
-    transform:rotate(-45deg) translate(6px,-6px);
-
-}
-
 
 /* ==========================================
    HERO
@@ -334,143 +349,93 @@ nav a:hover{
 
 .about-hero{
 
-    min-height:520px;
+    min-height:100vh;
 
     display:flex;
-
+    align-items:center;
     justify-content:center;
 
-    align-items:center;
+    background:
+    linear-gradient(rgba(16,27,43,.72),
+    rgba(16,27,43,.72)),
+    url("images/about-hero.jpg") center center/cover;
 
     text-align:center;
-
-    background:
-
-    linear-gradient(
-        rgba(16,27,43,.60),
-        rgba(16,27,43,.60)
-    ),
-
-    url("images/about-hero.jpg");
-
-    background-size:cover;
-
-    background-position:center;
 
     color:var(--white);
 
 }
 
+.hero-overlay{
+
+    width:100%;
+    padding:180px 20px 120px;
+
+}
+
 .hero-content{
 
-    width:min(900px,90%);
+    max-width:900px;
+    margin:auto;
+
+}
+
+.eyebrow{
+
+    color:var(--gold-light);
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:.9rem;
+    margin-bottom:30px;
 
 }
 
 .about-hero h1{
 
     color:var(--white);
-
-    margin-bottom:20px;
+    margin-bottom:28px;
 
 }
 
-.about-hero p{
+.hero-text{
 
-    font-family:"Cinzel",serif;
-
-    font-size:1.4rem;
-
-    letter-spacing:1px;
+    color:rgba(255,255,255,.92);
+    font-size:1.3rem;
+    max-width:760px;
+    margin:0 auto 50px;
 
 }
 
 /* ==========================================
-   ABOUT STORY
+   FOUNDER
 ========================================== */
 
-.about-story{
-
-    padding:110px 8%;
+.founder{
 
     background:var(--white);
 
 }
 
-.about-story h2{
-
-    margin-bottom:40px;
-
-}
-
-.about-story p{
-
-    max-width:850px;
-
-    margin:0 auto 30px;
-
-    text-align:center;
-
-}
-
-.about-story p:last-child{
-
-    margin-bottom:0;
-
-}
-
-
-/* ==========================================
-   PHILOSOPHY
-========================================== */
-
-.philosophy{
-
-    padding:110px 8%;
-
-    background:var(--ivory);
-
-}
-
-.section-intro{
-
-    max-width:850px;
-
-    margin:0 auto 70px;
-
-    text-align:center;
-
-}
-
-
-/* ==========================================
-   VALUES GRID
-========================================== */
-
-.values{
+.founder-grid{
 
     display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
+    grid-template-columns:420px 1fr;
+    gap:80px;
+    align-items:center;
 
 }
 
+.founder-image{
 
-/* ==========================================
-   VALUE CARD
-========================================== */
+    position:relative;
 
-.value-card{
+}
 
-    background:var(--white);
+.founder-image img{
 
-    padding:45px 35px;
-
-    border-radius:18px;
-
-    text-align:center;
+    width:100%;
+    border-radius:var(--radius);
+    object-fit:cover;
 
     box-shadow:var(--shadow);
 
@@ -478,9 +443,121 @@ nav a:hover{
 
 }
 
+.founder-image img:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.founder-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-18px;
+    left:-18px;
+
+    width:100%;
+    height:100%;
+
+    border:2px solid var(--gold);
+
+    border-radius:var(--radius);
+
+    z-index:-1;
+
+}
+
+.founder-content h2{
+
+    margin-bottom:30px;
+
+}
+
+.founder-content strong{
+
+    color:var(--navy);
+
+}
+
+.founder-content p{
+
+    font-size:1.08rem;
+
+}
+
+/* ==========================================
+   STORY
+========================================== */
+
+.story{
+
+    background:linear-gradient(
+    to bottom,
+    var(--ivory),
+    #fdfbf8);
+
+    text-align:center;
+
+}
+
+.story h2{
+
+    margin-bottom:35px;
+
+}
+
+.story p{
+
+    font-size:1.12rem;
+    max-width:760px;
+    margin:0 auto 28px;
+
+}
+
+/* ==========================================
+   VALUES
+========================================== */
+
+.creator-values{
+
+    background:var(--white);
+
+    text-align:center;
+
+}
+
+.value-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    margin-top:70px;
+
+}
+
+.value-card{
+
+    background:var(--ivory);
+
+    padding:45px 35px;
+
+    border-radius:var(--radius);
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
 .value-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
 
 }
 
@@ -494,118 +571,441 @@ nav a:hover{
 
 .value-card p{
 
-    margin:0;
-
-}
-
-
-/* ==========================================
-   OPTIONAL ICON CIRCLE
-========================================== */
-
-.value-card::before{
-
-    content:"";
-
-    display:block;
-
-    width:70px;
-
-    height:70px;
-
-    margin:0 auto 30px;
-
-    border-radius:50%;
-
-    background:
-
-    linear-gradient(
-
-        135deg,
-
-        rgba(200,164,93,.18),
-
-        rgba(16,27,43,.08)
-
-    );
-
-}
-
-
-/* ==========================================
-   SUBTLE ANIMATION
-========================================== */
-
-
-
-.value-card.visible{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-.value-card:hover{
-
-    box-shadow:
-
-        0 18px 40px rgba(0,0,0,.12);
-
-}
-
-/* ==========================================
-   GENERATIONS REUNITED
-========================================== */
-
-.generations{
-
-    padding:110px 8%;
-
-    background:var(--white);
-
-}
-
-.generations h2{
-
-    margin-bottom:40px;
-
-}
-
-.generations p{
-
-    max-width:850px;
-
-    margin:0 auto 30px;
-
-    text-align:center;
-
-}
-
-.generations p:last-child{
-
     margin-bottom:0;
 
 }
 
-
 /* ==========================================
-   RESTORATION PROMISE
+   WHY IT MATTERS
 ========================================== */
 
-.promise{
+.why-it-matters{
 
-    padding:120px 8%;
+    background:linear-gradient(
+    rgba(16,27,43,.94),
+    rgba(16,27,43,.94)),
+    url("images/vintage-photo.jpg")
+    center/cover;
+
+    color:var(--white);
 
     text-align:center;
 
-    background:var(--navy);
+}
+
+.why-it-matters h2{
 
     color:var(--white);
 
 }
 
-.promise h2{
+.why-it-matters p{
+
+    color:rgba(255,255,255,.92);
+
+    max-width:850px;
+    margin:0 auto 28px;
+
+    font-size:1.08rem;
+
+}
+
+/* ==========================================
+   FAITH FOUNDATION
+========================================== */
+
+.faith-foundation{
+
+    background:var(--white);
+
+}
+
+.faith-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:70px;
+    align-items:start;
+
+}
+
+.faith-content p{
+
+    font-size:1.08rem;
+
+}
+
+.scripture-card{
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.scripture-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.scripture-card p{
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.reference{
+
+    margin:25px 0;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   RESTORATION PROCESS
+========================================== */
+
+.restoration-process{
+
+    background:var(--ivory);
+
+    text-align:center;
+
+}
+
+.process-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.process-card{
+
+    background:var(--white);
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    text-align:left;
+
+    position:relative;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.process-number{
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.5rem;
+
+    margin-bottom:30px;
+
+}
+
+.process-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.process-card p{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================
+   PROCESS CONNECTOR
+========================================== */
+
+.process-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-18px;
+    top:50%;
+
+    width:36px;
+    height:2px;
+
+    background:var(--gold);
+
+    opacity:.35;
+
+}
+
+.process-card:nth-child(2)::after,
+.process-card:nth-child(4)::after{
+
+    display:none;
+
+}
+
+/* ==========================================
+   LEGACY
+========================================== */
+
+.legacy{
+
+    background:var(--white);
+
+}
+
+.legacy .container{
+
+    display:grid;
+    grid-template-columns:1fr 460px;
+    gap:70px;
+    align-items:center;
+
+}
+
+.legacy-content p{
+
+    font-size:1.08rem;
+
+}
+
+.legacy-image{
+
+    position:relative;
+
+}
+
+.legacy-image img{
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.legacy-image img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.legacy-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-18px;
+    right:-18px;
+
+    width:100%;
+    height:100%;
+
+    border:2px solid var(--gold);
+
+    border-radius:var(--radius);
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   PERSONAL NOTE
+========================================== */
+
+.personal-note{
+
+    background:linear-gradient(
+    to bottom,
+    #fcfaf7,
+    var(--ivory));
+
+    text-align:center;
+
+}
+
+.personal-note p{
+
+    max-width:760px;
+
+    margin:0 auto 24px;
+
+    font-size:1.08rem;
+
+}
+
+.signature{
+
+    margin-top:60px;
+
+}
+
+.signature h3{
+
+    margin:15px 0;
+
+    color:var(--gold);
+
+    font-size:2rem;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.signature p:last-child{
+
+    color:var(--gray);
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================
+   GALLERY PREVIEW
+========================================== */
+
+.about-gallery-preview{
+
+    background:var(--white);
+
+    text-align:center;
+
+}
+
+.gallery-preview{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.gallery-card{
+
+    background:var(--ivory);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.gallery-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.gallery-card img{
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.gallery-card h3{
+
+    margin:30px 25px 15px;
+
+}
+
+.gallery-card p{
+
+    padding:0 25px 35px;
+
+    margin-bottom:0;
+
+}
+
+.gallery-button{
+
+    margin-top:60px;
+
+}
+
+/* ==========================================
+   CALL TO ACTION
+========================================== */
+
+.cta-section{
+
+    background:
+    linear-gradient(
+    rgba(16,27,43,.90),
+    rgba(16,27,43,.90)),
+    url("images/cta-background.jpg")
+    center center/cover;
+
+    color:var(--white);
+
+    text-align:center;
+
+}
+
+.cta-section h2{
 
     color:var(--white);
 
@@ -613,24 +1013,29 @@ nav a:hover{
 
 }
 
-.promise p{
+.cta-section p{
+
+    color:rgba(255,255,255,.90);
 
     max-width:850px;
 
-    margin:0 auto;
+    margin:0 auto 50px;
 
-    font-size:1.15rem;
-
-    line-height:1.9;
+    font-size:1.1rem;
 
 }
 
-.promise .button{
+.cta-buttons{
 
-    margin-top:45px;
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
 
 }
-
 
 /* ==========================================
    FOOTER
@@ -638,85 +1043,54 @@ nav a:hover{
 
 .site-footer{
 
-    background:#0f1826;
+    background:var(--navy);
 
-    color:var(--white);
+    color:rgba(255,255,255,.85);
 
-    padding:80px 8% 35px;
+    padding:90px 0 40px;
 
 }
 
-.footer-brand{
+.footer-grid{
 
-    text-align:center;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
 
-    margin-bottom:60px;
+    gap:50px;
 
 }
 
 .footer-brand h3{
 
-    font-family:"Cinzel",serif;
-
-    font-size:2rem;
-
     color:var(--gold);
 
-    letter-spacing:2px;
-
-    margin-bottom:15px;
+    margin-bottom:20px;
 
 }
 
 .footer-brand p{
 
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.45rem;
-
-    color:rgba(255,255,255,.85);
-
-}
-
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:100px;
-
-    margin-bottom:60px;
-
-}
-
-.footer-column{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
+    color:rgba(255,255,255,.75);
 
 }
 
 .footer-column h4{
 
-    font-family:"Cinzel",serif;
-
     color:var(--gold);
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
-    font-size:1.05rem;
+    font-size:1.15rem;
 
 }
 
 .footer-column a{
 
-    color:var(--white);
+    display:block;
 
-    margin:8px 0;
+    margin-bottom:14px;
+
+    color:rgba(255,255,255,.75);
 
     transition:var(--transition);
 
@@ -726,13 +1100,27 @@ nav a:hover{
 
     color:var(--gold);
 
+    padding-left:8px;
+
 }
 
-.footer-bottom{
+.footer-column p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.site-footer hr{
+
+    border:none;
 
     border-top:1px solid rgba(255,255,255,.12);
 
-    padding-top:30px;
+    margin:60px 0 35px;
+
+}
+
+.footer-bottom{
 
     text-align:center;
 
@@ -740,46 +1128,103 @@ nav a:hover{
 
 .footer-bottom p{
 
-    margin:8px 0;
+    margin-bottom:10px;
+
+    color:rgba(255,255,255,.65);
 
     font-size:.95rem;
 
-    color:rgba(255,255,255,.75);
+}
+
+/* ==========================================
+   TRUEPORTRAIT REVIVAL
+   ABOUT PAGE STYLESHEET
+   PART 4
+   RESPONSIVE + ANIMATIONS
+========================================== */
+
+/* ==========================================
+   LARGE TABLETS
+========================================== */
+
+@media (max-width:1200px){
+
+    .founder-grid,
+    .faith-grid,
+    .legacy .container{
+
+        grid-template-columns:1fr;
+        gap:60px;
+
+    }
+
+    .founder-image,
+    .legacy-image{
+
+        max-width:550px;
+        margin:0 auto;
+
+    }
+
+    .scripture-card{
+
+        position:relative;
+        top:auto;
+
+    }
 
 }
 
-
-
-
 /* ==========================================
-   RESPONSIVE DESIGN
+   TABLETS
 ========================================== */
-
-/* ---------- Tablets ---------- */
 
 @media (max-width:992px){
 
-    h1{
+    section{
 
-        font-size:4rem;
+        padding:90px 0;
+
+    }
+
+    .value-grid,
+    .gallery-preview{
+
+        grid-template-columns:repeat(2,1fr);
 
     }
 
-    h2{
+    .process-grid{
 
-        font-size:2.8rem;
+        grid-template-columns:1fr;
 
     }
+
+    .process-card::after{
+
+        display:none;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:45px;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+@media (max-width:768px){
 
     .navbar{
 
-        padding:20px 6%;
-
-    }
-
-    .logo{
-
-        font-size:1.5rem;
+        padding:18px 6%;
 
     }
 
@@ -796,14 +1241,11 @@ nav a:hover{
         position:absolute;
 
         top:100%;
-
         left:0;
 
         width:100%;
 
-        background:var(--ivory);
-
-        display:flex;
+        background:var(--navy);
 
         flex-direction:column;
 
@@ -811,27 +1253,19 @@ nav a:hover{
 
         gap:0;
 
-        padding:30px 0;
+        max-height:0;
 
-        border-top:1px solid rgba(200,164,93,.25);
+        overflow:hidden;
 
-        opacity:0;
-
-        visibility:hidden;
-
-        transform:translateY(-15px);
-
-        transition:var(--transition);
+        transition:.45s ease;
 
     }
 
-    nav.active{
+    nav.open{
 
-        opacity:1;
+        max-height:600px;
 
-        visibility:visible;
-
-        transform:translateY(0);
+        padding:20px 0;
 
     }
 
@@ -841,60 +1275,45 @@ nav a:hover{
 
         text-align:center;
 
-        padding:16px 0;
+        padding:18px;
 
     }
 
-    .navbar.scrolled nav{
+    nav a::after{
 
-        background:var(--navy);
-
-    }
-
-    .navbar.scrolled nav a{
-
-        color:var(--white);
-
-    }
-
-    .values{
-
-        grid-template-columns:1fr;
-
-        gap:30px;
-
-    }
-
-    .footer-links{
-
-        flex-direction:column;
-
-        gap:50px;
+        display:none;
 
     }
 
 }
 
+/* ==========================================
+   MOBILE LAYOUT
+========================================== */
 
-/* ---------- Phones ---------- */
+@media (max-width:768px){
 
-@media (max-width:600px){
+    section{
+
+        padding:75px 0;
+
+    }
 
     h1{
 
-        font-size:3rem;
+        font-size:2.7rem;
 
     }
 
     h2{
 
-        font-size:2.2rem;
+        font-size:2rem;
 
     }
 
     h3{
 
-        font-size:1.2rem;
+        font-size:1.3rem;
 
     }
 
@@ -904,103 +1323,217 @@ nav a:hover{
 
     }
 
-    .about-hero{
+    .hero-overlay{
 
-        min-height:420px;
-
-        padding:40px 20px;
+        padding:150px 20px 90px;
 
     }
 
-    .about-story,
+    .hero-text{
 
-    .philosophy,
-
-    .generations,
-
-    .promise{
-
-        padding:75px 6%;
+        font-size:1.1rem;
 
     }
 
-    .value-card{
+    .founder-grid{
 
-        padding:35px 25px;
-
-    }
-
-    .footer-brand h3{
-
-        font-size:1.7rem;
+        gap:40px;
 
     }
 
-    .footer-brand p{
+    .founder-image{
+
+        max-width:350px;
+
+        margin:auto;
+
+    }
+
+    .value-grid,
+    .gallery-preview{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-card img{
+
+        height:240px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .button{
+
+        width:100%;
+        max-width:340px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .footer-column a:hover{
+
+        padding-left:0;
+
+    }
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width:576px){
+
+    body{
+
+        font-size:16px;
+
+    }
+
+    section{
+
+        padding:65px 0;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .hero-overlay{
+
+        padding-top:135px;
+
+    }
+
+    .eyebrow{
+
+        font-size:.75rem;
+
+        letter-spacing:3px;
+
+    }
+
+    h1{
+
+        font-size:2.2rem;
+
+    }
+
+    h2{
+
+        font-size:1.75rem;
+
+    }
+
+    blockquote{
+
+        padding:24px;
+
+        font-size:1.5rem;
+
+    }
+
+    .process-card,
+    .value-card,
+    .scripture-card{
+
+        padding:30px;
+
+    }
+
+    .process-number{
+
+        width:60px;
+        height:60px;
 
         font-size:1.2rem;
 
     }
 
-}
+    .signature h3{
 
+        font-size:1.7rem;
+
+    }
+
+}
 
 /* ==========================================
-   ACCESSIBILITY
+   FADE ANIMATIONS
 ========================================== */
-
-a:focus,
-
-button:focus{
-
-    outline:3px solid rgba(200,164,93,.45);
-
-    outline-offset:4px;
-
-}
-
-.button:focus{
-
-    outline:3px solid var(--gold);
-
-}
-
-
-/* ==========================================
-   IMAGE & SECTION ANIMATIONS
-========================================== */
-
-.hero-content,
-
-.container{
-
-    animation:fadeUp .8s ease both;
-
-}
 
 @keyframes fadeUp{
 
     from{
 
         opacity:0;
-
-        transform:translateY(25px);
+        transform:translateY(40px);
 
     }
 
     to{
 
         opacity:1;
-
         transform:translateY(0);
 
     }
 
 }
 
+.about-hero,
+.founder,
+.story,
+.creator-values,
+.why-it-matters,
+.faith-foundation,
+.restoration-process,
+.legacy,
+.personal-note,
+.about-gallery-preview,
+.cta-section{
+
+    animation:fadeUp .9s ease both;
+
+}
 
 /* ==========================================
-   SELECTION
+   IMAGE HOVER EFFECTS
+========================================== */
+
+img{
+
+    transition:var(--transition);
+
+}
+
+.gallery-card:hover img,
+.legacy-image:hover img,
+.founder-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================
+   TEXT SELECTION
 ========================================== */
 
 ::selection{
@@ -1011,14 +1544,13 @@ button:focus{
 
 }
 
-
 /* ==========================================
    SCROLLBAR
 ========================================== */
 
 ::-webkit-scrollbar{
 
-    width:10px;
+    width:12px;
 
 }
 
@@ -1032,17 +1564,65 @@ button:focus{
 
     background:var(--gold);
 
-    border-radius:50px;
+    border-radius:20px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:#b48e43;
+    background:var(--navy);
 
 }
 
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+a:focus-visible,
+button:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+
+    border-radius:8px;
+
+}
 
 /* ==========================================
-   END OF ABOUT STYLESHEET
+   UTILITY CLASSES
+========================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:2rem;
+
+}
+
+.mt-3{
+
+    margin-top:3rem;
+
+}
+
+.mb-2{
+
+    margin-bottom:2rem;
+
+}
+
+.mb-3{
+
+    margin-bottom:3rem;
+
+}
+
+/* ==========================================
+   END OF ABOUT PAGE STYLESHEET
 ========================================== */
