@@ -1,0 +1,1472 @@
+/* ==========================================
+   TRUEPORTRAIT REVIVAL
+   LEGACY PORTRAIT CREATION STYLESHEET
+   Part 1
+========================================== */
+
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --ivory:#f7f0e6;
+    --gold:#c8a45d;
+    --navy:#101b2b;
+    --charcoal:#222222;
+    --white:#ffffff;
+
+    --shadow:0 15px 35px rgba(0,0,0,.12);
+    --radius:18px;
+    --transition:.35s ease;
+
+    --container:1200px;
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+    background:var(--ivory);
+    color:var(--charcoal);
+    line-height:1.75;
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+    max-width:100%;
+
+}
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+.container{
+
+    width:min(92%,var(--container));
+    margin:auto;
+
+}
+
+section{
+
+    padding:110px 0;
+
+}
+
+.section-heading{
+
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 70px;
+
+}
+
+.section-heading p{
+
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.82rem;
+    font-weight:700;
+    margin-bottom:18px;
+
+}
+
+.section-heading h2{
+
+    font-family:"Cinzel",serif;
+    color:var(--navy);
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.25;
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:"Cinzel",serif;
+    color:var(--navy);
+    line-height:1.2;
+
+}
+
+h1{
+
+    font-size:clamp(3rem,6vw,4.8rem);
+    margin-bottom:30px;
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:28px;
+
+}
+
+h3{
+
+    font-size:1.45rem;
+    margin-bottom:20px;
+
+}
+
+p{
+
+    margin-bottom:22px;
+    color:#444;
+
+}
+
+.eyebrow{
+
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.82rem;
+    font-weight:700;
+    margin-bottom:18px;
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    background:var(--gold);
+    color:var(--white);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+    background:#b48d43;
+
+}
+
+.button-outline{
+
+    background:transparent;
+    color:var(--white);
+    border:2px solid rgba(255,255,255,.65);
+
+}
+
+.button-outline:hover{
+
+    background:var(--white);
+    color:var(--navy);
+
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(16,27,43,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 6px 20px rgba(0,0,0,.18);
+
+}
+
+.nav-container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    height:84px;
+
+}
+
+.logo{
+
+    font-family:"Cinzel",serif;
+    font-size:1.45rem;
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+nav{
+
+    display:flex;
+    align-items:center;
+    gap:36px;
+
+}
+
+nav a{
+
+    color:var(--white);
+    font-size:.95rem;
+    font-weight:500;
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:var(--gold);
+
+}
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+    border:none;
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    display:block;
+
+    width:28px;
+    height:3px;
+
+    margin:5px 0;
+
+    background:var(--white);
+
+    transition:var(--transition);
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    min-height:95vh;
+
+    padding-top:120px;
+
+    text-align:center;
+
+    color:var(--white);
+
+    background:
+
+    linear-gradient(
+    rgba(16,27,43,.72),
+    rgba(16,27,43,.82)
+    ),
+
+    url("images/legacy-portrait-banner.jpg")
+    center center/cover no-repeat;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(200,164,93,.18),
+    transparent 65%);
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:850px;
+
+}
+
+.hero h1{
+
+    color:var(--white);
+
+}
+
+.hero-text{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.15rem;
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.introduction{
+
+    background:var(--white);
+
+}
+
+.intro-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.intro-content h2{
+
+    margin-bottom:28px;
+
+}
+
+.intro-content p{
+
+    font-size:1.05rem;
+    color:#444;
+
+}
+
+.intro-card{
+
+    background:linear-gradient(145deg,#ffffff,#f5efe5);
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    border-top:5px solid var(--gold);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.intro-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.intro-card h3{
+
+    margin-bottom:28px;
+
+    text-align:center;
+
+}
+
+.intro-card ul{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+}
+
+.intro-card li{
+
+    position:relative;
+
+    padding-left:32px;
+
+    font-size:1rem;
+
+}
+
+.intro-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.services{
+
+    background:#faf8f4;
+
+}
+
+.service-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+
+}
+
+.service-card{
+
+    background:var(--white);
+
+    padding:42px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    display:flex;
+    flex-direction:column;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:5px;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.45s ease;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.service-icon{
+
+    width:80px;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:28px;
+
+    border-radius:50%;
+
+    background:rgba(200,164,93,.12);
+
+    font-size:2.2rem;
+
+}
+
+.service-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.service-card p{
+
+    margin-bottom:25px;
+
+    color:#555;
+
+}
+
+.service-card ul{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:auto;
+
+}
+
+.service-card li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    color:#444;
+
+}
+
+.service-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+
+
+/* ==========================================
+   FEATURED SERVICE
+========================================== */
+
+.service-card.featured{
+
+    background:linear-gradient(145deg,#101b2b,#16263b);
+
+    color:var(--white);
+
+    border:2px solid rgba(200,164,93,.35);
+
+}
+
+.service-card.featured h3{
+
+    color:var(--white);
+
+}
+
+.service-card.featured p{
+
+    color:rgba(255,255,255,.88);
+
+}
+
+.service-card.featured li{
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.service-card.featured .service-icon{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.featured-badge{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    margin-bottom:28px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   PERFECT FOR
+========================================== */
+
+.ideal-for{
+
+    background:var(--white);
+
+}
+
+.ideal-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+
+}
+
+.ideal-item{
+
+    background:#faf8f4;
+
+    border-radius:var(--radius);
+
+    padding:32px 25px;
+
+    text-align:center;
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.15rem;
+
+    color:var(--navy);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    border-top:4px solid transparent;
+
+}
+
+.ideal-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+}
+
+
+
+/* ==========================================
+   PORTRAIT PHILOSOPHY
+========================================== */
+
+.philosophy{
+
+    background:#faf8f4;
+
+}
+
+.philosophy-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.philosophy-content p{
+
+    color:#444;
+    font-size:1.05rem;
+
+}
+
+.philosophy-card{
+
+    background:linear-gradient(145deg,#ffffff,#f5efe5);
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--gold);
+
+    transition:var(--transition);
+
+}
+
+.philosophy-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.philosophy-card h3{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.philosophy-card ul{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+}
+
+.philosophy-card li{
+
+    position:relative;
+
+    padding-left:30px;
+
+}
+
+.philosophy-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+}
+
+
+
+/* ==========================================
+   INVESTMENT
+========================================== */
+
+.investment{
+
+    background:var(--white);
+
+}
+
+.pricing-comparison{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-bottom:60px;
+
+}
+
+.price-card{
+
+    background:#faf8f4;
+
+    border-radius:var(--radius);
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.price-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.price{
+
+    font-family:"Cinzel",serif;
+
+    font-size:2.5rem;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+.price-card.featured{
+
+    background:linear-gradient(145deg,#101b2b,#16263b);
+
+    color:var(--white);
+
+    border:2px solid rgba(200,164,93,.35);
+
+}
+
+.price-card.featured h3{
+
+    color:var(--white);
+
+}
+
+.price-card.featured p{
+
+    color:rgba(255,255,255,.9);
+
+}
+
+.investment-note{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    background:#faf8f4;
+
+    padding:55px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+.investment-note h3{
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* ==========================================
+   WHY FAMILIES CHOOSE US
+========================================== */
+
+.introduction:last-of-type{
+
+    background:#faf8f4;
+
+}
+
+
+
+/* ==========================================
+   CONSULTATION
+========================================== */
+
+.consultation{
+
+    background:
+
+    linear-gradient(
+    rgba(16,27,43,.88),
+    rgba(16,27,43,.88)
+    ),
+
+    url("images/family-legacy-background.jpg")
+    center center/cover no-repeat;
+
+    color:var(--white);
+
+    text-align:center;
+
+}
+
+.consultation h2{
+
+    color:var(--white);
+
+}
+
+.consultation p{
+
+    color:rgba(255,255,255,.9);
+
+    max-width:760px;
+
+    margin:0 auto 40px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    background:var(--navy);
+
+    color:rgba(255,255,255,.85);
+
+    padding:90px 0 30px;
+
+}
+
+.footer-brand{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.footer-brand h3{
+
+    color:var(--gold);
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.footer-brand p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.footer-links{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:45px;
+
+    margin-bottom:60px;
+
+}
+
+.footer-column h4{
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+    font-size:1.1rem;
+
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:rgba(255,255,255,.82);
+
+    margin-bottom:14px;
+
+    transition:var(--transition);
+
+}
+
+.footer-column a:hover{
+
+    color:var(--gold);
+
+    padding-left:8px;
+
+}
+
+.footer-column p{
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    padding-top:30px;
+
+}
+
+.footer-bottom p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.hero{
+
+    min-height:80vh;
+
+}
+
+.intro-grid,
+.philosophy-grid{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+.service-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.ideal-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.pricing-comparison{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-links{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+section{
+
+    padding:80px 0;
+
+}
+
+.nav-container{
+
+    height:78px;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+nav{
+
+    position:absolute;
+
+    top:78px;
+    left:0;
+
+    width:100%;
+
+    background:var(--navy);
+
+    flex-direction:column;
+
+    gap:0;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+}
+
+nav.active{
+
+    max-height:450px;
+
+}
+
+nav a{
+
+    width:100%;
+
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.hero{
+
+    min-height:70vh;
+
+    padding-top:120px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero .button{
+
+    width:100%;
+    max-width:320px;
+
+}
+
+.service-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.ideal-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-links{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.footer-column a:hover{
+
+    padding-left:0;
+
+}
+
+.price{
+
+    font-size:2.1rem;
+
+}
+
+.intro-card,
+.philosophy-card,
+.price-card,
+.investment-note{
+
+    padding:35px 28px;
+
+}
+
+.cta-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.cta-buttons .button{
+
+    width:100%;
+    max-width:320px;
+
+}
+
+}
+
+
+
+/* ==========================================
+   SMALL DEVICES
+========================================== */
+
+@media (max-width:480px){
+
+.container{
+
+    width:94%;
+
+}
+
+.hero h1{
+
+    font-size:2.4rem;
+
+}
+
+.hero-text{
+
+    font-size:1rem;
+
+}
+
+.section-heading h2{
+
+    font-size:2rem;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+}
+
+.service-card{
+
+    padding:30px;
+
+}
+
+.intro-card,
+.philosophy-card,
+.price-card,
+.investment-note{
+
+    padding:28px 24px;
+
+}
+
+.service-icon{
+
+    width:70px;
+    height:70px;
+
+    font-size:2rem;
+
+}
+
+}
+
+
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.button:focus,
+nav a:focus{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+
+}
+
+::selection{
+
+    background:var(--gold);
+
+    color:var(--white);
+
+}
+
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}
+
+
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print{
+
+.navbar,
+.hero-buttons,
+.menu-toggle,
+.cta-buttons,
+.site-footer{
+
+    display:none;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    background:none;
+
+    color:#000;
+
+    padding:40px 0;
+
+}
+
+.hero h1,
+.hero p{
+
+    color:#000;
+
+}
+
+section{
+
+    padding:40px 0;
+
+}
+
+body{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+}
