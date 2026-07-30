@@ -1187,29 +1187,47 @@ footer{
     }
     }
 
+.portrait-banner-introduction p{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+}
+
 @media (max-width:768px){
 
-    .portrait-banner{
+    .portrait-banner-introduction p{
 
-        padding:60px 0;
+        font-size:1rem;
+
+        line-height:1.75;
 
     }
 
-    .banner-introduction{
+}
 
-        margin-bottom:30px;
+    .portrait-banner-introduction{
+
+        padding:55px 0 20px;
+
+    }
+
+    .portrait-banner{
+
+        padding:0 0 70px;
 
     }
 
     .portrait-banner-link{
 
-        border-radius:18px;
+        border-radius:16px;
 
     }
 
     .portrait-banner-image{
 
-        border-radius:18px;
+        border-radius:16px;
 
     }
 
@@ -1284,5 +1302,7 @@ footer{
     width:100%;
 
     border-radius:24px;
+
+
 
 }
