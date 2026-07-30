@@ -676,9 +676,9 @@ nav a.active::after{
 
     display:grid;
 
-grid-template-columns:minmax(320px,420px) 1fr;
+    grid-template-columns:340px 1fr;
 
-    gap:70px;
+    gap:80px;
 
     align-items:start;
 
@@ -710,9 +710,11 @@ grid-template-columns:minmax(320px,420px) 1fr;
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(320px,1fr));
 
-    gap:35px;
+    gap:40px;
+
+    align-items:start;
 
 }
 
@@ -720,13 +722,15 @@ grid-template-columns:minmax(320px,420px) 1fr;
 
     background:var(--white);
 
-    border-radius:18px;
+    border-radius:20px;
 
-    overflow:hidden;
+    padding-bottom:25px;
 
     box-shadow:var(--shadow);
 
     transition:var(--transition);
+
+    overflow:visible;
 
 }
 
@@ -748,9 +752,15 @@ grid-template-columns:minmax(320px,420px) 1fr;
 
 .comparison-card img{
 
-    aspect-ratio:4/5;
+    width:100%;
 
-    object-fit:cover;
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    border-radius:0;
 
 }
 
