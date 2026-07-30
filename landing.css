@@ -2421,7 +2421,7 @@ textarea:focus{
 .gallery-banner{
 
     background:var(--ivory);
-    padding:120px 40px;
+    padding:120px 40px 200px;
 
 }
 
