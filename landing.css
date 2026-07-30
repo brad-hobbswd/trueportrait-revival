@@ -2420,47 +2420,16 @@ textarea:focus{
 
 .gallery-banner{
 
-    padding:120px 40px;
-
     background:var(--ivory);
+    padding:120px 40px;
 
 }
 
 .gallery-banner-content{
 
     max-width:1400px;
-
     margin:0 auto;
-
     text-align:center;
-
-}
-
-.gallery-banner-text{
-
-    max-width:900px;
-
-    margin:0 auto 60px;
-
-
-}
-
-.gallery-banner-text h2{
-
-    font-family:"Cinzel",serif;
-    font-size:clamp(2.3rem,5vw,3.8rem);
-    color:var(--navy);
-    margin-bottom:25px;
-
-}
-
-.gallery-banner-text p{
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.45rem;
-    line-height:1.8;
-    color:var(--charcoal);
-    margin-bottom:40px;
 
 }
 
@@ -2471,29 +2440,43 @@ textarea:focus{
     text-transform:uppercase;
     color:var(--gold);
     font-size:.9rem;
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
-.gallery-banner-image{
+.gallery-banner h2{
 
-    margin:50px auto;
+    font-family:"Cinzel",serif;
+    font-size:clamp(2.4rem,5vw,4rem);
+    color:var(--navy);
+    margin-bottom:30px;
 
 }
 
-.gallery-banner-image img{
+.gallery-banner p{
 
-    width:100%;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.45rem;
+    line-height:1.8;
+    color:var(--charcoal);
 
-    max-width:1280px;
+    max-width:850px;
+    margin:0 auto 45px;
+
+}
+
+.feature-image{
 
     display:block;
 
-    margin:auto;
+    width:100%;
+    max-width:1280px;
 
-    border-radius:30px;
+    margin:60px auto;
 
-    box-shadow:0 35px 80px rgba(0,0,0,.18);
+    border-radius:28px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.18);
 
 }
 
@@ -2503,7 +2486,6 @@ textarea:focus{
     margin-top:10px;
 
 }
-
 
 /* ==========================================
    END OF LANDING PAGE STYLESHEET
