@@ -2414,7 +2414,6 @@ textarea:focus{
 
 }
 
-
 /* ==========================================
    GALLERY FEATURE
 ========================================== */
@@ -2428,14 +2427,16 @@ textarea:focus{
 
 .gallery-banner-content{
 
-    max-width:1300px;
+    max-width:1100px;
     margin:0 auto;
+    text-align:center;
 
-    display:grid;
-    grid-template-columns:1fr 1.1fr;
-    gap:60px;
+}
 
-    align-items:center;
+.gallery-banner-text{
+
+    max-width:820px;
+    margin:0 auto;
 
 }
 
@@ -2454,7 +2455,7 @@ textarea:focus{
     font-size:1.45rem;
     line-height:1.8;
     color:var(--charcoal);
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
@@ -2469,31 +2470,34 @@ textarea:focus{
 
 }
 
+.gallery-banner-image{
+
+    margin:50px auto;
+
+}
+
 .gallery-banner-image img{
 
     width:100%;
-    border-radius:18px;
+    max-width:1024px;
+
     display:block;
+
+    margin:auto;
+
+    border-radius:18px;
 
     box-shadow:0 30px 60px rgba(0,0,0,.18);
 
 }
 
-@media (max-width:900px){
+.gallery-banner .button{
 
-.gallery-banner-content{
-
-    grid-template-columns:1fr;
-
-}
-
-.gallery-banner-image{
-
-    order:-1;
+    display:inline-block;
+    margin-top:10px;
 
 }
 
-}
 
 /* ==========================================
    END OF LANDING PAGE STYLESHEET
