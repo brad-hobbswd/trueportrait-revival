@@ -2,6 +2,8 @@
    TRUEPORTRAIT REVIVAL
    GALLERY PAGE STYLESHEET
    PART 1
+   VARIABLES • RESET • TYPOGRAPHY
+   LAYOUT • BUTTONS • NAVIGATION • HERO
 ========================================== */
 
 /* ==========================================
@@ -16,10 +18,15 @@
     --charcoal:#222222;
     --white:#ffffff;
 
-    --shadow:0 18px 40px rgba(0,0,0,.12);
+    --text:#555555;
+    --light:#faf8f3;
+    --border:#e8dfd1;
+
+    --shadow:0 18px 40px rgba(0,0,0,.10);
     --shadow-hover:0 28px 60px rgba(0,0,0,.18);
 
-    --radius:18px;
+    --radius:20px;
+
     --transition:.35s ease;
 
     --max-width:1200px;
@@ -46,10 +53,12 @@ html{
 
 body{
 
+    font-family:"Inter",sans-serif;
+
     background:var(--ivory);
+
     color:var(--charcoal);
 
-    font-family:"Inter",sans-serif;
     line-height:1.8;
 
     overflow-x:hidden;
@@ -59,7 +68,9 @@ body{
 img{
 
     display:block;
+
     width:100%;
+
     height:auto;
 
 }
@@ -67,6 +78,8 @@ img{
 a{
 
     text-decoration:none;
+
+    color:inherit;
 
 }
 
@@ -77,104 +90,14 @@ ul{
 }
 
 /* ==========================================
-   TYPOGRAPHY
-========================================== */
-
-h1,
-h2,
-h3,
-h4{
-
-    font-family:"Cinzel",serif;
-    font-weight:600;
-    color:var(--navy);
-    line-height:1.2;
-
-}
-
-h1{
-
-    font-size:4rem;
-    margin-bottom:25px;
-
-}
-
-h2{
-
-    font-size:2.7rem;
-    margin-bottom:25px;
-
-}
-
-h3{
-
-    font-size:1.5rem;
-    margin-bottom:18px;
-
-}
-
-p{
-
-    margin-bottom:20px;
-    font-size:1.05rem;
-
-}
-
-.section-label{
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:.82rem;
-
-    font-weight:600;
-
-    margin-bottom:15px;
-
-}
-
-.section-introduction{
-
-    max-width:760px;
-
-    margin:0 auto 55px;
-
-    text-align:center;
-
-    font-size:1.1rem;
-
-    color:#555;
-
-}
-
-.eyebrow{
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:6px;
-
-    font-size:.82rem;
-
-    margin-bottom:20px;
-
-}
-
-/* ==========================================
-   LAYOUT
+   CONTAINER
 ========================================== */
 
 .container{
 
-    width:min(1200px,92%);
+    width:min(var(--max-width),92%);
 
-    margin:0 auto;
-
-    padding:0 15px;
+    margin:auto;
 
 }
 
@@ -190,11 +113,96 @@ section{
 
 }
 
-section{
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
 
-    width:100%;
+h1,
+h2,
+h3,
+h4{
 
-    overflow:hidden;
+    font-family:"Cinzel",serif;
+
+    color:var(--navy);
+
+    font-weight:600;
+
+    line-height:1.2;
+
+}
+
+h1{
+
+    font-size:4rem;
+
+    margin-bottom:30px;
+
+}
+
+h2{
+
+    font-size:2.8rem;
+
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    font-size:1.05rem;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+.section-label{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.section-introduction{
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+}
+
+.eyebrow{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:6px;
+
+    font-size:.85rem;
+
+    margin-bottom:20px;
 
 }
 
@@ -210,7 +218,7 @@ section{
 
     justify-content:center;
 
-    padding:15px 34px;
+    padding:16px 34px;
 
     border-radius:50px;
 
@@ -238,9 +246,9 @@ section{
 
     background:transparent;
 
-    color:var(--navy);
-
     border:2px solid var(--gold);
+
+    color:var(--navy);
 
 }
 
@@ -265,13 +273,13 @@ section{
 
     width:100%;
 
+    padding:22px 7%;
+
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
-
-    padding:22px 7%;
 
     background:rgba(16,27,43,.96);
 
@@ -285,11 +293,11 @@ section{
 
     font-family:"Cinzel",serif;
 
-    font-size:1.4rem;
-
-    font-weight:600;
-
     color:var(--gold);
+
+    font-size:1.45rem;
+
+    font-weight:700;
 
 }
 
@@ -297,9 +305,9 @@ nav{
 
     display:flex;
 
-    align-items:center;
-
     gap:30px;
+
+    align-items:center;
 
 }
 
@@ -307,9 +315,9 @@ nav a{
 
     color:var(--white);
 
-    font-weight:500;
-
     position:relative;
+
+    font-weight:500;
 
     transition:var(--transition);
 
@@ -376,7 +384,7 @@ nav a.active::after{
 
     background:var(--white);
 
-    border-radius:3px;
+    border-radius:5px;
 
 }
 
@@ -392,32 +400,29 @@ nav a.active::after{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
-    background:url("images/gallery-hero.jpg") center center/cover no-repeat;
+    align-items:center;
 
-}
+    background:
 
-.gallery-hero::before{
+    linear-gradient(
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
         rgba(16,27,43,.70),
+
         rgba(16,27,43,.82)
-    );
+
+    ),
+
+    url("images/gallery-hero.jpg")
+
+    center center/cover
+
+    no-repeat;
 
 }
 
 .hero-overlay{
-
-    position:relative;
 
     width:100%;
 
@@ -425,13 +430,11 @@ nav a.active::after{
 
     text-align:center;
 
-    z-index:2;
-
 }
 
 .hero-content{
 
-    max-width:860px;
+    max-width:850px;
 
     margin:auto;
 
@@ -447,20 +450,21 @@ nav a.active::after{
 
     color:rgba(255,255,255,.92);
 
-    font-size:1.2rem;
-
     max-width:760px;
 
     margin:0 auto 45px;
 
+    font-size:1.18rem;
+
 }
 
 /* ==========================================
-   SHARED CONTENT SECTIONS
+   SHARED SECTION COLORS
 ========================================== */
 
 .gallery-introduction,
 .featured-story,
+.before-after,
 .services-showcase,
 .gallery-collections,
 .gallery-cta{
@@ -470,6 +474,7 @@ nav a.active::after{
 }
 
 .gallery-philosophy,
+.custom-composite,
 .legacy-feature,
 .quality-promise,
 .founder-invitation{
@@ -479,11 +484,13 @@ nav a.active::after{
 }
 
 /* ==========================================
-   IMAGE STYLING
+   SHARED IMAGE STYLING
 ========================================== */
 
 .philosophy-image img,
-.story-image img{
+.story-image img,
+.legacy-image img,
+.founder-image img{
 
     border-radius:var(--radius);
 
@@ -493,8 +500,10 @@ nav a.active::after{
 
 }
 
-.philosophy-image img:hover,
-.story-image img:hover{
+.philosophy-image:hover img,
+.story-image:hover img,
+.legacy-image:hover img,
+.founder-image:hover img{
 
     transform:scale(1.03);
 
@@ -510,6 +519,8 @@ nav a.active::after{
    TRUEPORTRAIT REVIVAL
    GALLERY PAGE STYLESHEET
    PART 2
+   INTRODUCTION • PHILOSOPHY
+   FEATURED STORY • BEFORE & AFTER
 ========================================== */
 
 /* ==========================================
@@ -524,7 +535,7 @@ nav a.active::after{
 
 .gallery-introduction h2{
 
-    max-width:720px;
+    max-width:760px;
 
     margin:0 auto 30px;
 
@@ -535,10 +546,6 @@ nav a.active::after{
     max-width:760px;
 
     margin:0 auto 28px;
-
-    font-size:1.08rem;
-
-    color:#555;
 
 }
 
@@ -560,21 +567,13 @@ nav a.active::after{
 
 .philosophy-content p{
 
-    color:#555;
+    color:var(--text);
 
 }
 
 .philosophy-image{
 
     position:relative;
-
-}
-
-.philosophy-image img{
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
 
 }
 
@@ -592,9 +591,9 @@ nav a.active::after{
 
     height:100%;
 
-    border:2px solid rgba(200,164,93,.45);
+    border:2px solid rgba(200,164,93,.35);
 
-    border-radius:18px;
+    border-radius:var(--radius);
 
     z-index:-1;
 
@@ -604,37 +603,75 @@ nav a.active::after{
    FEATURED STORY
 ========================================== */
 
+.featured-story{
+
+    text-align:center;
+
+}
+
+.featured-story .section-introduction{
+
+    margin-bottom:60px;
+
+}
+
 .story-card{
 
     display:grid;
 
     grid-template-columns:1.05fr .95fr;
 
-    gap:60px;
+    gap:70px;
 
     align-items:center;
-
-    margin-top:60px;
 
     background:var(--white);
 
     padding:55px;
 
-    border-radius:22px;
+    border-radius:24px;
 
     box-shadow:var(--shadow);
+
+    text-align:left;
+
+}
+
+.story-text{
+
+    position:relative;
+
+}
+
+.story-text::before{
+
+    content:"“";
+
+    position:absolute;
+
+    top:-35px;
+
+    left:-10px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:6rem;
+
+    color:rgba(200,164,93,.25);
+
+    line-height:1;
 
 }
 
 .story-text h3{
 
-    margin-bottom:24px;
+    margin-bottom:22px;
 
 }
 
-.story-text p{
+.story-text p:last-child{
 
-    color:#555;
+    margin-bottom:0;
 
 }
 
@@ -642,23 +679,17 @@ nav a.active::after{
 
     overflow:hidden;
 
-    border-radius:18px;
+    border-radius:var(--radius);
 
 }
 
 .story-image img{
 
+    width:100%;
+
     height:100%;
 
     object-fit:cover;
-
-    transition:var(--transition);
-
-}
-
-.story-card:hover img{
-
-    transform:scale(1.04);
 
 }
 
@@ -668,7 +699,13 @@ nav a.active::after{
 
 .before-after{
 
-    background:#fcfaf6;
+    text-align:center;
+
+}
+
+.before-after .section-introduction{
+
+    margin-bottom:60px;
 
 }
 
@@ -676,13 +713,11 @@ nav a.active::after{
 
     display:grid;
 
-    grid-template-columns:340px 1fr;
+    grid-template-columns:330px 1fr;
 
-    gap:80px;
+    gap:70px;
 
-    align-items:start;
-
-    margin-top:60px;
+    align-items:flex-start;
 
 }
 
@@ -692,6 +727,8 @@ nav a.active::after{
 
     top:120px;
 
+    text-align:left;
+
 }
 
 .comparison-text h3{
@@ -700,9 +737,9 @@ nav a.active::after{
 
 }
 
-.comparison-text p{
+.comparison-text p:last-child{
 
-    color:#555;
+    margin-bottom:0;
 
 }
 
@@ -710,11 +747,9 @@ nav a.active::after{
 
     display:grid;
 
-    grid-template-columns:repeat(2,minmax(320px,1fr));
+    grid-template-columns:repeat(2,1fr);
 
-    gap:40px;
-
-    align-items:start;
+    gap:35px;
 
 }
 
@@ -722,15 +757,13 @@ nav a.active::after{
 
     background:var(--white);
 
-    border-radius:20px;
+    border-radius:22px;
 
-    padding-bottom:25px;
+    overflow:hidden;
 
     box-shadow:var(--shadow);
 
     transition:var(--transition);
-
-    overflow:visible;
 
 }
 
@@ -741,46 +774,6 @@ nav a.active::after{
     box-shadow:var(--shadow-hover);
 
 }
-
-.comparison-card h3{
-
-    text-align:center;
-
-    padding:28px 20px 18px;
-
-}
-
-.comparison-card img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-    object-fit:contain;
-
-    border-radius:0;
-
-}
-
-.comparison-card figcaption{
-
-    padding:24px;
-
-    font-size:.95rem;
-
-    color:#666;
-
-    text-align:center;
-
-    line-height:1.7;
-
-}
-
-/* ==========================================
-   IMAGE LABEL
-========================================== */
 
 .comparison-card:first-child{
 
@@ -794,8 +787,55 @@ nav a.active::after{
 
 }
 
+.comparison-card h3{
+
+    padding:28px 20px 20px;
+
+    text-align:center;
+
+    margin-bottom:0;
+
+}
+
+.comparison-card img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+.comparison-card figcaption{
+
+    padding:24px;
+
+    color:var(--text);
+
+    font-size:.96rem;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
 /* ==========================================
-   SECTION HEADINGS
+   SHARED IMAGE FRAMES
+========================================== */
+
+.comparison-card img,
+.story-image img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ==========================================
+   SHARED SECTION TITLES
 ========================================== */
 
 .featured-story h2,
@@ -809,35 +849,6 @@ nav a.active::after{
 .before-after .section-label{
 
     text-align:center;
-
-}
-
-.featured-story .section-introduction,
-.before-after .section-introduction{
-
-    margin-bottom:0;
-
-}
-
-/* ==========================================
-   STORY QUOTE
-========================================== */
-
-.story-text::before{
-
-    content:"“";
-
-    display:block;
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:5rem;
-
-    color:rgba(200,164,93,.35);
-
-    line-height:.8;
-
-    margin-bottom:10px;
 
 }
 
@@ -855,19 +866,6 @@ nav a.active::after{
 }
 
 /* ==========================================
-   IMAGE SHADOWS
-========================================== */
-
-.comparison-card img,
-.story-image img{
-
-    display:block;
-
-    width:100%;
-
-}
-
-/* ==========================================
    END OF PART 2
 ========================================== */
 
@@ -875,7 +873,131 @@ nav a.active::after{
    TRUEPORTRAIT REVIVAL
    GALLERY PAGE STYLESHEET
    PART 3
+   CUSTOM PORTRAITS
+   LEGACY FEATURE
+   SERVICES
+   QUALITY PROMISE
 ========================================== */
+
+/* ==========================================
+   CUSTOM PORTRAIT DESIGN
+========================================== */
+
+.custom-composite{
+
+    text-align:center;
+
+}
+
+.custom-comparison{
+
+    display:grid;
+
+    grid-template-columns:380px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-top:60px;
+
+}
+
+.before-side,
+.after-side{
+
+    background:var(--ivory);
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.before-side:hover,
+.after-side:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.before-side h3,
+.after-side h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.before-images{
+
+    display:grid;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.before-images img{
+
+    width:100%;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.before-images img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.final-image{
+
+    width:100%;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+
+    transition:var(--transition);
+
+}
+
+.final-image:hover{
+
+    transform:scale(1.02);
+
+}
+
+.before-side p,
+.after-side p{
+
+    color:var(--text);
+
+    margin-bottom:0;
+
+}
+
+.after-side .button{
+
+    margin-top:30px;
+
+}
 
 /* ==========================================
    LEGACY FEATURE
@@ -899,43 +1021,23 @@ nav a.active::after{
 
 }
 
-.legacy-image img{
-
-    width:100%;
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
-}
-
-.legacy-image:hover img{
-
-    transform:scale(1.03);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
 .legacy-image::after{
 
     content:"";
 
     position:absolute;
 
-    top:20px;
+    top:18px;
 
-    left:20px;
+    left:18px;
 
     width:100%;
 
     height:100%;
 
-    border:2px solid rgba(200,164,93,.45);
+    border:2px solid rgba(200,164,93,.35);
 
-    border-radius:20px;
+    border-radius:var(--radius);
 
     z-index:-1;
 
@@ -943,7 +1045,7 @@ nav a.active::after{
 
 .legacy-content p{
 
-    color:#555;
+    color:var(--text);
 
 }
 
@@ -956,6 +1058,12 @@ nav a.active::after{
 /* ==========================================
    SERVICES
 ========================================== */
+
+.services-showcase{
+
+    text-align:center;
+
+}
 
 .services-grid{
 
@@ -975,9 +1083,7 @@ nav a.active::after{
 
     padding:45px 35px;
 
-    border-radius:20px;
-
-    text-align:center;
+    border-radius:22px;
 
     box-shadow:var(--shadow);
 
@@ -1007,11 +1113,11 @@ nav a.active::after{
 
     justify-content:center;
 
-    font-size:2.3rem;
+    border-radius:50%;
 
     background:rgba(200,164,93,.12);
 
-    border-radius:50%;
+    font-size:2.2rem;
 
 }
 
@@ -1023,7 +1129,7 @@ nav a.active::after{
 
 .service-card p{
 
-    color:#555;
+    color:var(--text);
 
     margin-bottom:0;
 
@@ -1032,6 +1138,12 @@ nav a.active::after{
 /* ==========================================
    QUALITY PROMISE
 ========================================== */
+
+.quality-promise{
+
+    text-align:center;
+
+}
 
 .promise-grid{
 
@@ -1055,6 +1167,8 @@ nav a.active::after{
 
     border-left:6px solid var(--gold);
 
+    text-align:left;
+
     transition:var(--transition);
 
 }
@@ -1077,13 +1191,56 @@ nav a.active::after{
 
     margin-bottom:0;
 
-    color:#555;
+    color:var(--text);
 
 }
 
 /* ==========================================
-   COLLECTIONS
+   SHARED SPACING
 ========================================== */
+
+.services-showcase .section-introduction,
+.quality-promise .section-introduction{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================
+   PERFORMANCE
+========================================== */
+
+.service-card,
+.promise-card,
+.before-side,
+.after-side{
+
+    will-change:transform;
+
+}
+
+/* ==========================================
+   END OF PART 3
+========================================== */
+
+/* ==========================================
+   TRUEPORTRAIT REVIVAL
+   GALLERY PAGE STYLESHEET
+   PART 4
+   COLLECTIONS • FOUNDER
+   CTA • FOOTER
+   RESPONSIVE
+========================================== */
+
+/* ==========================================
+   GALLERY COLLECTIONS
+========================================== */
+
+.gallery-collections{
+
+    text-align:center;
+
+}
 
 .collections-grid{
 
@@ -1101,15 +1258,13 @@ nav a.active::after{
 
     background:var(--white);
 
-    border-radius:18px;
+    border-radius:22px;
 
     overflow:hidden;
 
     box-shadow:var(--shadow);
 
     transition:var(--transition);
-
-    color:inherit;
 
 }
 
@@ -1123,9 +1278,7 @@ nav a.active::after{
 
 .collection-card img{
 
-    width:100%;
-
-    aspect-ratio:1/1;
+    height:260px;
 
     object-fit:cover;
 
@@ -1135,13 +1288,15 @@ nav a.active::after{
 
 .collection-card:hover img{
 
-    transform:scale(1.06);
+    transform:scale(1.05);
 
 }
 
 .collection-content{
 
     padding:28px;
+
+    text-align:left;
 
 }
 
@@ -1153,126 +1308,29 @@ nav a.active::after{
 
 .collection-content p{
 
-    color:#555;
-
-    margin-bottom:0;
-
-    font-size:.96rem;
-
-}
-
-/* ==========================================
-   SHARED SECTION ALIGNMENT
-========================================== */
-
-.services-showcase,
-.quality-promise,
-.gallery-collections{
-
-    text-align:center;
-
-}
-
-.services-showcase .section-introduction,
-.quality-promise .section-introduction,
-.gallery-collections .section-introduction{
-
     margin-bottom:0;
 
 }
 
 /* ==========================================
-   CARD ANIMATIONS
-========================================== */
-
-.service-card,
-.promise-card,
-.collection-card{
-
-    will-change:transform;
-
-}
-
-/* ==========================================
-   END OF PART 3
-========================================== */
-
-/* ==========================================
-   TRUEPORTRAIT REVIVAL
-   GALLERY PAGE STYLESHEET
-   PART 4
-   FOUNDER • CTA • FOOTER • RESPONSIVE
-========================================== */
-
-/* ==========================================
-   FOUNDER INVITATION
+   FOUNDER
 ========================================== */
 
 .founder-grid{
 
     display:grid;
 
-    grid-template-columns:1fr 1.1fr;
+    grid-template-columns:380px 1fr;
 
-    gap:80px;
+    gap:70px;
 
     align-items:center;
 
 }
 
-.founder-image{
-
-    position:relative;
-
-    max-width:480px;
-
-}
-
 .founder-image img{
 
-    width:100%;
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
-}
-
-.founder-image:hover img{
-
-    transform:scale(1.03);
-
-    box-shadow:var(--shadow-hover);
-
-}
-
-.founder-image::after{
-
-    content:"";
-
-    position:absolute;
-
-    top:20px;
-
-    left:20px;
-
-    width:100%;
-
-    height:100%;
-
-    border:2px solid rgba(200,164,93,.45);
-
-    border-radius:20px;
-
-    z-index:-1;
-
-}
-
-.founder-content p{
-
-    color:#555;
+    border-radius:24px;
 
 }
 
@@ -1282,15 +1340,15 @@ nav a.active::after{
 
     padding-top:25px;
 
-    border-top:1px solid rgba(0,0,0,.12);
+    border-top:1px solid var(--border);
 
 }
 
 .signature h3{
 
-    margin-bottom:8px;
-
     color:var(--gold);
+
+    margin-bottom:8px;
 
 }
 
@@ -1298,12 +1356,10 @@ nav a.active::after{
 
     margin-bottom:0;
 
-    color:#666;
-
 }
 
 /* ==========================================
-   CTA
+   CALL TO ACTION
 ========================================== */
 
 .gallery-cta{
@@ -1312,21 +1368,11 @@ nav a.active::after{
 
 }
 
-.gallery-cta h2{
-
-    max-width:700px;
-
-    margin:0 auto 25px;
-
-}
-
 .gallery-cta p{
 
     max-width:760px;
 
-    margin:0 auto 40px;
-
-    color:#555;
+    margin:0 auto 25px;
 
 }
 
@@ -1336,11 +1382,11 @@ nav a.active::after{
 
     justify-content:center;
 
-    align-items:center;
-
     gap:20px;
 
     flex-wrap:wrap;
+
+    margin-top:45px;
 
 }
 
@@ -1352,9 +1398,9 @@ nav a.active::after{
 
     background:var(--navy);
 
-    color:rgba(255,255,255,.82);
+    color:rgba(255,255,255,.85);
 
-    padding:80px 0 30px;
+    padding:90px 0 40px;
 
 }
 
@@ -1362,34 +1408,37 @@ nav a.active::after{
 
     display:grid;
 
-    grid-template-columns:2fr 1fr 1fr 1.3fr;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
 
-    gap:45px;
+    gap:50px;
 
 }
 
-.footer-brand h3,
+.footer-brand h3{
+
+    color:var(--gold);
+
+    margin-bottom:18px;
+
+}
+
 .footer-column h4{
 
     color:var(--gold);
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
-}
-
-.footer-column{
-
-    display:flex;
-
-    flex-direction:column;
+    font-size:1.1rem;
 
 }
 
 .footer-column a{
 
-    color:rgba(255,255,255,.82);
+    display:block;
 
     margin-bottom:12px;
+
+    color:rgba(255,255,255,.82);
 
     transition:var(--transition);
 
@@ -1399,7 +1448,14 @@ nav a.active::after{
 
     color:var(--gold);
 
-    padding-left:6px;
+    padding-left:8px;
+
+}
+
+.footer-brand p,
+.footer-column p{
+
+    color:rgba(255,255,255,.75);
 
 }
 
@@ -1407,9 +1463,11 @@ nav a.active::after{
 
     border:none;
 
-    border-top:1px solid rgba(255,255,255,.15);
+    height:1px;
 
-    margin:50px 0 25px;
+    background:rgba(255,255,255,.12);
+
+    margin:55px 0 30px;
 
 }
 
@@ -1419,11 +1477,19 @@ nav a.active::after{
 
     justify-content:space-between;
 
-    gap:20px;
+    align-items:center;
 
     flex-wrap:wrap;
 
-    font-size:.95rem;
+    gap:15px;
+
+}
+
+.footer-bottom p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.65);
 
 }
 
@@ -1433,15 +1499,31 @@ nav a.active::after{
 
 @media (max-width:1100px){
 
+    h1{
+
+        font-size:3.2rem;
+
+    }
+
+    h2{
+
+        font-size:2.4rem;
+
+    }
+
     .philosophy-grid,
     .story-card,
     .legacy-grid,
     .founder-grid,
-    .comparison-showcase{
+    .custom-comparison{
 
         grid-template-columns:1fr;
 
-        gap:50px;
+    }
+
+    .comparison-showcase{
+
+        grid-template-columns:1fr;
 
     }
 
@@ -1451,15 +1533,15 @@ nav a.active::after{
 
     }
 
-    .collections-grid{
+    .services-grid{
 
         grid-template-columns:repeat(2,1fr);
 
     }
 
-    .services-grid{
+    .collections-grid{
 
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
 
     }
 
@@ -1472,111 +1554,20 @@ nav a.active::after{
 }
 
 /* ==========================================
-   MOBILE NAVIGATION
-========================================== */
-
-@media (max-width:768px){
-
-    .gallery-hero{
-
-        min-height:75vh;
-
-        background-position:center;
-
-    }
-
-    .hero-overlay{
-
-        padding:135px 25px 70px;
-
-    }
-
-    .hero-content{
-
-        max-width:100%;
-
-    }
-
-    .hero-text{
-
-        max-width:100%;
-
-    }
-    
-    .menu-toggle{
-
-    display:block;
-
-    z-index:1001;
-
-}
-
-nav{
-
-    position:absolute;
-
-    top:100%;
-    left:0;
-
-    width:100%;
-
-    background:var(--navy);
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:0;
-
-    overflow:hidden;
-
-    max-height:0;
-
-    transition:.4s ease;
-
-}
-
-nav.open{
-
-    max-height:600px;
-
-    padding:20px 0;
-
-}
-
-nav a{
-
-    width:100%;
-
-    text-align:center;
-
-    padding:18px;
-
-}
-
-nav a::after{
-
-    display:none;
-
-}
-
-}
-
-/* ==========================================
-   MOBILE LAYOUT
+   MOBILE
 ========================================== */
 
 @media (max-width:768px){
 
     section{
 
-        padding:90px 0;
+        padding:80px 0;
 
     }
 
     h1{
 
-        font-size:2.8rem;
+        font-size:2.6rem;
 
     }
 
@@ -1586,9 +1577,51 @@ nav a::after{
 
     }
 
-    .hero-overlay{
+    .navbar{
 
-        padding:160px 20px 90px;
+        flex-wrap:wrap;
+
+        padding:20px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    nav{
+
+        display:none;
+
+        width:100%;
+
+        flex-direction:column;
+
+        gap:0;
+
+        margin-top:20px;
+
+        background:var(--navy);
+
+        border-radius:16px;
+
+        overflow:hidden;
+
+    }
+
+    nav.open{
+
+        display:flex;
+
+    }
+
+    nav a{
+
+        padding:16px 20px;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
 
     }
 
@@ -1598,29 +1631,11 @@ nav a::after{
 
     }
 
-    .promise-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
+    .services-grid,
+    .promise-grid,
     .collections-grid{
 
         grid-template-columns:1fr;
-
-    }
-
-    .cta-buttons{
-
-        flex-direction:column;
-
-    }
-
-    .button{
-
-        width:100%;
-
-        max-width:320px;
 
     }
 
@@ -1632,9 +1647,11 @@ nav a::after{
 
     }
 
-    .footer-column a:hover{
+    .footer-bottom{
 
-        padding-left:0;
+        flex-direction:column;
+
+        text-align:center;
 
     }
 
@@ -1644,17 +1661,11 @@ nav a::after{
    SMALL PHONES
 ========================================== */
 
-@media (max-width:576px){
-
-    .container{
-
-        width:92%;
-
-    }
+@media (max-width:480px){
 
     h1{
 
-        font-size:2.2rem;
+        font-size:2.1rem;
 
     }
 
@@ -1664,23 +1675,25 @@ nav a::after{
 
     }
 
-  .story-card{
+    .button{
 
-    padding:30px;
+        width:100%;
 
-}
+    }
 
-.service-card,
-.promise-card,
-.collection-card{
+    .cta-buttons{
 
-    padding:30px;
+        flex-direction:column;
 
-}
+    }
 
-    .collection-content{
+    .before-side,
+    .after-side,
+    .story-card,
+    .service-card,
+    .promise-card{
 
-        padding:22px;
+        padding:28px;
 
     }
 
@@ -1696,7 +1709,7 @@ nav a::after{
 
         opacity:0;
 
-        transform:translateY(40px);
+        transform:translateY(35px);
 
     }
 
@@ -1714,6 +1727,7 @@ nav a::after{
 .gallery-philosophy,
 .featured-story,
 .before-after,
+.custom-composite,
 .legacy-feature,
 .services-showcase,
 .quality-promise,
@@ -1721,19 +1735,7 @@ nav a::after{
 .founder-invitation,
 .gallery-cta{
 
-    animation:fadeUp .9s ease both;
-
-}
-
-/* ==========================================
-   SELECTION
-========================================== */
-
-::selection{
-
-    background:var(--gold);
-
-    color:var(--white);
+    animation:fadeUp .8s ease both;
 
 }
 
@@ -1743,7 +1745,7 @@ nav a::after{
 
 ::-webkit-scrollbar{
 
-    width:12px;
+    width:10px;
 
 }
 
@@ -1757,13 +1759,13 @@ nav a::after{
 
     background:var(--gold);
 
-    border-radius:30px;
+    border-radius:20px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:var(--navy);
+    background:#b68d45;
 
 }
 
@@ -1771,19 +1773,25 @@ nav a::after{
    ACCESSIBILITY
 ========================================== */
 
-a:focus-visible,
-button:focus-visible{
+a:focus,
+button:focus{
 
     outline:3px solid var(--gold);
 
     outline-offset:4px;
 
-    border-radius:8px;
+}
+
+::selection{
+
+    background:var(--gold);
+
+    color:var(--white);
 
 }
 
 /* ==========================================
-   UTILITIES
+   UTILITY CLASSES
 ========================================== */
 
 .text-center{
@@ -1792,152 +1800,30 @@ button:focus-visible{
 
 }
 
-.mt-2{
+.mt-0{
 
-    margin-top:2rem;
-
-}
-
-.mt-3{
-
-    margin-top:3rem;
+    margin-top:0;
 
 }
 
-.mb-2{
+.mb-0{
 
-    margin-bottom:2rem;
-
-}
-
-.mb-3{
-
-    margin-bottom:3rem;
+    margin-bottom:0;
 
 }
 
-.philosophy-image,
-.legacy-image,
-.founder-image{
+.shadow{
 
-    margin:auto;
+    box-shadow:var(--shadow);
+
+}
+
+.rounded{
+
+    border-radius:var(--radius);
 
 }
 
 /* ==========================================
-   CUSTOM PORTRAIT COMPARISON
-========================================== */
-
-.custom-composite{
-
-    background:var(--white);
-
-}
-
-.comparison-showcase{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    margin-top:60px;
-
-    align-items:start;
-
-}
-
-.comparison-side{
-
-    background:var(--ivory);
-
-    padding:35px;
-
-    border-radius:22px;
-
-    box-shadow:var(--shadow);
-
-    text-align:center;
-
-}
-
-.comparison-side h3{
-
-    margin-bottom:25px;
-
-    color:var(--navy);
-
-}
-
-.reference-photos{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:18px;
-
-    margin-bottom:25px;
-
-}
-
-.reference-photos img{
-
-    width:100%;
-
-    border-radius:14px;
-
-    display:block;
-
-    box-shadow:var(--shadow);
-
-}
-
-.finished-portrait img{
-
-    width:100%;
-
-    border-radius:20px;
-
-    display:block;
-
-    box-shadow:var(--shadow);
-
-}
-
-.comparison-description{
-
-    margin:30px 0;
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-
-.comparison-side .button{
-
-    margin-top:10px;
-
-}
-
-@media(max-width:900px){
-
-    .comparison-showcase{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .reference-photos{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-/* ==========================================
-   END OF GALLERY PAGE STYLESHEET
+   END OF GALLERY STYLESHEET
 ========================================== */
