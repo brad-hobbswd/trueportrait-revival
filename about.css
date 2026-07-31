@@ -1227,6 +1227,14 @@ nav a:hover{
         padding:20px 6%;
 
     }
+    
+    .navbar.scrolled{
+
+    background:rgba(16,27,43,.96);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+
+}
 
     .logo{
 
