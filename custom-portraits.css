@@ -1,0 +1,2277 @@
+/*==================================================
+TRUEPORTRAIT REVIVAL
+CUSTOM PORTRAITS STYLESHEET
+Part 1
+==================================================*/
+
+
+
+/*==================================================
+CSS VARIABLES
+==================================================*/
+
+:root{
+
+    --ivory:#f7f0e6;
+    --white:#ffffff;
+    --gold:#c8a45d;
+    --gold-light:#d9bb7c;
+    --gold-dark:#9e7d38;
+
+    --navy:#101b2b;
+    --charcoal:#222222;
+    --gray:#666666;
+    --light-gray:#f4f4f4;
+
+    --shadow-sm:
+    0 8px 25px rgba(0,0,0,.08);
+
+    --shadow:
+    0 20px 45px rgba(0,0,0,.12);
+
+    --shadow-lg:
+    0 35px 70px rgba(0,0,0,.18);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+
+    --container:1280px;
+
+}
+
+
+
+/*==================================================
+RESET
+==================================================*/
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    color:var(--charcoal);
+
+    background:var(--white);
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+
+
+/*==================================================
+TYPOGRAPHY
+==================================================*/
+
+h1,
+h2,
+h3{
+
+    font-family:"Cinzel",serif;
+
+    color:var(--navy);
+
+    line-height:1.2;
+
+    font-weight:600;
+
+}
+
+h1{
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    margin-bottom:30px;
+
+}
+
+h2{
+
+    font-size:clamp(2.2rem,4vw,3.4rem);
+
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    font-size:1.06rem;
+
+    margin-bottom:20px;
+
+}
+
+.section-label{
+
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    font-size:.82rem;
+
+    margin-bottom:20px;
+
+}
+
+.section-introduction{
+
+    max-width:860px;
+
+    margin:0 auto;
+
+    font-size:1.12rem;
+
+}
+
+
+
+/*==================================================
+LAYOUT
+==================================================*/
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin-inline:auto;
+
+}
+
+.narrow{
+
+    max-width:900px;
+
+    text-align:center;
+
+}
+
+section{
+
+    padding:110px 0;
+
+}
+
+
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 36px;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    border-radius:100px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.button:hover{
+
+    background:var(--gold-dark);
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.button-secondary{
+
+    background:transparent;
+
+    border:2px solid rgba(255,255,255,.8);
+
+    color:var(--white);
+
+}
+
+.button-secondary:hover{
+
+    background:var(--white);
+
+    color:var(--navy);
+
+}
+
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 6%;
+
+    background:rgba(16,27,43,.94);
+
+    backdrop-filter:blur(16px);
+
+    transition:.4s;
+
+}
+
+.logo{
+
+    font-family:"Cinzel",serif;
+
+    font-size:1.55rem;
+
+    color:var(--gold);
+
+    letter-spacing:1px;
+
+    font-weight:700;
+
+}
+
+#primary-navigation{
+
+    display:flex;
+
+    gap:34px;
+
+    align-items:center;
+
+}
+
+#primary-navigation a{
+
+    color:var(--white);
+
+    font-size:.97rem;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+#primary-navigation a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.35s;
+
+}
+
+#primary-navigation a:hover::after,
+
+#primary-navigation a.active::after{
+
+    width:100%;
+
+}
+
+#primary-navigation a.active{
+
+    color:var(--gold);
+
+}
+
+
+
+/*==================================================
+MOBILE MENU BUTTON
+==================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:var(--white);
+
+    border-radius:10px;
+
+}
+
+
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(rgba(16,27,43,.72),
+    rgba(16,27,43,.72)),
+
+    url("custom-hero.jpg") center/cover;
+
+}
+
+.hero-overlay{
+
+    width:100%;
+
+    padding-top:130px;
+
+    padding-bottom:90px;
+
+}
+
+.hero-content{
+
+    max-width:860px;
+
+    color:var(--white);
+
+}
+
+.hero h1{
+
+    color:var(--white);
+
+}
+
+.hero p{
+
+    color:rgba(255,255,255,.90);
+
+    font-size:1.15rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+
+
+/*==================================================
+INTRODUCTION
+==================================================*/
+
+.introduction{
+
+    background:var(--white);
+
+}
+
+.introduction p{
+
+    max-width:850px;
+
+    margin-inline:auto;
+
+}
+
+
+
+/*==================================================
+POSSIBILITIES
+==================================================*/
+
+.possibilities{
+
+    background:var(--ivory);
+
+}
+
+.possibilities-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.possibilities article{
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.possibilities article:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.possibilities h3{
+
+    margin-bottom:15px;
+
+}
+
+/*==================================================
+CUSTOM COMPOSITE
+==================================================*/
+
+.custom-composite{
+
+    background:var(--white);
+
+}
+
+.custom-comparison{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-top:70px;
+
+}
+
+.before-side,
+.after-side{
+
+    background:var(--ivory);
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.before-side:hover,
+.after-side:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.before-side h3,
+.after-side h3{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/*==================================================
+REFERENCE PHOTOS
+==================================================*/
+
+.before-images{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:30px;
+
+}
+
+.before-images img{
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:5px solid var(--white);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.before-images img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+/*==================================================
+FINAL PORTRAIT
+==================================================*/
+
+.final-image{
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    margin-bottom:30px;
+
+    border:8px solid var(--white);
+
+    box-shadow:var(--shadow);
+
+    transition:.45s;
+
+}
+
+.final-image:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+
+/*==================================================
+CUSTOM COMPOSITE BUTTON
+==================================================*/
+
+.after-side .button{
+
+    margin-top:25px;
+
+}
+
+
+
+/*==================================================
+COLLECTION SHOWCASE
+==================================================*/
+
+.collection-showcase{
+
+    background:linear-gradient(
+
+    180deg,
+
+    var(--ivory),
+
+    var(--white)
+
+    );
+
+    text-align:center;
+
+}
+
+.collection-showcase .section-introduction{
+
+    margin-bottom:55px;
+
+}
+
+.invitation-image{
+
+    width:min(100%,900px);
+
+    margin:0 auto;
+
+    border-radius:24px;
+
+    border:10px solid var(--white);
+
+    box-shadow:var(--shadow-lg);
+
+    transition:.4s;
+
+}
+
+.invitation-image:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.finished-caption{
+
+    max-width:850px;
+
+    margin:45px auto 0;
+
+    font-size:1.08rem;
+
+}
+
+
+
+/*==================================================
+PORTRAIT SERVICES
+==================================================*/
+
+.portrait-services{
+
+    background:var(--white);
+
+}
+
+.services-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.service-card{
+
+    background:var(--ivory);
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow-sm);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--gold);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.service-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.service-card p{
+
+    margin-bottom:0;
+
+}
+
+
+
+/*==================================================
+SECTION DIVIDERS
+==================================================*/
+
+.custom-composite::after,
+.collection-showcase::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:90px auto 0;
+
+}
+
+
+
+/*==================================================
+IMAGE ANIMATIONS
+==================================================*/
+
+.before-images img,
+.final-image,
+.invitation-image{
+
+    transition:
+
+    transform .45s ease,
+
+    box-shadow .45s ease;
+
+}
+
+
+
+/*==================================================
+SOFT FADE ANIMATION
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.before-side,
+.after-side,
+.service-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+.custom-comparison{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.before-images{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.before-side,
+.after-side{
+
+padding:30px;
+
+}
+
+.before-images{
+
+gap:12px;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.finished-caption{
+
+font-size:1rem;
+
+}
+
+}
+
+
+
+@media(max-width:560px){
+
+.before-images{
+
+grid-template-columns:1fr;
+
+}
+
+.before-images img{
+
+max-width:320px;
+
+margin:auto;
+
+}
+
+}
+
+/*==================================================
+IMAGINE THE POSSIBILITIES
+==================================================*/
+
+.possibilities-story{
+
+    background:var(--ivory);
+
+}
+
+.story-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.story-card{
+
+    position:relative;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow-sm);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+}
+
+.story-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+    90deg,
+    var(--gold),
+    var(--gold-light)
+    );
+
+}
+
+.story-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.story-card h3{
+
+    margin-bottom:20px;
+
+    color:var(--navy);
+
+}
+
+.story-card p{
+
+    margin-bottom:0;
+
+}
+
+
+
+/*==================================================
+WHY CHOOSE CUSTOM PORTRAITS
+==================================================*/
+
+.why-custom{
+
+    background:var(--white);
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr
+    1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.why-image{
+
+    position:relative;
+
+}
+
+.why-image img{
+
+    border-radius:28px;
+
+    border:10px solid var(--white);
+
+    box-shadow:var(--shadow-lg);
+
+    transition:.45s;
+
+}
+
+.why-image img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.why-content h2{
+
+    margin-bottom:30px;
+
+}
+
+.why-content p{
+
+    margin-bottom:24px;
+
+}
+
+
+
+/*==================================================
+IMAGE FRAME
+==================================================*/
+
+.why-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:-18px;
+
+    width:100%;
+
+    height:100%;
+
+    border:2px solid var(--gold);
+
+    border-radius:28px;
+
+    z-index:-1;
+
+}
+
+
+
+/*==================================================
+SECTION HEADINGS
+==================================================*/
+
+.possibilities-story h2,
+.why-custom h2{
+
+    max-width:900px;
+
+}
+
+.section-introduction{
+
+    margin-bottom:60px;
+
+}
+
+
+
+/*==================================================
+TEXT EMPHASIS
+==================================================*/
+
+.story-card strong,
+.why-content strong{
+
+    color:var(--gold-dark);
+
+    font-weight:600;
+
+}
+
+
+
+/*==================================================
+HOVER GLOW
+==================================================*/
+
+.story-card:hover::before{
+
+    height:100%;
+
+    opacity:.04;
+
+    transition:.45s;
+
+}
+
+
+
+/*==================================================
+DECORATIVE GOLD DIVIDER
+==================================================*/
+
+.possibilities-story::after,
+.why-custom::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:90px auto 0;
+
+    background:var(--gold);
+
+}
+
+
+
+/*==================================================
+FADE ANIMATION
+==================================================*/
+
+.story-card,
+.why-image,
+.why-content{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.why-content{
+
+text-align:center;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.story-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.story-card{
+
+padding:35px;
+
+}
+
+.why-image img{
+
+border-width:6px;
+
+}
+
+}
+
+
+
+@media(max-width:560px){
+
+.story-card{
+
+padding:28px;
+
+}
+
+.story-card h3{
+
+font-size:1.3rem;
+
+}
+
+.why-grid{
+
+gap:40px;
+
+}
+
+}
+
+/*==================================================
+DESIGN PROCESS
+==================================================*/
+
+.design-process{
+
+    background:var(--ivory);
+
+}
+
+.process-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:35px;
+
+}
+
+.process-grid article{
+
+    background:var(--white);
+
+    padding:45px 35px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.process-grid article:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.process-grid span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    font-family:"Cinzel",serif;
+
+}
+
+.process-grid h3{
+
+    margin-bottom:18px;
+
+}
+
+
+
+/*==================================================
+FAQ
+==================================================*/
+
+.faq{
+
+    background:var(--white);
+
+}
+
+.faq-list{
+
+    margin-top:60px;
+
+}
+
+.faq-list h3{
+
+    padding:28px 35px;
+
+    background:var(--ivory);
+
+    border-left:6px solid var(--gold);
+
+    border-radius:16px;
+
+    margin-top:30px;
+
+    transition:var(--transition);
+
+}
+
+.faq-list h3:hover{
+
+    background:#f3eadb;
+
+}
+
+.faq-list p{
+
+    padding:20px 35px 5px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+/*==================================================
+QUALITY PROMISE
+==================================================*/
+
+.quality-promise{
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--navy),
+    #1b304d
+    );
+
+    color:var(--white);
+
+    text-align:center;
+
+}
+
+.quality-promise h2{
+
+    color:var(--white);
+
+}
+
+.quality-promise p{
+
+    color:rgba(255,255,255,.88);
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.quality-promise .section-label{
+
+    color:var(--gold-light);
+
+}
+
+
+
+/*==================================================
+CALL TO ACTION
+==================================================*/
+
+.cta{
+
+    background:var(--ivory);
+
+    text-align:center;
+
+}
+
+.cta h2{
+
+    max-width:850px;
+
+    margin-inline:auto;
+
+}
+
+.cta p{
+
+    max-width:760px;
+
+    margin:25px auto 40px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    background:var(--navy);
+
+    color:rgba(255,255,255,.75);
+
+    padding:60px 0;
+
+}
+
+footer .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+footer p{
+
+    color:inherit;
+
+    margin:0;
+
+}
+
+footer nav{
+
+    display:flex;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+footer nav a{
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+footer nav a:hover{
+
+    color:var(--gold);
+
+}
+
+
+
+/*==================================================
+SECTION DIVIDERS
+==================================================*/
+
+.design-process::after,
+.faq::after,
+.quality-promise::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:90px auto 0;
+
+    background:var(--gold);
+
+}
+
+
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+.process-grid article,
+.faq-list h3,
+.cta,
+.quality-promise{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:992px){
+
+.process-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+footer .container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+}
+
+
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.process-grid article{
+
+padding:35px 28px;
+
+}
+
+.faq-list h3{
+
+padding:22px 24px;
+
+font-size:1.2rem;
+
+}
+
+.faq-list p{
+
+padding:18px 24px 5px;
+
+}
+
+.cta-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+footer nav{
+
+justify-content:center;
+
+}
+
+}
+
+
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media(max-width:480px){
+
+.process-grid span{
+
+width:60px;
+
+height:60px;
+
+font-size:1.15rem;
+
+}
+
+footer{
+
+padding:45px 0;
+
+}
+
+footer nav{
+
+gap:18px;
+
+font-size:.9rem;
+
+}
+
+}
+
+/*==================================================
+PART 5
+PREMIUM FINISHING TOUCHES
+==================================================*/
+
+
+
+/*==================================================
+SMOOTH SECTION REVEAL
+==================================================*/
+
+.hero,
+.introduction,
+.possibilities,
+.custom-composite,
+.collection-showcase,
+.portrait-services,
+.possibilities-story,
+.why-custom,
+.design-process,
+.faq,
+.quality-promise,
+.cta{
+
+    animation:fadeUp .9s ease;
+
+}
+
+
+
+/*==================================================
+IMAGE HOVER EFFECTS
+==================================================*/
+
+.before-images img,
+.final-image,
+.invitation-image,
+.why-image img{
+
+    will-change:transform;
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    filter .45s ease;
+
+}
+
+.before-images img:hover,
+.final-image:hover,
+.invitation-image:hover,
+.why-image img:hover{
+
+    transform:scale(1.03);
+
+    filter:brightness(1.02);
+
+}
+
+
+
+/*==================================================
+CARD POLISH
+==================================================*/
+
+.story-card,
+.service-card,
+.process-grid article,
+.before-side,
+.after-side{
+
+    overflow:hidden;
+
+}
+
+.story-card::after,
+.service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.08),
+
+    transparent
+
+    );
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.story-card:hover::after,
+.service-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+
+/*==================================================
+HEADINGS
+==================================================*/
+
+h1,
+h2{
+
+    text-wrap:balance;
+
+}
+
+h3{
+
+    text-wrap:pretty;
+
+}
+
+
+
+/*==================================================
+TEXT SELECTION
+==================================================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:var(--white);
+
+}
+
+
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--ivory);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold-dark);
+
+}
+
+
+
+/*==================================================
+FOCUS STATES
+==================================================*/
+
+a:focus-visible,
+button:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:4px;
+
+    border-radius:10px;
+
+}
+
+
+
+/*==================================================
+BUTTON IMPROVEMENTS
+==================================================*/
+
+.button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:120%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.25),
+
+    transparent
+
+    );
+
+    transition:.6s;
+
+}
+
+.button:hover::before{
+
+    left:120%;
+
+}
+
+
+
+/*==================================================
+PHOTO SHADOWS
+==================================================*/
+
+.before-images img,
+.final-image,
+.invitation-image{
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.12);
+
+}
+
+
+
+/*==================================================
+SPACING
+==================================================*/
+
+section:last-of-type{
+
+    margin-bottom:0;
+
+}
+
+.container>*:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+/*==================================================
+RESPONSIVE NAVIGATION
+==================================================*/
+
+@media(max-width:900px){
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+#primary-navigation{
+
+position:fixed;
+
+top:84px;
+
+right:-100%;
+
+width:300px;
+
+height:calc(100vh - 84px);
+
+background:var(--navy);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+padding:50px 35px;
+
+gap:28px;
+
+transition:.4s;
+
+box-shadow:-12px 0 30px rgba(0,0,0,.18);
+
+}
+
+#primary-navigation.active{
+
+right:0;
+
+}
+
+#primary-navigation a{
+
+font-size:1.05rem;
+
+}
+
+}
+
+
+
+/*==================================================
+TABLETS
+==================================================*/
+
+@media(max-width:992px){
+
+section{
+
+padding:90px 0;
+
+}
+
+.hero{
+
+min-height:90vh;
+
+}
+
+.hero-content{
+
+max-width:700px;
+
+}
+
+}
+
+
+
+/*==================================================
+PHONES
+==================================================*/
+
+@media(max-width:768px){
+
+section{
+
+padding:75px 0;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+h1{
+
+font-size:2.7rem;
+
+}
+
+h2{
+
+font-size:2rem;
+
+}
+
+p{
+
+font-size:1rem;
+
+}
+
+.section-label{
+
+letter-spacing:3px;
+
+}
+
+.button{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+}
+
+
+
+/*==================================================
+SMALL DEVICES
+==================================================*/
+
+@media(max-width:480px){
+
+.container{
+
+width:94%;
+
+}
+
+.logo{
+
+font-size:1.2rem;
+
+}
+
+.hero{
+
+min-height:80vh;
+
+}
+
+.hero-buttons{
+
+gap:15px;
+
+}
+
+.section-label{
+
+font-size:.75rem;
+
+}
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+h2{
+
+font-size:1.8rem;
+
+}
+
+}
+
+
+
+/*==================================================
+PRINT
+==================================================*/
+
+@media print{
+
+.navbar,
+.menu-toggle,
+.button,
+.cta,
+footer{
+
+display:none;
+
+}
+
+body{
+
+background:#fff;
+
+color:#000;
+
+}
+
+section{
+
+padding:30px 0;
+
+page-break-inside:avoid;
+
+}
+
+img{
+
+box-shadow:none;
+
+}
+
+}
+
+
+
+/*==================================================
+END OF STYLESHEET
+==================================================*/
