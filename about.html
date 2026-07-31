@@ -916,25 +916,7 @@ Preserving memories with integrity, craftsmanship, and gratitude.
 
 </footer>
 
-<script>
-
-document.querySelector(".year").textContent = new Date().getFullYear();
-
-const menuToggle = document.querySelector(".menu-toggle");
-
-const navigation = document.getElementById("primary-navigation");
-
-menuToggle.addEventListener("click", () => {
-
-const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-
-menuToggle.setAttribute("aria-expanded", !expanded);
-
-navigation.classList.toggle("open");
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
