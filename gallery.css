@@ -888,10 +888,18 @@ COLLECTION LAYOUT
 
 }
 
+.collections-center{
+
+    display:flex;
+    justify-content:center;
+    margin-top:35px;
+
+}
+
 .collections-center .collection-card{
 
-    width:100%;
-    max-width:700px;
+    width:calc((100% - 35px) / 2);
+    max-width:none;
 
 }
 
@@ -1165,7 +1173,7 @@ footer{
     }
 
     .services-grid,
-    .collections-grid{
+   .collections-row{
 
         gap:25px;
 
