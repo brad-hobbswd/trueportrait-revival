@@ -47,11 +47,12 @@ navLinks.forEach(link => {
 
 link.addEventListener("click", function(){
 
-if(navigation){
+if (navigation) {
+    navigation.classList.remove("active");
+}
 
-navigation.classList.remove("active");
-menuButton.classList.remove("open");
-
+if (menuButton) {
+    menuButton.classList.remove("open");
 }
 
 
@@ -213,36 +214,24 @@ year.textContent = new Date().getFullYear();
    CONTACT FORM MESSAGE
 ================================ */
 
-
 const form = document.querySelector("form");
-
 
 if(form){
 
+    form.addEventListener("submit", function(e){
 
-form.addEventListener("submit", function(e){
+        e.preventDefault();
 
+        alert(
+        "Thank you for contacting TruePortrait Revival. We will review your restoration request and respond soon."
+        );
 
-e.preventDefault();
+        form.reset();
 
-
-alert(
-"Thank you for contacting TruePortrait Revival. We will review your restoration request and respond soon."
-);
-
-
-form.reset();
-
-
-});
-
+    });
 
 }
 
-
-
-
-});
 
 /* ================================
    SECTION FADE-IN
@@ -250,7 +239,7 @@ form.reset();
 
 const animatedItems = document.querySelectorAll(
 
-".about-story, .philosophy, .generations, .promise, .value-card"
+".story, .founder, .creator-values, .why-it-matters, .faith-foundation, .restoration-process, .legacy, .personal-note, .about-gallery-preview, .cta-section, .value-card"
 
 );
 
@@ -258,21 +247,21 @@ const sectionObserver = new IntersectionObserver(
 
 (entries)=>{
 
-entries.forEach(entry=>{
+    entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+        if(entry.isIntersecting){
 
-entry.target.classList.add("visible");
+            entry.target.classList.add("visible");
 
-}
+        }
 
-});
+    });
 
 },
 
 {
 
-threshold:.15
+    threshold:.15
 
 }
 
@@ -280,6 +269,8 @@ threshold:.15
 
 animatedItems.forEach(item=>{
 
-sectionObserver.observe(item);
+    sectionObserver.observe(item);
+
+});
 
 });
