@@ -1238,44 +1238,62 @@ nav a:hover{
 
         display:block;
 
-        z-index:1001;
+        z-index:1002;
 
     }
 
     nav{
 
-        position:absolute;
+        position:fixed;
 
-        top:100%;
+        top:78px;
+
         left:0;
 
         width:100%;
 
-        background:var(--navy);
-
         display:flex;
+
         flex-direction:column;
+
         align-items:center;
 
         gap:0;
 
         padding:30px 0;
 
+        background:var(--navy);
+
         border-top:1px solid rgba(200,164,93,.25);
 
+        box-shadow:0 18px 40px rgba(0,0,0,.18);
+
         opacity:0;
+
         visibility:hidden;
+
+        pointer-events:none;
 
         transform:translateY(-15px);
 
-        transition:all .35s ease;
+        transition:
+
+            opacity .3s ease,
+
+            transform .3s ease,
+
+            visibility .3s;
 
     }
 
     nav.active{
 
         opacity:1;
+
         visibility:visible;
+
+        pointer-events:auto;
+
         transform:translateY(0);
 
     }
@@ -1283,8 +1301,11 @@ nav a:hover{
     nav a{
 
         width:100%;
-        text-align:center;
+
         padding:16px 0;
+
+        text-align:center;
+
         color:var(--white);
 
     }
