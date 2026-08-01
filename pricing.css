@@ -1261,7 +1261,21 @@ button:focus-visible{
 
     .services-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:35px;
+
+    }
+
+    .service-card{
+
+        flex:0 1 calc(50% - 18px);
+
+        max-width:520px;
 
     }
 
@@ -1482,21 +1496,25 @@ nav a{
 
     }
     
-    .services-grid{
+   .services-grid{
 
-        grid-template-columns:1fr;
+    display:grid;
 
-        gap:25px;
+    grid-template-columns:1fr;
 
-    }
+    gap:25px;
 
-    .service-card{
+}
 
-        width:100%;
+.service-card{
 
-        min-width:0;
+    flex:none;
 
-    }
+    max-width:100%;
+
+    width:100%;
+
+}
 
 }
 
