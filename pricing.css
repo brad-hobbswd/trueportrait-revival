@@ -1481,28 +1481,20 @@ nav a{
         min-width:0;
 
     }
-
-}
-
-@media (max-width:768px){
-
+    
     .services-grid{
 
-        display:flex;
+        grid-template-columns:1fr;
 
-        overflow-x:auto;
-
-        gap:20px;
-
-        padding-bottom:10px;
+        gap:25px;
 
     }
 
     .service-card{
 
-        min-width:320px;
+        width:100%;
 
-        flex:0 0 320px;
+        min-width:0;
 
     }
 
