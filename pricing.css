@@ -541,7 +541,7 @@ nav a.active{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3, minmax(0,1fr));
 
     gap:35px;
 
@@ -1405,9 +1405,11 @@ nav a{
 
     .services-grid{
 
-        grid-template-columns:1fr;
+    grid-template-columns:repeat(3, minmax(0,1fr));
 
-    }
+    gap:20px;
+
+}
 
     .factor-grid{
 
@@ -1477,6 +1479,30 @@ nav a{
     .consultation-panel .button{
 
         min-width:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .services-grid{
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:20px;
+
+        padding-bottom:10px;
+
+    }
+
+    .service-card{
+
+        min-width:320px;
+
+        flex:0 0 320px;
 
     }
 
