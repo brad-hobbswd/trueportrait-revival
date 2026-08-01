@@ -29,7 +29,9 @@ TruePortrait Revival
 
 <button
 class="menu-toggle"
-aria-label="Open Navigation">
+aria-label="Open Navigation"
+aria-expanded="false"
+aria-controls="primary-navigation">
 
 <span></span>
 <span></span>
@@ -37,13 +39,22 @@ aria-label="Open Navigation">
 
 </button>
 
-<nav>
+<nav
+
+id="primary-navigation"
+
+aria-label="Primary Navigation">
 
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="ethics.html">Ethics</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="pricing.html" class="active">Pricing</a>
+
 <a href="contact.html">Contact</a>
 
 </nav>
