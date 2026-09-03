@@ -1527,3 +1527,68 @@ line-height:1.8;
     color:var(--gold);
 
 }
+
+/* ==========================================
+   INDEX CONTACT CARD
+========================================== */
+
+.contact{
+    background:var(--ivory);
+}
+
+.index-contact-card{
+    max-width:900px;
+    margin:0 auto;
+    padding:70px 64px;
+    background:#fffdf9;
+    border:1px solid rgba(200,164,93,.42);
+    border-radius:22px;
+    box-shadow:0 22px 55px rgba(16,27,43,.10);
+}
+
+.index-contact-card h2{
+    text-align:center;
+}
+
+.index-contact-card > p{
+    max-width:680px;
+    margin:0 auto 48px;
+    text-align:center;
+}
+
+.index-contact-card .contact-form{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.index-contact-card .contact-form label{
+    text-align:left;
+}
+
+.index-contact-card input,
+.index-contact-card textarea,
+.index-contact-card select{
+    width:100%;
+    box-sizing:border-box;
+    border-radius:10px;
+    background:#fff;
+}
+
+@media(max-width:768px){
+    .index-contact-card{
+        padding:46px 30px;
+        border-radius:18px;
+    }
+}
+
+@media(max-width:480px){
+    .contact{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .index-contact-card{
+        padding:34px 20px;
+        border-radius:14px;
+    }
+}
