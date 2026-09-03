@@ -421,6 +421,40 @@ nav a:hover{
 
 
 /* ==========================================
+   CONTACT CARD
+========================================== */
+
+.contact-card{
+
+    max-width:980px;
+
+    margin:0 auto;
+
+    padding:70px;
+
+    background:var(--white);
+
+    border:1px solid rgba(200,164,93,.38);
+
+    border-radius:22px;
+
+    box-shadow:0 22px 55px rgba(16,27,43,.10);
+
+}
+
+.contact-card h2{
+
+    text-align:center;
+
+}
+
+.contact-card .section-intro{
+
+    margin-bottom:50px;
+
+}
+
+/* ==========================================
    CONTACT FORM
 ========================================== */
 
@@ -1030,5 +1064,31 @@ textarea:focus-visible{
 ::-webkit-scrollbar-thumb:hover{
 
     background:var(--navy);
+
+}
+
+/* Keep the contact card comfortable on smaller screens */
+
+@media(max-width:768px){
+
+    .contact-card{
+
+        padding:42px 28px;
+
+        border-radius:18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .contact-card{
+
+        padding:32px 20px;
+
+        border-radius:14px;
+
+    }
 
 }
