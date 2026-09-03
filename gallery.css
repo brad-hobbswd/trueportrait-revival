@@ -1622,14 +1622,15 @@ footer{
 
 /* ==========================================
    FEATURED RESTORATION
-   CSS BEFORE & AFTER REVEAL
-   Uses the existing portrait only.
+   BEFORE & AFTER REVEAL
+   Labels are placed outside the photograph
 ========================================== */
 
 .story-image{
     position:relative;
     min-height:560px;
-    overflow:hidden;
+    margin-top:44px;
+    overflow:visible;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
     background:#eee8df;
@@ -1642,12 +1643,11 @@ footer{
     display:block;
     object-fit:cover;
     object-position:center;
-    border-radius:0;
+    border-radius:var(--radius);
     box-shadow:none;
 }
 
-/* BEFORE: the same existing portrait shown with an aged,
-   faded restoration-state treatment on the left. */
+/* BEFORE: the supplied original photograph on the left. */
 .story-image::before{
     content:"";
     position:absolute;
@@ -1662,28 +1662,21 @@ footer{
     pointer-events:none;
 }
 
+/* Keep BEFORE and AFTER near the image instead of over it. */
 .story-image::after{
-    content:"BEFORE                             AFTER";
+    content:"BEFORE                                      AFTER";
     position:absolute;
-    z-index:3;
-    inset:0;
+    z-index:4;
+    left:0;
+    right:0;
+    top:-36px;
     display:flex;
-    align-items:flex-start;
     justify-content:space-between;
-    padding:22px;
-    color:var(--white);
+    color:var(--navy);
     font-family:"Cinzel",serif;
     font-size:.72rem;
     font-weight:700;
     letter-spacing:2px;
-    text-shadow:0 2px 10px rgba(0,0,0,.5);
-    background:linear-gradient(
-        to right,
-        transparent calc(50% - 1px),
-        rgba(255,255,255,.95) calc(50% - 1px),
-        rgba(255,255,255,.95) calc(50% + 1px),
-        transparent calc(50% + 1px)
-    );
     pointer-events:none;
 }
 
@@ -1698,10 +1691,15 @@ footer{
         min-height:460px;
     }
 
+    .story-image{
+        margin-top:38px;
+    }
+
     .story-image::after{
-        padding:16px;
+        top:-30px;
         font-size:.62rem;
         letter-spacing:1.4px;
     }
 
 }
+
