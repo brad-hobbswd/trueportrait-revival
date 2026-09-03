@@ -1852,3 +1852,14 @@ footer{
     }
 
 }
+
+
+/* Additional full-image Before & After comparison */
+.additional-image-comparison{
+    padding-top:30px;
+}
+
+.additional-image-comparison .full-comparison-card img{
+    max-height:760px;
+    object-fit:contain;
+}
