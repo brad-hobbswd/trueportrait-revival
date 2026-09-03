@@ -1618,3 +1618,90 @@ footer{
         max-height:none;
     }
 }
+
+
+/* ==========================================
+   FEATURED RESTORATION
+   CSS BEFORE & AFTER REVEAL
+   Uses the existing portrait only.
+========================================== */
+
+.story-image{
+    position:relative;
+    min-height:560px;
+    overflow:hidden;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    background:#eee8df;
+}
+
+.story-image img{
+    width:100%;
+    height:100%;
+    min-height:560px;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+    border-radius:0;
+    box-shadow:none;
+}
+
+/* BEFORE: the same existing portrait shown with an aged,
+   faded restoration-state treatment on the left. */
+.story-image::before{
+    content:"";
+    position:absolute;
+    z-index:2;
+    inset:0 auto 0 0;
+    width:50%;
+    background:
+        linear-gradient(rgba(88,62,34,.12),rgba(88,62,34,.12)),
+        url("3B29FE6A-A1C8-49C3-8A5A-5E5B88E32581.png") center/cover no-repeat;
+    filter:sepia(.62) saturate(.48) contrast(.82) brightness(.88);
+    clip-path:inset(0 0 0 0 round var(--radius) 0 0 var(--radius));
+    pointer-events:none;
+}
+
+.story-image::after{
+    content:"BEFORE                             AFTER";
+    position:absolute;
+    z-index:3;
+    inset:0;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    padding:22px;
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
+    background:linear-gradient(
+        to right,
+        transparent calc(50% - 1px),
+        rgba(255,255,255,.95) calc(50% - 1px),
+        rgba(255,255,255,.95) calc(50% + 1px),
+        transparent calc(50% + 1px)
+    );
+    pointer-events:none;
+}
+
+@media(max-width:768px){
+
+    .story-card{
+        gap:35px;
+    }
+
+    .story-image,
+    .story-image img{
+        min-height:460px;
+    }
+
+    .story-image::after{
+        padding:16px;
+        font-size:.62rem;
+        letter-spacing:1.4px;
+    }
+
+}
