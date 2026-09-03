@@ -1400,3 +1400,104 @@ footer{
 
 
 }
+
+/* ==========================================
+   BEFORE & AFTER PAIRING
+   Present each restoration as one connected story
+========================================== */
+
+.comparison-images{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 110px minmax(0,1fr);
+    gap:24px;
+    align-items:center;
+}
+
+.comparison-card{
+    position:relative;
+    overflow:hidden;
+    padding:0 0 24px;
+    border:1px solid var(--border);
+}
+
+.comparison-label{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:2;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(16,27,43,.92);
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.after-card .comparison-label{
+    background:var(--gold);
+}
+
+.comparison-card img{
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 3;
+    object-fit:contain;
+    background:#eee8df;
+    margin:0;
+    border-radius:0;
+}
+
+.comparison-card figcaption{
+    padding:20px 24px 0;
+    margin:0;
+}
+
+.comparison-arrow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    color:var(--gold-dark);
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.comparison-arrow div{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--navy);
+    color:var(--gold);
+    font-family:"Inter",sans-serif;
+    font-size:2rem;
+    line-height:1;
+    box-shadow:0 12px 30px rgba(16,27,43,.18);
+}
+
+@media(max-width:992px){
+    .comparison-images{
+        grid-template-columns:1fr;
+        gap:24px;
+    }
+
+    .comparison-arrow{
+        flex-direction:row;
+        justify-content:center;
+        margin:0;
+    }
+
+    .comparison-arrow div{
+        transform:rotate(90deg);
+    }
+
+    .comparison-card img{
+        aspect-ratio:auto;
+        max-height:70vh;
+    }
+}
