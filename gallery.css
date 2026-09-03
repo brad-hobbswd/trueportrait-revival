@@ -1523,3 +1523,98 @@ footer{
         max-height:70vh;
     }
 }
+
+/* ==========================================
+   RESTORATION PORTFOLIO
+========================================== */
+
+.restoration-card{
+    position:relative;
+    overflow:hidden;
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.restoration-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 28px 60px rgba(16,27,43,.16);
+}
+
+.portfolio-image-wrap{
+    position:relative;
+    overflow:hidden;
+    background:#eee8df;
+}
+
+.restoration-card img{
+    width:100%;
+    height:auto;
+    max-height:520px;
+    display:block;
+    object-fit:contain;
+    background:#eee8df;
+}
+
+.portfolio-image-wrap .collection-label{
+    position:absolute;
+    top:18px;
+    left:18px;
+    z-index:2;
+    display:inline-block;
+    padding:9px 14px;
+    border-radius:999px;
+    background:rgba(16,27,43,.92);
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    font-size:.7rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.collection-content{
+    padding:32px;
+}
+
+.collection-content h3{
+    margin:0 0 14px;
+}
+
+.collection-content p{
+    margin:0;
+}
+
+.collection-button{
+    display:inline-block;
+    margin-top:22px;
+    padding-bottom:5px;
+    color:var(--navy);
+    font-family:"Cinzel",serif;
+    font-size:.78rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    border-bottom:2px solid var(--gold);
+    transition:color .25s ease, border-color .25s ease;
+}
+
+.collection-button:hover{
+    color:var(--gold-dark);
+    border-color:var(--gold-dark);
+}
+
+.collections-center .restoration-card{
+    max-width:820px;
+}
+
+@media(max-width:768px){
+    .collection-content{
+        padding:25px;
+    }
+
+    .restoration-card img{
+        max-height:none;
+    }
+}
