@@ -1706,3 +1706,93 @@ footer{
 
 }
 
+
+
+/* ==========================================
+   FULL IMAGE BEFORE & AFTER
+   Keep the complete photograph visible
+========================================== */
+
+.full-image-comparison{
+    padding:110px 0;
+}
+
+.full-image-comparison .section-introduction{
+    max-width:760px;
+    margin:0 auto 55px;
+}
+
+.full-comparison-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:38px;
+    align-items:start;
+}
+
+.full-comparison-card{
+    position:relative;
+    margin:34px 0 0;
+    overflow:visible;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.full-comparison-card img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#eee8df;
+    border-radius:var(--radius) var(--radius) 0 0;
+}
+
+.full-comparison-label{
+    position:absolute;
+    top:-20px;
+    left:22px;
+    z-index:2;
+    padding:9px 17px;
+    border-radius:999px;
+    background:var(--navy);
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 8px 20px rgba(16,27,43,.14);
+}
+
+.full-after-card .full-comparison-label{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.full-before-card img{
+    filter:sepia(.45) saturate(.62) contrast(.9) brightness(.9);
+}
+
+.full-comparison-card figcaption{
+    padding:24px 28px 28px;
+    text-align:center;
+    color:var(--text);
+}
+
+@media(max-width:768px){
+
+    .full-image-comparison{
+        padding:80px 0;
+    }
+
+    .full-comparison-grid{
+        grid-template-columns:1fr;
+        gap:48px;
+    }
+
+    .full-comparison-card{
+        margin-top:30px;
+    }
+
+}
