@@ -478,11 +478,67 @@ nav a.active::after{
 
 }
 
-.philosophy-image img{
+/* Philosophy Before & After comparison */
 
+.philosophy-comparison{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:stretch;
+}
+
+.philosophy-photo{
+    position:relative;
+    margin-top:32px;
+    overflow:visible;
+}
+
+.philosophy-photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#eee8df;
     border-radius:var(--radius);
-
     box-shadow:var(--shadow);
+}
+
+.philosophy-label{
+    position:absolute;
+    top:-18px;
+    left:18px;
+    z-index:2;
+    padding:8px 15px;
+    border-radius:999px;
+    background:var(--navy);
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    font-size:.68rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    box-shadow:0 8px 18px rgba(16,27,43,.14);
+}
+
+.philosophy-after .philosophy-label{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.philosophy-before img{
+    filter:sepia(.28) saturate(.78) contrast(.92) brightness(.92);
+}
+
+@media(max-width:768px){
+
+    .philosophy-comparison{
+        grid-template-columns:1fr;
+        gap:34px;
+    }
+
+    .philosophy-photo{
+        margin-top:28px;
+    }
 
 }
 
