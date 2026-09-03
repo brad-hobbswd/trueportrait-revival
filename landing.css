@@ -2490,3 +2490,58 @@ textarea:focus{
 /* ==========================================
    END OF LANDING PAGE STYLESHEET
 ========================================== */
+
+/* ==========================================
+   HOMEPAGE RESTORATION FORM CARD
+========================================== */
+
+.contact{
+    padding:90px 6%;
+    background:var(--ivory, #f7f0e6);
+}
+
+.index-contact-card{
+    width:100%;
+    max-width:980px;
+    margin:0 auto;
+    padding:64px;
+    box-sizing:border-box;
+    background:#fffdf9;
+    border:1px solid rgba(200,164,93,.50);
+    border-radius:24px;
+    box-shadow:0 20px 55px rgba(16,27,43,.12);
+}
+
+.index-contact-card h2{
+    margin-top:0;
+    text-align:center;
+}
+
+.index-contact-card > p{
+    max-width:700px;
+    margin:0 auto 44px;
+    text-align:center;
+}
+
+.index-contact-card .contact-form{
+    max-width:100%;
+    margin:0;
+}
+
+@media(max-width:768px){
+    .contact{
+        padding:60px 5%;
+    }
+
+    .index-contact-card{
+        padding:42px 26px;
+        border-radius:18px;
+    }
+}
+
+@media(max-width:480px){
+    .index-contact-card{
+        padding:32px 18px;
+        border-radius:14px;
+    }
+}
