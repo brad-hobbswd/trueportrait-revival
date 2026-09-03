@@ -535,29 +535,32 @@ nav a.active::after{
 .comparison-card{
     background:var(--white);
     border-radius:var(--radius);
-    overflow:hidden;
+    overflow:visible;
     box-shadow:var(--shadow);
     border:1px solid var(--border);
     position:relative;
+    margin-top:38px;
 }
 
 .comparison-label{
     position:absolute;
-    top:20px;
+    top:-20px;
     left:20px;
-    z-index:2;
-    padding:10px 18px;
+    z-index:3;
+    padding:9px 16px;
     border-radius:50px;
     background:var(--navy);
     color:var(--white);
     font-family:"Cinzel",serif;
     letter-spacing:2px;
-    font-size:.75rem;
+    font-size:.72rem;
     text-transform:uppercase;
+    box-shadow:0 8px 20px rgba(16,27,43,.14);
 }
 
 .after-card .comparison-label{
     background:var(--gold);
+    color:var(--navy);
 }
 
 .comparison-card img{
