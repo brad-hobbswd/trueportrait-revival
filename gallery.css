@@ -1656,7 +1656,7 @@ footer{
     width:50%;
     background:
         linear-gradient(rgba(88,62,34,.12),rgba(88,62,34,.12)),
-        url("3B29FE6A-A1C8-49C3-8A5A-5E5B88E32581.png") center/cover no-repeat;
+        url("IMG_0201.jpeg") center/cover no-repeat;
     filter:sepia(.62) saturate(.48) contrast(.82) brightness(.88);
     clip-path:inset(0 0 0 0 round var(--radius) 0 0 var(--radius));
     pointer-events:none;
