@@ -521,71 +521,93 @@ nav a.active::after{
 }
 
 /* ==========================================
-   BEFORE & AFTER
-========================================== */
-
-.before-after{
-
-    padding:110px 0;
-
-    background:var(--light);
-
-    text-align:center;
-
-}
-
-.comparison-showcase{
-
-    margin-top:60px;
-
-}
-
-.comparison-text{
-
-    max-width:760px;
-
-    margin:0 auto 50px;
-
-}
+   FAMILY RESTORATION BEFORE & AFTER
+   ========================================== */
 
 .comparison-images{
-
     display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:40px;
-
+    grid-template-columns:1fr auto 1fr;
+    gap:35px;
+    align-items:center;
+    margin-top:50px;
 }
 
 .comparison-card{
-
     background:var(--white);
-
     border-radius:var(--radius);
-
-    padding:24px;
-
+    overflow:hidden;
     box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    position:relative;
+}
 
+.comparison-label{
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:2;
+    padding:10px 18px;
+    border-radius:50px;
+    background:var(--navy);
+    color:var(--white);
+    font-family:"Cinzel",serif;
+    letter-spacing:2px;
+    font-size:.75rem;
+    text-transform:uppercase;
+}
+
+.after-card .comparison-label{
+    background:var(--gold);
 }
 
 .comparison-card img{
-
-    border-radius:14px;
-
-    margin-bottom:20px;
-
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#f1ebe2;
 }
 
 .comparison-card figcaption{
-
-    color:#777777;
-
-    font-size:.95rem;
-
+    padding:25px;
+    text-align:center;
+    color:var(--text);
 }
 
+.comparison-arrow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    color:var(--gold-dark);
+    font-family:"Cinzel",serif;
+    letter-spacing:2px;
+}
+
+.comparison-arrow div{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--navy);
+    color:var(--gold);
+    font-size:2rem;
+}
+
+
+@media(max-width:992px){
+
+    .comparison-images{
+        grid-template-columns:1fr;
+    }
+
+    .comparison-arrow{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+}
 /* ==========================================
    CUSTOM PORTRAIT DESIGN
 ========================================== */
