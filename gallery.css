@@ -1223,7 +1223,44 @@ RESTORATION PORTFOLIO
 
 
 
+/* ==========================================
+CUSTOM PORTRAIT FEATURE
+========================================== */
 
+
+.custom-portrait-feature {
+
+    padding:80px 0;
+
+}
+
+
+
+.custom-portrait-feature h2 {
+
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+    text-align:center;
+
+}
+
+
+
+.custom-portrait-feature .section-label {
+
+    text-align:center;
+
+}
+
+
+
+.custom-portrait-feature .section-introduction {
+
+    margin-bottom:45px;
+
+}
 
 
 
