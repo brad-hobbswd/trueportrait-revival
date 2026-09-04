@@ -773,15 +773,7 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
 
 
 
-.restoration-grid {
 
-    display:grid;
-
-    grid-template-columns:repeat(2, 1fr);
-
-    gap:45px;
-
-}
 
 
 
@@ -1543,12 +1535,74 @@ footer ul {
 }
 
 
+/* ==========================================
+IMAGE LIGHTBOX
+========================================== */
+
+
 .lightbox {
 
     display:none;
 
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    background:rgba(16,27,43,.92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
 }
 
+
+
+.lightbox.active {
+
+    display:flex;
+
+}
+
+
+
+.lightbox img {
+
+    max-width:90%;
+
+    max-height:90vh;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+
+
+.lightbox-close {
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+}
 
 
 
