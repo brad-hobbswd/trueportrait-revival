@@ -801,46 +801,50 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
 
 
 
-/* ==================================================
-   BEFORE & AFTER IMAGE DISPLAY UPDATE
-================================================== */
+/* ==========================================
+BEFORE & AFTER LARGE IMAGE DISPLAY
+========================================== */
 
 
 .restoration-images {
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:1fr 1fr;
+    flex-direction:column;
 
-    gap:25px;
+    gap:35px;
 
 }
+
 
 
 .restoration-images figure {
 
     width:100%;
 
-    height:520px;
+    margin:0;
 
-    overflow:hidden;
-
-    border-radius:18px;
+    position:relative;
 
     background:#eee8df;
 
+    border-radius:18px;
+
+    overflow:hidden;
+
 }
+
 
 
 .restoration-images img {
 
     width:100%;
 
-    height:100%;
+    height:650px;
 
-    object-fit:cover;
+    object-fit:contain;
 
-    object-position:center;
+    background:#eee8df;
 
     border-radius:18px;
 
