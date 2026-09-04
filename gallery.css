@@ -1462,9 +1462,9 @@ footer {
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1.2fr .8fr .8fr;
 
-    gap:50px;
+    gap:70px;
 
     margin-bottom:50px;
 
@@ -1543,7 +1543,11 @@ footer ul {
 }
 
 
+.lightbox {
 
+    display:none;
+
+}
 
 
 
