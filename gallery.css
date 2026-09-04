@@ -1262,6 +1262,56 @@ CUSTOM PORTRAIT FEATURE
 
 }
 
+/* ==========================================
+LEGACY MESSAGE FEATURED SECTION
+========================================== */
+
+
+.legacy-feature {
+
+    padding:120px 0;
+
+    background:var(--ivory);
+
+}
+
+
+
+.legacy-grid {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    background:var(--white);
+
+    padding:60px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.legacy-content h2 {
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+}
+
+
+
+.legacy-content p {
+
+    font-size:1.05rem;
+
+}
 
 
 /* ==================================================
