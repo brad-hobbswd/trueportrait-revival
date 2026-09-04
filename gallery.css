@@ -2019,3 +2019,41 @@ footer .container {
     }
 
 }
+
+
+/* ==========================================
+RESTORATION PORTFOLIO LAYOUT
+========================================== */
+
+
+.collections-row.three-column {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+
+.custom-feature-card {
+
+    max-width:850px;
+
+}
+
+
+
+
+
+@media(max-width:1000px){
+
+    .collections-row.three-column {
+
+        grid-template-columns:1fr;
+
+    }
+
+}
