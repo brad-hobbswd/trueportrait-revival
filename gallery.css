@@ -828,7 +828,9 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
 
     border-radius:18px;
 
-    overflow:visible;
+    min-height:600px;
+
+    overflow:hidden;
 
 }
 
@@ -838,11 +840,11 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
 
     width:100%;
 
-    height:520px;
+    height:600px;
 
-    object-fit:contain;
+    object-fit:cover;
 
-    background:#eee8df;
+    object-position:center;
 
     border-radius:18px;
 
