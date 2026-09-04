@@ -812,35 +812,31 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
 
     grid-template-columns:1fr 1fr;
 
-    gap:30px;
+    gap:25px;
 
 }
-
 
 
 .restoration-images figure {
 
-    position:relative;
+    width:100%;
 
-    margin:0;
-
-    background:var(--white);
-
-    border-radius:18px;
-
-    min-height:600px;
+    height:520px;
 
     overflow:hidden;
 
-}
+    border-radius:18px;
 
+    background:#eee8df;
+
+}
 
 
 .restoration-images img {
 
     width:100%;
 
-    height:600px;
+    height:100%;
 
     object-fit:cover;
 
@@ -849,7 +845,6 @@ MULTIPLE BEFORE & AFTER RESTORATION GALLERY
     border-radius:18px;
 
 }
-
 
 .restoration-tag {
 
