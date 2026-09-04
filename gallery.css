@@ -1,78 +1,103 @@
-/* ==========================================
-   TRUEPORTRAIT REVIVAL
-   GALLERY PAGE STYLESHEET
-   Part 1
-========================================== */
+/* ==================================================
 
-/* ==========================================
-   CSS VARIABLES
-========================================== */
+TRUEPORTRAIT REVIVAL
 
-:root{
+GALLERY CSS
+
+PART 1
+
+Global Styles
+Navigation
+Hero
+Buttons
+
+================================================== */
+
+
+/* ==================================================
+ROOT VARIABLES
+================================================== */
+
+:root {
 
     --ivory:#f7f0e6;
-    --gold:#c8a45d;
-    --gold-dark:#aa8848;
-    --navy:#101b2b;
-    --charcoal:#222222;
-    --text:#444444;
+
+    --cream:#fffaf2;
+
     --white:#ffffff;
-    --light:#faf8f5;
-    --border:#e8dfd2;
 
-    --shadow:
-    0 18px 40px rgba(0,0,0,.08);
+    --navy:#101b2b;
 
-    --radius:18px;
-    --transition:.35s ease;
+    --gold:#c8a45d;
 
-    --container:1200px;
+    --gold-dark:#9d793b;
+
+    --charcoal:#222222;
+
+    --text:#444444;
+
+    --border:rgba(200,164,93,.35);
+
+    --shadow:0 20px 55px rgba(16,27,43,.12);
+
+    --radius:22px;
 
 }
 
-/* ==========================================
-   RESET
-========================================== */
 
-*{
+
+/* ==================================================
+RESET
+================================================== */
+
+
+* {
 
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 
 }
 
-html{
+
+
+html {
 
     scroll-behavior:smooth;
 
 }
 
-body{
 
-    font-family:"Inter",sans-serif;
-    font-size:16px;
-    line-height:1.8;
 
-    color:var(--text);
+body {
 
     background:var(--ivory);
 
-    overflow-x:hidden;
+    color:var(--text);
+
+    font-family:"Inter", sans-serif;
+
+    line-height:1.7;
 
 }
 
-img{
 
-    display:block;
 
-    width:100%;
+img {
+
+    max-width:100%;
 
     height:auto;
 
+    display:block;
+
 }
 
-a{
+
+
+a {
 
     text-decoration:none;
 
@@ -80,169 +105,102 @@ a{
 
 }
 
-ul{
+
+
+ul {
 
     list-style:none;
 
 }
 
-/* ==========================================
-   TYPOGRAPHY
-========================================== */
+
+
+
+
+/* ==================================================
+TYPOGRAPHY
+================================================== */
+
 
 h1,
 h2,
-h3{
+h3 {
 
-    font-family:"Cinzel",serif;
+    font-family:"Cinzel", serif;
 
     color:var(--navy);
 
-    line-height:1.2;
-
-    font-weight:600;
+    line-height:1.25;
 
 }
 
-h1{
 
-    font-size:clamp(2.8rem,5vw,4.8rem);
 
-}
+h1 {
 
-h2{
-
-    font-size:clamp(2rem,4vw,3rem);
-
-    margin-bottom:20px;
+    font-size:clamp(2.5rem,5vw,4.8rem);
 
 }
 
-h3{
+
+
+h2 {
+
+    font-size:clamp(2rem,3vw,3rem);
+
+    margin-bottom:25px;
+
+}
+
+
+
+h3 {
 
     font-size:1.45rem;
-
-    margin-bottom:16px;
-
-}
-
-p{
 
     margin-bottom:18px;
 
 }
 
-.section-label{
 
-    display:inline-block;
 
-    letter-spacing:3px;
+p {
 
-    text-transform:uppercase;
-
-    font-size:.82rem;
-
-    font-weight:700;
-
-    color:var(--gold);
-
-    margin-bottom:16px;
+    margin-bottom:18px;
 
 }
 
-.section-introduction{
 
-    max-width:760px;
 
-    margin:0 auto 50px;
 
-    text-align:center;
 
-    font-size:1.08rem;
+/* ==================================================
+CONTAINER
+================================================== */
 
-}
 
-/* ==========================================
-   LAYOUT
-========================================== */
+.container {
 
-.container{
-
-    width:min(92%,var(--container));
+    width:min(1200px,90%);
 
     margin:auto;
 
 }
 
-.container.narrow{
 
-    max-width:850px;
 
-}
 
-/* ==========================================
-   BUTTONS
-========================================== */
 
-.button{
+/* ==================================================
+NAVIGATION
+================================================== */
 
-    display:inline-block;
 
-    padding:15px 34px;
+.navbar {
 
-    border-radius:999px;
+    position:relative;
 
-    background:var(--gold);
-
-    color:var(--white);
-
-    font-weight:600;
-
-    transition:var(--transition);
-
-}
-
-.button:hover{
-
-    background:var(--gold-dark);
-
-    transform:translateY(-3px);
-
-}
-
-.button-secondary{
-
-    background:transparent;
-
-    color:var(--navy);
-
-    border:2px solid var(--gold);
-
-}
-
-.button-secondary:hover{
-
-    background:var(--gold);
-
-    color:var(--white);
-
-}
-
-/* ==========================================
-   NAVIGATION
-========================================== */
-
-.navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    background:rgba(16,27,43,.96);
-
-    backdrop-filter:blur(12px);
+    z-index:20;
 
     display:flex;
 
@@ -250,81 +208,70 @@ p{
 
     align-items:center;
 
-    padding:18px 5%;
+    padding:25px 5%;
+
+    background:var(--white);
+
+    border-bottom:1px solid var(--border);
 
 }
 
-.logo{
 
-    font-family:"Cinzel",serif;
 
-    color:var(--white);
+.logo {
 
-    font-size:1.4rem;
+    font-family:"Cinzel", serif;
 
-    letter-spacing:1px;
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    color:var(--navy);
 
 }
 
-nav{
+
+
+.navbar nav {
 
     display:flex;
 
-    gap:34px;
+    align-items:center;
+
+    gap:35px;
 
 }
 
-nav a{
 
-    color:var(--white);
 
-    transition:var(--transition);
+.navbar nav a {
 
-    position:relative;
+    font-family:"Cinzel",serif;
 
-}
+    font-size:.85rem;
 
-nav a:hover,
+    letter-spacing:1px;
 
-nav a.active{
+    text-transform:uppercase;
 
-    color:var(--gold);
+    color:var(--navy);
 
-}
-
-nav a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--gold);
-
-    transition:var(--transition);
+    transition:.3s ease;
 
 }
 
-nav a:hover::after,
 
-nav a.active::after{
 
-    width:100%;
+.navbar nav a:hover,
+.navbar nav a.active {
+
+    color:var(--gold-dark);
 
 }
 
-/* ==========================================
-   MOBILE MENU BUTTON
-========================================== */
 
-.menu-toggle{
+
+.menu-toggle {
 
     display:none;
 
@@ -332,46 +279,812 @@ nav a.active::after{
 
     border:none;
 
-    cursor:pointer;
-
 }
 
-.menu-toggle span{
 
-    display:block;
 
-    width:28px;
 
-    height:3px;
 
-    margin:5px 0;
+/* ==================================================
+HERO SECTION
+================================================== */
 
-    background:var(--white);
 
-    transition:var(--transition);
+.gallery-hero {
 
-}
+    min-height:80vh;
 
-/* ==========================================
-   HERO
-========================================== */
+    background:
 
-.gallery-hero{
+    linear-gradient(
 
-    position:relative;
+        rgba(16,27,43,.55),
 
-    min-height:82vh;
+        rgba(16,27,43,.55)
+
+    ),
+
+    url("gallery-banner.jpg")
+
+    center/cover no-repeat;
 
     display:flex;
 
     align-items:center;
 
+}
+
+
+
+.hero-overlay {
+
+    width:100%;
+
+}
+
+
+
+.hero-content {
+
+    width:min(850px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+    color:var(--white);
+
+}
+
+
+
+.eyebrow {
+
+    font-family:"Cinzel",serif;
+
+    color:var(--gold);
+
+    font-size:.85rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content h1 {
+
+    color:var(--white);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.hero-text {
+
+    max-width:720px;
+
+    margin:0 auto 35px;
+
+    font-size:1.15rem;
+
+    color:white;
+
+}
+
+
+
+
+
+/* ==================================================
+BUTTONS
+================================================== */
+
+
+.button {
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    border-radius:50px;
+
+    font-family:"Cinzel",serif;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    transition:.3s ease;
+
+}
+
+
+
+.button:hover {
+
+    background:var(--navy);
+
+    color:var(--white);
+
+}
+
+
+
+.button-secondary {
+
+    background:transparent;
+
+    border:1px solid var(--gold);
+
+    color:var(--navy);
+
+}
+
+
+
+.button-secondary:hover {
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+}
+
+/* ==================================================
+
+GALLERY INTRODUCTION
+
+================================================== */
+
+
+.gallery-introduction {
+
+    padding:100px 0;
+
+    background:var(--ivory);
+
+    text-align:center;
+
+}
+
+
+
+.section-label {
+
+    font-family:"Cinzel",serif;
+
+    font-size:.75rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--gold-dark);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.gallery-introduction h2 {
+
+    max-width:800px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+.gallery-introduction p {
+
+    max-width:850px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    font-size:1.05rem;
+
+}
+
+
+
+
+
+/* ==================================================
+
+SECTION INTRODUCTION
+
+================================================== */
+
+
+.section-introduction {
+
+    max-width:800px;
+
+    margin:0 auto 55px;
+
+    text-align:center;
+
+    font-size:1.08rem;
+
+}
+
+
+
+
+
+/* ==================================================
+
+FEATURED RESTORATION
+
+================================================== */
+
+
+.featured-story {
+
+    padding:110px 0;
+
+    background:var(--cream);
+
+}
+
+
+
+.story-card {
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    background:var(--white);
+
+    padding:55px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+
+.story-content h3 {
+
+    font-size:1.8rem;
+
+}
+
+
+
+.story-content p {
+
+    font-size:1.05rem;
+
+}
+
+
+
+.story-content .button {
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+.story-image {
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+    background:#eee8df;
+
+}
+
+
+
+.story-image img {
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:contain;
+
+    background:#eee8df;
+
+}
+
+
+
+
+
+/* ==================================================
+
+BEFORE & AFTER
+
+================================================== */
+
+
+.before-after {
+
+    padding:110px 0;
+
+    background:var(--ivory);
+
+}
+
+
+
+.comparison-images {
+
+    display:grid;
+
+    grid-template-columns:
+
+    1fr auto 1fr;
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.comparison-card {
+
+    position:relative;
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    overflow:visible;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+    padding:20px;
+
+}
+
+
+
+
+
+.comparison-card img {
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:contain;
+
+    background:#eee8df;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+.comparison-label {
+
+    position:absolute;
+
+    top:-18px;
+
+    left:25px;
+
+    z-index:3;
+
+    padding:9px 18px;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    border-radius:50px;
+
+    font-family:"Cinzel",serif;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.after-card .comparison-label {
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+}
+
+
+
+
+
+.comparison-card figcaption {
+
+    padding:20px 10px 5px;
+
+    text-align:center;
+
+    font-size:.95rem;
+
+}
+
+
+
+
+
+/* ==================================================
+
+RESTORATION ARROW
+
+================================================== */
+
+
+.comparison-arrow {
+
+    text-align:center;
+
+    color:var(--gold-dark);
+
+}
+
+
+
+.comparison-arrow div {
+
+    font-family:"Cinzel",serif;
+
+    font-size:3rem;
+
+}
+
+
+
+.comparison-arrow span {
+
+    display:block;
+
+    font-family:"Cinzel",serif;
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+
+
+/* ==================================================
+
+IMAGE PROTECTION
+
+Keeps photographs visible
+
+================================================== */
+
+
+.story-image img,
+.comparison-card img {
+
+    object-position:center;
+
+}
+
+/* ==================================================
+
+RESTORATION PORTFOLIO
+
+================================================== */
+
+
+.gallery-collections {
+
+    padding:110px 0;
+
+    background:var(--cream);
+
+}
+
+
+
+.collections-row {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    margin-top:60px;
+
+}
+
+
+
+.collections-center {
+
+    display:flex;
+
     justify-content:center;
 
+    margin-top:45px;
+
+}
+
+
+
+.restoration-card {
+
+    width:100%;
+
+    max-width:850px;
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+    transition:.35s ease;
+
+}
+
+
+
+.restoration-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+
+.portfolio-image-wrap {
+
+    position:relative;
+
+    background:#eee8df;
+
+    overflow:hidden;
+
+}
+
+
+
+.portfolio-image-wrap img {
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:contain;
+
+    background:#eee8df;
+
+}
+
+
+
+
+
+.collection-label {
+
+    position:absolute;
+
+    top:22px;
+
+    left:22px;
+
+    z-index:2;
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-family:"Cinzel",serif;
+
+    font-size:.7rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.collection-content {
+
+    padding:35px;
+
+}
+
+
+
+.collection-content h3 {
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+.collection-content p {
+
+    margin-bottom:0;
+
+}
+
+
+
+
+
+
+
+/* ==================================================
+
+LEGACY FEATURE
+
+================================================== */
+
+
+.legacy-feature {
+
+    padding:110px 0;
+
+    background:var(--ivory);
+
+}
+
+
+
+.legacy-grid {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    background:var(--white);
+
+    padding:55px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+
+
+.legacy-image {
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+    background:#eee8df;
+
+}
+
+
+
+.legacy-image img {
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:contain;
+
+    background:#eee8df;
+
+}
+
+
+
+
+
+.legacy-content h2 {
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* ==================================================
+
+GALLERY CALL TO ACTION
+
+================================================== */
+
+
+.gallery-cta {
+
+    padding:100px 0;
+
     background:
-    linear-gradient(rgba(16,27,43,.55),
-    rgba(16,27,43,.55)),
-    url("images/gallery-hero.jpg")
+
+    linear-gradient(
+
+        rgba(16,27,43,.92),
+
+        rgba(16,27,43,.92)
+
+    ),
+
+    url("gallery-banner.jpg")
+
     center/cover no-repeat;
 
     text-align:center;
@@ -380,704 +1093,31 @@ nav a.active::after{
 
 }
 
-.hero-overlay{
 
-    width:100%;
 
-    padding:100px 20px;
-
-}
-
-.hero-content{
-
-    max-width:820px;
-
-    margin:auto;
-
-}
-
-.eyebrow{
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    color:#f6d38f;
-
-    margin-bottom:18px;
-
-    font-weight:700;
-
-}
-
-.gallery-hero h1{
+.gallery-cta h2 {
 
     color:var(--white);
 
-    margin-bottom:28px;
-
-}
-
-.hero-text{
-
-    font-size:1.15rem;
-
-    max-width:700px;
-
-    margin:0 auto 40px;
-
-    color:rgba(255,255,255,.94);
-
-}
-
-/* ==========================================
-   GALLERY INTRODUCTION
-========================================== */
-
-.gallery-introduction{
-
-    padding:100px 0;
-
-    text-align:center;
-
-    background:var(--white);
-
-}
-
-.gallery-introduction p{
-
-    font-size:1.08rem;
-
-    max-width:760px;
-
-    margin:0 auto 24px;
-
-}
-
-/* ==========================================
-   PHILOSOPHY
-========================================== */
-
-.gallery-philosophy{
-
-    padding:110px 0;
-
-    background:var(--light);
-
-}
-
-.philosophy-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-/* Philosophy Before & After comparison */
-
-.philosophy-comparison{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-    align-items:stretch;
-}
-
-.philosophy-photo{
-    position:relative;
-    margin-top:32px;
-    overflow:visible;
-}
-
-.philosophy-photo img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    background:#eee8df;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-}
-
-.philosophy-label{
-    position:absolute;
-    top:-18px;
-    left:18px;
-    z-index:2;
-    padding:8px 15px;
-    border-radius:999px;
-    background:var(--navy);
-    color:var(--white);
-    font-family:"Cinzel",serif;
-    font-size:.68rem;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    box-shadow:0 8px 18px rgba(16,27,43,.14);
-}
-
-.philosophy-after .philosophy-label{
-    background:var(--gold);
-    color:var(--navy);
-}
-
-.philosophy-before img{
-    filter:sepia(.28) saturate(.78) contrast(.92) brightness(.92);
-}
-
-@media(max-width:768px){
-
-    .philosophy-comparison{
-        grid-template-columns:1fr;
-        gap:34px;
-    }
-
-    .philosophy-photo{
-        margin-top:28px;
-    }
-
-}
-
-/* ==========================================
-   FEATURED STORY
-========================================== */
-
-.featured-story{
-
-    padding:110px 0;
-
-    background:var(--white);
-
-}
-
-.story-card{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-    margin-top:60px;
-
-}
-
-.story-image img{
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-}
-
-/* ==========================================
-   FAMILY RESTORATION BEFORE & AFTER
-   ========================================== */
-
-.comparison-images{
-    display:grid;
-    grid-template-columns:1fr auto 1fr;
-    gap:35px;
-    align-items:center;
-    margin-top:50px;
-}
-
-.comparison-card{
-    background:var(--white);
-    border-radius:var(--radius);
-    overflow:visible;
-    box-shadow:var(--shadow);
-    border:1px solid var(--border);
-    position:relative;
-    margin-top:38px;
-}
-
-.comparison-label{
-    position:absolute;
-    top:-20px;
-    left:20px;
-    z-index:3;
-    padding:9px 16px;
-    border-radius:50px;
-    background:var(--navy);
-    color:var(--white);
-    font-family:"Cinzel",serif;
-    letter-spacing:2px;
-    font-size:.72rem;
-    text-transform:uppercase;
-    box-shadow:0 8px 20px rgba(16,27,43,.14);
-}
-
-.after-card .comparison-label{
-    background:var(--gold);
-    color:var(--navy);
-}
-
-.comparison-card img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    background:#f1ebe2;
-}
-
-.comparison-card figcaption{
-    padding:25px;
-    text-align:center;
-    color:var(--text);
-}
-
-.comparison-arrow{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:10px;
-    color:var(--gold-dark);
-    font-family:"Cinzel",serif;
-    letter-spacing:2px;
-}
-
-.comparison-arrow div{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    background:var(--navy);
-    color:var(--gold);
-    font-size:2rem;
 }
 
 
-@media(max-width:992px){
 
-    .comparison-images{
-        grid-template-columns:1fr;
-    }
-
-    .comparison-arrow{
-        flex-direction:row;
-        justify-content:center;
-    }
-
-}
-/* ==========================================
-   CUSTOM PORTRAIT DESIGN
-========================================== */
-
-.custom-composite{
-
-    padding:110px 0;
-
-    background:var(--white);
-
-}
-
-.custom-composite .section-introduction{
-
-    margin-bottom:70px;
-
-}
-
-.custom-comparison{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:60px;
-
-    align-items:flex-start;
-
-}
-
-.before-side,
-.after-side{
-
-    background:var(--light);
-
-    padding:35px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-}
-
-.before-side h3,
-.after-side h3{
-
-    text-align:center;
-
-    margin-bottom:25px;
-
-}
-
-.before-images{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
-
-    margin-bottom:25px;
-
-}
-
-.before-images img{
-
-    border-radius:12px;
-
-    box-shadow:0 10px 24px rgba(0,0,0,.08);
-
-}
-
-.final-image{
-
-    border-radius:18px;
-
-    margin-bottom:25px;
-
-    box-shadow:var(--shadow);
-
-}
-
-.after-side .button{
-
-    margin-top:15px;
-
-}
-
-/* ==========================================
-   MATCHING WEDDING INVITATION
-========================================== */
-
-.finished-design{
-
-    max-width:650px;
-
-    margin:80px auto 0;
-
-    text-align:center;
-
-}
-
-.finished-design .section-label{
-
-    display:block;
-
-    margin-bottom:20px;
-
-}
-
-.invitation-image{
-
-    max-width:360px;
-
-    margin:0 auto;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow);
-
-}
-
-.finished-caption{
-
-    margin-top:30px;
-
-    max-width:620px;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-    font-size:1rem;
-
-    color:var(--text);
-
-    line-height:1.8;
-
-}
-
-/* ==========================================
-   LEGACY FEATURE
-========================================== */
-
-.legacy-feature{
-
-    padding:110px 0;
-
-    background:var(--light);
-
-}
-
-.legacy-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.legacy-image img{
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-}
-
-.legacy-content .button{
-
-    margin-top:15px;
-
-}
-
-/* ==========================================
-   SERVICES
-========================================== */
-
-.services-showcase{
-
-    padding:110px 0;
-
-    background:var(--white);
-
-    text-align:center;
-
-}
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-    margin-top:60px;
-
-}
-
-.service-card{
-
-    background:var(--light);
-
-    padding:40px 30px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
-}
-
-.service-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.service-icon{
-
-    font-size:2.8rem;
-
-    margin-bottom:20px;
-
-}
-
-/* ==========================================
-   QUALITY PROMISE
-========================================== */
-
-.quality-promise{
-
-    padding:100px 0;
-
-    background:var(--navy);
-
-    color:rgba(255,255,255,.92);
-
-    text-align:center;
-
-}
-
-.quality-promise h2{
-
-    color:var(--white);
-
-}
-
-.quality-promise p{
-
-    max-width:760px;
-
-    margin:0 auto 25px;
-
-}
-
-/* ==========================================
-   GALLERY COLLECTIONS
-========================================== */
-
-.gallery-collections{
-
-    padding:110px 0;
-
-    background:var(--white);
-
-    text-align:center;
-
-}
-
-/*=========================================
-COLLECTION LAYOUT
-=========================================*/
-
-.collections-row{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    margin-top:60px;
-
-}
-
-.collections-center{
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-top:35px;
-
-}
-
-.collections-center{
-
-    display:flex;
-    justify-content:center;
-    margin-top:35px;
-
-}
-
-.collections-center .collection-card{
-
-    width:calc((100% - 35px) / 2);
-    max-width:none;
-
-}
-
-.collection-card{
-
-    overflow:hidden;
-
-    border-radius:var(--radius);
-
-    background:var(--light);
-
-    box-shadow:var(--shadow);
-
-    transition:var(--transition);
-
-}
-
-.collection-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.collection-card img{
-
-    width:100%;
-
-    height:340px;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-.collection-content{
-
-    padding:30px;
-
-}
-
-/* ==========================================
-   FOUNDER MESSAGE
-========================================== */
-
-.founder-message{
-
-    padding:110px 0;
-
-    background:var(--light);
-
-    text-align:center;
-
-}
-
-.founder-message p{
-
-    max-width:760px;
-
-    margin:0 auto 24px;
-
-}
-
-/* ==========================================
-   CALL TO ACTION
-========================================== */
-
-.gallery-cta{
-
-    padding:110px 0;
-
-    background:linear-gradient(
-    135deg,
-    var(--navy),
-    #1d314d);
-
-    text-align:center;
-
-    color:var(--white);
-
-}
-
-.gallery-cta h2{
-
-    color:var(--white);
-
-}
-
-.gallery-cta p{
+.gallery-cta p {
 
     max-width:700px;
 
     margin:0 auto 35px;
 
+    color:var(--white);
+
 }
 
-.cta-buttons{
+
+
+
+
+.cta-buttons {
 
     display:flex;
 
@@ -1089,777 +1129,496 @@ COLLECTION LAYOUT
 
 }
 
-/* ==========================================
-   FOOTER
-========================================== */
 
-footer{
 
-    background:#0d1726;
+.gallery-cta .button {
 
-    color:rgba(255,255,255,.82);
-
-    padding:70px 0 30px;
+    background:var(--gold);
 
 }
 
-.footer-grid{
 
-    display:grid;
 
-    grid-template-columns:2fr 1fr 1fr;
+.gallery-cta .button-secondary {
 
-    gap:50px;
+    background:transparent;
 
-    margin-bottom:45px;
-
-}
-
-.footer-grid h3{
+    border:1px solid var(--gold);
 
     color:var(--white);
 
-    margin-bottom:20px;
+}
+
+
+
+
+
+.gallery-cta .button-secondary:hover {
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+}
+
+/* ==================================================
+
+FOOTER
+
+================================================== */
+
+
+footer {
+
+    background:var(--navy);
+
+    color:var(--white);
+
+    padding:80px 0 30px;
+
+}
+
+
+
+.footer-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:50px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+footer h3 {
+
+    color:var(--gold);
 
     font-size:1.2rem;
 
-}
-
-.footer-grid li{
-
-    margin-bottom:12px;
+    margin-bottom:20px;
 
 }
 
-.footer-grid a{
 
-    transition:var(--transition);
+
+footer p {
+
+    color:rgba(255,255,255,.85);
 
 }
 
-.footer-grid a:hover{
+
+
+footer a {
+
+    color:rgba(255,255,255,.85);
+
+    transition:.3s ease;
+
+}
+
+
+
+footer a:hover {
 
     color:var(--gold);
 
 }
 
-.footer-bottom{
 
-    border-top:1px solid rgba(255,255,255,.12);
+
+footer ul {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.footer-bottom {
+
+    border-top:1px solid rgba(255,255,255,.2);
 
     padding-top:25px;
 
     text-align:center;
 
-    font-size:.95rem;
+}
+
+
+
+.footer-bottom p {
+
+    margin:0;
+
+    font-size:.9rem;
 
 }
 
-/* ==========================================
-   RESPONSIVE
-========================================== */
 
-@media (max-width:992px){
 
-    .philosophy-grid,
-    .story-card,
-    .custom-comparison,
-    .legacy-grid,
-    .services-grid,
-    .collections-grid,
-    .footer-grid{
 
-        grid-template-columns:1fr;
 
-    }
 
-    .comparison-images{
 
-        grid-template-columns:1fr;
+/* ==================================================
 
-    }
+TABLET RESPONSIVE
 
-    .before-images{
+================================================== */
 
-        grid-template-columns:repeat(3,1fr);
 
-    }
+@media(max-width:1000px){
 
-   .collections-row{
 
-        grid-template-columns:1fr;
 
-    }
+.navbar nav {
 
-    .collections-center .collection-card{
-
-        max-width:100%;
-
-    }
+    gap:20px;
 
 }
 
-@media (max-width:992px){
 
-    .navbar{
 
-        padding:20px 6%;
+.story-card,
+.legacy-grid {
 
-    }
-
-    .menu-toggle{
-
-        display:block;
-
-        z-index:1002;
-
-    }
-
-    nav{
-
-        position:fixed;
-
-        top:78px;
-
-        left:0;
-
-        width:100%;
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:0;
-
-        padding:30px 0;
-
-        background:var(--navy);
-
-        border-top:1px solid rgba(200,164,93,.25);
-
-        box-shadow:0 18px 40px rgba(0,0,0,.18);
-
-        opacity:0;
-
-        visibility:hidden;
-
-        pointer-events:none;
-
-        transform:translateY(-15px);
-
-        transition:
-            opacity .3s ease,
-            transform .3s ease,
-            visibility .3s;
-
-    }
-
-    nav.active{
-
-        opacity:1;
-
-        visibility:visible;
-
-        pointer-events:auto;
-
-        transform:translateY(0);
-
-    }
-
-    nav a{
-
-        width:100%;
-
-        padding:16px 0;
-
-        text-align:center;
-
-        color:var(--white);
-
-    }
-
-    nav a::after{
-
-        display:none;
-
-    }
-
-    .gallery-hero{
-
-        min-height:70vh;
-
-    }
-
-    .hero-text{
-
-        font-size:1rem;
-
-    }
-
-    h2{
-
-        font-size:2rem;
-
-    }
-
-    .services-grid,
-    .collections-row{
-
-        gap:25px;
-
-    }
+    grid-template-columns:1fr;
 
 }
 
-@media (max-width:600px){
 
-    section{
 
-        padding:80px 0 !important;
+.story-image img,
+.legacy-image img {
 
-    }
-
-    .before-images{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .comparison-card,
-
-    .service-card,
-
-    .before-side,
-
-    .after-side{
-
-        padding:25px;
-
-    }
-
-    .invitation-image{
-
-        max-width:100%;
-
-    }
-
-    .cta-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    .button{
-
-        width:100%;
-
-        max-width:320px;
-
-        text-align:center;
-
-    }
-    }
-
-.portrait-banner-introduction p{
-
-    max-width:650px;
-
-    margin:0 auto;
-
-}
-
-@media (max-width:768px){
-
-    .portrait-banner-introduction{
-
-        padding:55px 0 20px;
-
-    }
-
-    .portrait-banner-introduction p{
-
-        font-size:1rem;
-
-        line-height:1.75;
-
-    }
-
-    .portrait-banner{
-
-        padding:0 0 70px;
-
-    }
-
-    .portrait-banner-link{
-
-        border-radius:16px;
-
-    }
-
-    .portrait-banner-image{
-
-        border-radius:16px;
-
-    }
-
-}
-
-/* ==========================================
-   CUSTOM PORTRAIT BANNER
-========================================== */
-
-.portrait-banner{
-
-    padding:90px 0;
-
-    background:var(--ivory);
-
-}
-
-.banner-introduction{
-
-    max-width:850px;
-
-    margin:0 auto 45px;
-
-    text-align:center;
-
-}
-
-.banner-introduction h2{
-
-    margin-bottom:18px;
-
-}
-
-.banner-introduction p{
-
-    max-width:760px;
-
-    margin:0 auto;
-
-    font-size:1.08rem;
-
-    line-height:1.9;
-
-}
-
-.portrait-banner-link{
-
-    display:block;
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    box-shadow:0 25px 60px rgba(0,0,0,.15);
-
-    transition:.35s ease;
-
-}
-
-.portrait-banner-link:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 35px 80px rgba(0,0,0,.20);
-
-}
-
-.portrait-banner-image{
-
-    display:block;
-
-    width:100%;
-
-    border-radius:24px;
-
-
-
-}
-
-/* ==========================================
-   BEFORE & AFTER PAIRING
-   Present each restoration as one connected story
-========================================== */
-
-.comparison-images{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) 110px minmax(0,1fr);
-    gap:24px;
-    align-items:center;
-}
-
-.comparison-card{
-    position:relative;
-    overflow:hidden;
-    padding:0 0 24px;
-    border:1px solid var(--border);
-}
-
-.comparison-label{
-    position:absolute;
-    top:18px;
-    left:18px;
-    z-index:2;
-    padding:8px 16px;
-    border-radius:999px;
-    background:rgba(16,27,43,.92);
-    color:var(--white);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.after-card .comparison-label{
-    background:var(--gold);
-}
-
-.comparison-card img{
-    width:100%;
     height:auto;
-    aspect-ratio:4 / 3;
-    object-fit:contain;
-    background:#eee8df;
-    margin:0;
-    border-radius:0;
+
+    max-height:600px;
+
 }
 
-.comparison-card figcaption{
-    padding:20px 24px 0;
-    margin:0;
+
+
+.comparison-images {
+
+    grid-template-columns:1fr;
+
 }
 
-.comparison-arrow{
+
+
+.comparison-arrow {
+
+    transform:rotate(90deg);
+
+    margin:15px 0;
+
+}
+
+
+
+.collections-row {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.footer-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+/* ==================================================
+
+MOBILE RESPONSIVE
+
+================================================== */
+
+
+@media(max-width:768px){
+
+
+
+.container {
+
+    width:90%;
+
+}
+
+
+
+.navbar {
+
+    padding:20px 5%;
+
+}
+
+
+
+.navbar nav {
+
+    display:none;
+
+}
+
+
+
+.menu-toggle {
+
     display:flex;
+
     flex-direction:column;
+
+    gap:6px;
+
+}
+
+
+
+.menu-toggle span {
+
+    width:28px;
+
+    height:2px;
+
+    background:var(--navy);
+
+}
+
+
+
+.gallery-hero {
+
+    min-height:70vh;
+
+}
+
+
+
+.hero-content {
+
+    width:90%;
+
+}
+
+
+
+.hero-text {
+
+    font-size:1rem;
+
+}
+
+
+
+.gallery-introduction,
+.featured-story,
+.before-after,
+.gallery-collections,
+.legacy-feature {
+
+    padding:75px 0;
+
+}
+
+
+
+
+
+.story-card {
+
+    padding:30px;
+
+}
+
+
+
+.story-image img {
+
+    height:auto;
+
+}
+
+
+
+.comparison-card {
+
+    padding:15px;
+
+}
+
+
+
+.comparison-card img {
+
+    height:auto;
+
+}
+
+
+
+.portfolio-image-wrap img {
+
+    height:auto;
+
+}
+
+
+
+.collection-content {
+
+    padding:25px;
+
+}
+
+
+
+.legacy-grid {
+
+    padding:30px;
+
+}
+
+
+
+.legacy-image img {
+
+    height:auto;
+
+}
+
+
+
+.gallery-cta {
+
+    padding:75px 0;
+
+}
+
+
+
+.cta-buttons {
+
+    flex-direction:column;
+
     align-items:center;
-    gap:8px;
-    color:var(--gold-dark);
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
+
 }
 
-.comparison-arrow div{
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:grid;
-    place-items:center;
-    background:var(--navy);
-    color:var(--gold);
-    font-family:"Inter",sans-serif;
-    font-size:2rem;
-    line-height:1;
-    box-shadow:0 12px 30px rgba(16,27,43,.18);
-}
 
-@media(max-width:992px){
-    .comparison-images{
-        grid-template-columns:1fr;
-        gap:24px;
-    }
 
-    .comparison-arrow{
-        flex-direction:row;
-        justify-content:center;
-        margin:0;
-    }
+.button {
 
-    .comparison-arrow div{
-        transform:rotate(90deg);
-    }
-
-    .comparison-card img{
-        aspect-ratio:auto;
-        max-height:70vh;
-    }
-}
-
-/* ==========================================
-   RESTORATION PORTFOLIO
-========================================== */
-
-.restoration-card{
-    position:relative;
-    overflow:hidden;
-    background:var(--white);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    transition:transform .35s ease, box-shadow .35s ease;
-}
-
-.restoration-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 28px 60px rgba(16,27,43,.16);
-}
-
-.portfolio-image-wrap{
-    position:relative;
-    overflow:hidden;
-    background:#eee8df;
-}
-
-.restoration-card img{
     width:100%;
-    height:auto;
-    max-height:520px;
-    display:block;
-    object-fit:contain;
-    background:#eee8df;
-}
 
-.portfolio-image-wrap .collection-label{
-    position:absolute;
-    top:18px;
-    left:18px;
-    z-index:2;
-    display:inline-block;
-    padding:9px 14px;
-    border-radius:999px;
-    background:rgba(16,27,43,.92);
-    color:var(--white);
-    font-family:"Cinzel",serif;
-    font-size:.7rem;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
+    max-width:320px;
 
-.collection-content{
-    padding:32px;
-}
-
-.collection-content h3{
-    margin:0 0 14px;
-}
-
-.collection-content p{
-    margin:0;
-}
-
-.collection-button{
-    display:inline-block;
-    margin-top:22px;
-    padding-bottom:5px;
-    color:var(--navy);
-    font-family:"Cinzel",serif;
-    font-size:.78rem;
-    font-weight:700;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    border-bottom:2px solid var(--gold);
-    transition:color .25s ease, border-color .25s ease;
-}
-
-.collection-button:hover{
-    color:var(--gold-dark);
-    border-color:var(--gold-dark);
-}
-
-.collections-center .restoration-card{
-    max-width:820px;
-}
-
-@media(max-width:768px){
-    .collection-content{
-        padding:25px;
-    }
-
-    .restoration-card img{
-        max-height:none;
-    }
-}
-
-
-/* ==========================================
-   FEATURED RESTORATION
-   BEFORE & AFTER REVEAL
-   Labels are placed outside the photograph
-========================================== */
-
-.story-image{
-    position:relative;
-    min-height:560px;
-    margin-top:44px;
-    overflow:visible;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    background:#eee8df;
-}
-
-.story-image img{
-    width:100%;
-    height:100%;
-    min-height:560px;
-    display:block;
-    object-fit:cover;
-    object-position:center;
-    border-radius:var(--radius);
-    box-shadow:none;
-}
-
-/* BEFORE: the supplied original photograph on the left. */
-.story-image::before{
-    content:"";
-    position:absolute;
-    z-index:2;
-    inset:0 auto 0 0;
-    width:50%;
-    background:
-        linear-gradient(rgba(88,62,34,.12),rgba(88,62,34,.12)),
-        url("IMG_0201.jpeg") center/cover no-repeat;
-    filter:sepia(.62) saturate(.48) contrast(.82) brightness(.88);
-    clip-path:inset(0 0 0 0 round var(--radius) 0 0 var(--radius));
-    pointer-events:none;
-}
-
-/* Keep BEFORE and AFTER near the image instead of over it. */
-.story-image::after{
-    content:"BEFORE                                      AFTER";
-    position:absolute;
-    z-index:4;
-    left:0;
-    right:0;
-    top:-36px;
-    display:flex;
-    justify-content:space-between;
-    color:var(--navy);
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    font-weight:700;
-    letter-spacing:2px;
-    pointer-events:none;
-}
-
-@media(max-width:768px){
-
-    .story-card{
-        gap:35px;
-    }
-
-    .story-image,
-    .story-image img{
-        min-height:460px;
-    }
-
-    .story-image{
-        margin-top:38px;
-    }
-
-    .story-image::after{
-        top:-30px;
-        font-size:.62rem;
-        letter-spacing:1.4px;
-    }
-
-}
-
-
-
-/* ==========================================
-   FULL IMAGE BEFORE & AFTER
-   Keep the complete photograph visible
-========================================== */
-
-.full-image-comparison{
-    padding:110px 0;
-}
-
-.full-image-comparison .section-introduction{
-    max-width:760px;
-    margin:0 auto 55px;
-}
-
-.full-comparison-grid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:38px;
-    align-items:start;
-}
-
-.full-comparison-card{
-    position:relative;
-    margin:34px 0 0;
-    overflow:visible;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-}
-
-.full-comparison-card img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    background:#eee8df;
-    border-radius:var(--radius) var(--radius) 0 0;
-}
-
-.full-comparison-label{
-    position:absolute;
-    top:-20px;
-    left:22px;
-    z-index:2;
-    padding:9px 17px;
-    border-radius:999px;
-    background:var(--navy);
-    color:var(--white);
-    font-family:"Cinzel",serif;
-    font-size:.72rem;
-    font-weight:700;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    box-shadow:0 8px 20px rgba(16,27,43,.14);
-}
-
-.full-after-card .full-comparison-label{
-    background:var(--gold);
-    color:var(--navy);
-}
-
-.full-before-card img{
-    filter:sepia(.45) saturate(.62) contrast(.9) brightness(.9);
-}
-
-.full-comparison-card figcaption{
-    padding:24px 28px 28px;
     text-align:center;
-    color:var(--text);
-}
-
-@media(max-width:768px){
-
-    .full-image-comparison{
-        padding:80px 0;
-    }
-
-    .full-comparison-grid{
-        grid-template-columns:1fr;
-        gap:48px;
-    }
-
-    .full-comparison-card{
-        margin-top:30px;
-    }
 
 }
 
 
-/* Additional full-image Before & After comparison */
-.additional-image-comparison{
-    padding-top:30px;
+
 }
 
-.additional-image-comparison .full-comparison-card img{
-    max-height:760px;
-    object-fit:contain;
+
+
+
+
+
+
+/* ==================================================
+
+SMALL MOBILE
+
+================================================== */
+
+
+@media(max-width:480px){
+
+
+
+h1 {
+
+    font-size:2.2rem;
+
+}
+
+
+
+h2 {
+
+    font-size:1.8rem;
+
+}
+
+
+
+h3 {
+
+    font-size:1.25rem;
+
+}
+
+
+
+.section-label {
+
+    letter-spacing:2px;
+
+}
+
+
+
+.story-card,
+.legacy-grid {
+
+    padding:22px;
+
+}
+
+
+
+.collection-label,
+.comparison-label {
+
+    font-size:.6rem;
+
+    padding:8px 12px;
+
+}
+
+
+
+footer {
+
+    padding:60px 0 25px;
+
+}
+
+
+
 }
