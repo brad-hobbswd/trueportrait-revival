@@ -1381,6 +1381,32 @@ GALLERY CALL TO ACTION
 
 }
 
+.gallery-cta .container {
+
+    width:min(1000px,90%);
+
+    margin:auto;
+
+}
+
+
+.gallery-cta h2 {
+
+    max-width:900px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+.gallery-cta p {
+
+    max-width:700px;
+
+}
+
 
 
 .gallery-cta .button {
