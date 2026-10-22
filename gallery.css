@@ -2131,3 +2131,54 @@ CONSISTENT GALLERY CARD SPACING
         gap: 18px;
     }
 }
+
+
+/* ==========================================
+CUSTOM ARTISTRY SECTION DIVIDER
+========================================== */
+.custom-portrait-feature {
+    position: relative;
+    margin-top: 32px;
+    padding: 88px 0 96px;
+    border-top: 1px solid var(--border);
+    background: linear-gradient(
+        180deg,
+        var(--ivory) 0%,
+        var(--cream) 100%
+    );
+}
+
+.custom-portrait-feature::before {
+    content: "CUSTOM ARTISTRY";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 22px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--gold-dark);
+    font-family: "Cinzel", serif;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.custom-portrait-feature .section-label {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .custom-portrait-feature {
+        margin-top: 22px;
+        padding: 70px 0 76px;
+    }
+
+    .custom-portrait-feature::before {
+        font-size: .65rem;
+        letter-spacing: 2px;
+        padding: 9px 18px;
+    }
+}
