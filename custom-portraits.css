@@ -2671,3 +2671,77 @@ CUSTOM PORTRAITS HERO SPACING AND READABILITY
         margin-bottom: 22px;
     }
 }
+
+
+/* Keep composite portrait and coordinated collection together as one section. */
+.custom-composite {
+    padding-bottom: 104px;
+}
+
+.custom-composite .collection-showcase-content {
+    margin-top: 0;
+    padding: 82px 0 0;
+    border: 0;
+    background: transparent;
+    text-align: center;
+}
+
+.custom-composite .collection-showcase-content > .container {
+    max-width: 1050px;
+}
+
+.custom-composite .collection-showcase-content > .container > .section-label {
+    display: table;
+    margin: 0 auto 22px;
+    padding: 9px 18px;
+    border: 1px solid rgba(200,164,93,.55);
+    border-radius: 999px;
+    background: var(--white);
+    letter-spacing: 3px;
+}
+
+.custom-composite .collection-showcase-content h2 {
+    max-width: 1000px;
+    margin: 0 auto 24px;
+}
+
+.custom-composite .collection-showcase-content .section-introduction {
+    max-width: 920px;
+    margin: 0 auto 42px;
+}
+
+.custom-composite .collection-showcase-content .invitation-image {
+    display: block;
+    max-height: 760px;
+    object-fit: contain;
+    background: var(--white);
+}
+
+@media (max-width: 768px) {
+    .custom-composite {
+        padding-bottom: 70px;
+    }
+
+    .custom-composite .collection-showcase-content {
+        padding-top: 58px;
+    }
+
+    .custom-composite .collection-showcase-content > .container > .section-label {
+        letter-spacing: 2px;
+        font-size: .68rem;
+    }
+
+    .custom-composite .collection-showcase-content .section-introduction {
+        margin-bottom: 30px;
+    }
+
+    .custom-composite .collection-showcase-content .invitation-image {
+        max-height: none;
+        width: 100%;
+        border-width: 5px;
+    }
+
+    .custom-composite .collection-showcase-content .finished-caption {
+        margin-top: 28px;
+    }
+}
