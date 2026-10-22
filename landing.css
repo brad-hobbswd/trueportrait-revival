@@ -2593,3 +2593,50 @@ PRESERVING LEGACIES FEATURE SECTION
         padding: 9px 16px;
     }
 }
+
+
+/* ==========================================
+GENERATIONS REUNITED SECTION DIVIDER
+========================================== */
+.legacy-feature {
+    position: relative;
+    margin-top: 38px;
+    padding-top: 118px;
+    border-top: 1px solid rgba(200,164,93,.55);
+    background: linear-gradient(180deg, #fffdf9 0%, var(--white) 100%);
+}
+
+.legacy-feature::before {
+    content: "GENERATIONS REUNITED";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 22px;
+    border: 1px solid rgba(200,164,93,.6);
+    border-radius: 999px;
+    background: #fffdf9;
+    color: var(--gold);
+    font-family: "Inter", sans-serif;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.legacy-feature .section-label {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .legacy-feature {
+        margin-top: 26px;
+        padding-top: 84px;
+    }
+
+    .legacy-feature::before {
+        font-size: .65rem;
+        letter-spacing: 2px;
+        padding: 9px 16px;
+    }
+}
