@@ -1665,3 +1665,20 @@ button:focus-visible{
 /* ==========================================
    END OF ABOUT PAGE STYLESHEET
 ========================================== */
+
+/* ==========================================
+ABOUT PAGE CTA BUTTON CONTRAST FIX
+========================================== */
+.cta-section .cta-buttons .button.secondary,
+.cta-section .cta-buttons .button.secondary:visited {
+    background: var(--ivory);
+    color: var(--navy);
+    border: 2px solid var(--gold);
+}
+
+.cta-section .cta-buttons .button.secondary:hover,
+.cta-section .cta-buttons .button.secondary:focus-visible {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+}
