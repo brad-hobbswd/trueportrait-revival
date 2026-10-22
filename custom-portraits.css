@@ -2502,3 +2502,118 @@ CUSTOM PORTRAIT CTA BUTTON CONTRAST FIX
     border-color: var(--navy);
     color: var(--white);
 }
+
+
+/* ==========================================
+CLEAR SECTION BREAKS FOR COMPOSITE PORTRAITS
+AND COORDINATED COLLECTIONS
+========================================== */
+.custom-composite {
+    position: relative;
+    margin-top: 38px;
+    padding: 104px 0 112px;
+    border-top: 1px solid rgba(200,164,93,.55);
+    border-bottom: 1px solid rgba(200,164,93,.3);
+    background: linear-gradient(180deg, #fffdf9 0%, var(--ivory) 100%);
+}
+
+.custom-composite > .container > .section-label {
+    display: table;
+    margin: 0 auto 22px;
+    padding: 9px 18px;
+    border: 1px solid rgba(200,164,93,.55);
+    border-radius: 999px;
+    background: var(--white);
+    letter-spacing: 3px;
+}
+
+.custom-composite > .container > h2 {
+    max-width: 900px;
+    margin: 0 auto 22px;
+    text-align: center;
+}
+
+.custom-composite > .container > .section-introduction {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom-composite .custom-comparison {
+    margin-top: 52px;
+    gap: 38px;
+    align-items: stretch;
+}
+
+.custom-composite .before-side,
+.custom-composite .after-side {
+    height: 100%;
+}
+
+.collection-showcase {
+    position: relative;
+    margin-top: 38px;
+    padding: 104px 0 112px;
+    border-top: 1px solid rgba(200,164,93,.55);
+    background: linear-gradient(180deg, var(--white) 0%, #f7f0e6 100%);
+}
+
+.collection-showcase > .container > .section-label {
+    display: table;
+    margin: 0 auto 22px;
+    padding: 9px 18px;
+    border: 1px solid rgba(200,164,93,.55);
+    border-radius: 999px;
+    background: var(--white);
+    letter-spacing: 3px;
+}
+
+.collection-showcase h2 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collection-showcase .section-introduction {
+    margin-bottom: 42px;
+}
+
+.collection-showcase .invitation-image {
+    display: block;
+    max-height: 760px;
+    object-fit: contain;
+    background: var(--white);
+}
+
+@media (max-width: 768px) {
+    .custom-composite,
+    .collection-showcase {
+        margin-top: 24px;
+        padding: 76px 0 82px;
+    }
+
+    .custom-composite > .container > .section-label,
+    .collection-showcase > .container > .section-label {
+        font-size: .68rem;
+        letter-spacing: 2px;
+    }
+
+    .custom-composite .custom-comparison {
+        margin-top: 34px;
+        gap: 24px;
+    }
+
+    .collection-showcase .section-introduction {
+        margin-bottom: 30px;
+    }
+
+    .collection-showcase .invitation-image {
+        max-height: none;
+        width: 100%;
+        border-width: 5px;
+    }
+
+    .collection-showcase .finished-caption {
+        margin-top: 28px;
+    }
+}
