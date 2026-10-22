@@ -1728,3 +1728,72 @@ ABOUT HERO SPACING REFINEMENT
         object-fit: contain;
     }
 }
+
+
+/* ABOUT PAGE: EVEN SECTION SPACING AND PHILOSOPHY CARD ALIGNMENT */
+.story {
+    padding-bottom: 76px;
+}
+
+.creator-values {
+    padding-top: 76px;
+    padding-bottom: 90px;
+}
+
+.creator-values .section-introduction {
+    margin-bottom: 0;
+}
+
+.creator-values .value-grid {
+    margin-top: 48px;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.creator-values .value-card {
+    height: 100%;
+    padding: 38px 30px;
+}
+
+.creator-values .value-card h3 {
+    line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+    .story {
+        padding-bottom: 64px;
+    }
+
+    .creator-values {
+        padding-top: 64px;
+        padding-bottom: 72px;
+    }
+
+    .creator-values .value-grid {
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        padding-bottom: 48px;
+    }
+
+    .creator-values {
+        padding-top: 52px;
+        padding-bottom: 58px;
+    }
+
+    .creator-values .section-introduction {
+        margin-bottom: 0;
+    }
+
+    .creator-values .value-grid {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .creator-values .value-card {
+        padding: 30px 24px;
+    }
+}
