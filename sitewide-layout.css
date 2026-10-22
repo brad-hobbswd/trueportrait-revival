@@ -1,0 +1,75 @@
+:root {
+  --sitewide-navy: #101b2b;
+  --sitewide-gold: #c8a45d;
+  --sitewide-ivory: #f7f0e6;
+  --sitewide-white: #ffffff;
+}
+.sitewide-header, .sitewide-header * , .sitewide-footer, .sitewide-footer * { box-sizing: border-box; }
+.sitewide-header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background: var(--sitewide-navy);
+  border-bottom: 1px solid rgba(200,164,93,.35);
+  box-shadow: 0 5px 24px rgba(16,27,43,.12);
+}
+.sitewide-header-inner {
+  width: min(1440px, 92%);
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.sitewide-logo, .sitewide-logo:visited {
+  flex: 0 0 auto;
+  color: var(--sitewide-gold);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: .04em;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.sitewide-nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: clamp(14px, 1.8vw, 28px); }
+.sitewide-nav a, .sitewide-nav a:visited {
+  color: var(--sitewide-white);
+  font-family: "Cinzel", Georgia, serif;
+  font-size: .78rem;
+  letter-spacing: .055em;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.sitewide-nav a:hover, .sitewide-nav a[aria-current="page"] { color: var(--sitewide-gold); }
+.sitewide-menu-toggle { display: none; border: 1px solid rgba(200,164,93,.55); border-radius: 8px; background: transparent; padding: 10px; cursor: pointer; }
+.sitewide-menu-toggle span { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--sitewide-gold); transition: transform .2s ease, opacity .2s ease; }
+.sitewide-footer { margin-top: 0; padding: 64px 0 22px; background: var(--sitewide-navy); color: rgba(255,255,255,.84); border-top: 3px solid var(--sitewide-gold); }
+.sitewide-footer-inner { width: min(1200px, 90%); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: clamp(28px, 5vw, 72px); }
+.sitewide-footer-brand > a { color: var(--sitewide-gold); font: 600 1.45rem/1.4 "Cinzel", Georgia, serif; text-decoration: none; }
+.sitewide-footer p { color: rgba(255,255,255,.78); margin: 12px 0 0; line-height: 1.75; }
+.sitewide-footer-note { max-width: 420px; font-size: .95rem; }
+.sitewide-footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.sitewide-footer-links h2 { margin: 0 0 8px; color: var(--sitewide-gold); font: 600 1rem/1.4 "Cinzel", Georgia, serif; }
+.sitewide-footer-links a, .sitewide-footer-links a:visited { color: rgba(255,255,255,.84); text-decoration: none; font-size: .94rem; transition: color .2s ease; }
+.sitewide-footer-links a:hover { color: var(--sitewide-gold); }
+.sitewide-footer-bottom { width: min(1200px, 90%); margin: 42px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.17); text-align: center; }
+.sitewide-footer-bottom p { margin: 0; font-size: .85rem; }
+@media (max-width: 1050px) {
+  .sitewide-header-inner { min-height: 78px; }
+  .sitewide-menu-toggle { display: block; }
+  .sitewide-menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .sitewide-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .sitewide-menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .sitewide-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 18px 5% 26px; background: var(--sitewide-navy); border-top: 1px solid rgba(200,164,93,.25); box-shadow: 0 14px 22px rgba(0,0,0,.16); align-items: stretch; gap: 0; }
+  .sitewide-nav.is-open { display: flex; flex-direction: column; }
+  .sitewide-nav a { padding: 13px 4px; font-size: .9rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+}
+@media (max-width: 700px) {
+  .sitewide-header-inner { width: 90%; min-height: 72px; gap: 12px; }
+  .sitewide-logo { max-width: 78%; font-size: 1.08rem; }
+  .sitewide-footer { padding-top: 46px; }
+  .sitewide-footer-inner { grid-template-columns: 1fr 1fr; gap: 32px 22px; }
+  .sitewide-footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) { .sitewide-footer-inner { grid-template-columns: 1fr; } .sitewide-footer-brand { grid-column: auto; } }
