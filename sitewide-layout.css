@@ -118,3 +118,21 @@ section .section-introduction {
         line-height: 1.7;
     }
 }
+
+
+/* DESKTOP ONLY: KEEP PRIMARY NAVIGATION VISIBLE WHILE SCROLLING */
+@media (min-width: 1051px) {
+    .sitewide-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}
+
+/* Tablet and mobile retain the normal, non-sticky header. */
+@media (max-width: 1050px) {
+    .sitewide-header {
+        position: relative;
+        top: auto;
+    }
+}
