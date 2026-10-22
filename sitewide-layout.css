@@ -136,3 +136,62 @@ section .section-introduction {
         top: auto;
     }
 }
+
+
+/* MOBILE NAVIGATION FIX
+   The legacy page stylesheet has generic nav rules that hide menus using
+   opacity and visibility. Explicitly override those rules for the shared menu. */
+@media (max-width: 1050px) {
+    .sitewide-header {
+        position: relative;
+        isolation: isolate;
+    }
+
+    .sitewide-header-inner {
+        position: relative;
+    }
+
+    .sitewide-header .sitewide-menu-toggle {
+        position: relative;
+        z-index: 1003;
+        flex: 0 0 auto;
+        color: var(--sitewide-gold);
+    }
+
+    .sitewide-header .sitewide-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 14px 5% 22px;
+        background: var(--sitewide-navy);
+        border-top: 1px solid rgba(200,164,93,.25);
+        box-shadow: 0 14px 22px rgba(0,0,0,.16);
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        z-index: 1002;
+    }
+
+    .sitewide-header .sitewide-nav.is-open {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .sitewide-header .sitewide-nav a,
+    .sitewide-header .sitewide-nav a:visited {
+        display: block;
+        width: 100%;
+        padding: 14px 4px;
+        color: var(--sitewide-white);
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+}
