@@ -2617,3 +2617,57 @@ AND COORDINATED COLLECTIONS
         margin-top: 28px;
     }
 }
+
+
+/* ==========================================
+CUSTOM PORTRAITS HERO SPACING AND READABILITY
+========================================== */
+.hero {
+    min-height: min(780px, calc(100svh - 138px));
+    padding: 0;
+}
+
+.hero .hero-overlay {
+    padding: clamp(64px, 8vh, 100px) 24px;
+}
+
+.hero .hero-content {
+    width: min(100%, 1120px);
+    max-width: 1120px;
+    margin-inline: auto;
+}
+
+.hero .hero-content h1 {
+    max-width: 1080px;
+    font-size: clamp(2.7rem, 5.2vw, 4.7rem);
+    line-height: 1.08;
+    text-wrap: balance;
+    margin: 0 0 28px;
+}
+
+.hero .hero-content .section-label,
+.hero .hero-content .eyebrow {
+    margin-bottom: 22px;
+}
+
+.hero .hero-content p {
+    max-width: 820px;
+    line-height: 1.75;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero .hero-overlay {
+        padding: 66px 22px 58px;
+    }
+
+    .hero .hero-content h1 {
+        font-size: clamp(2.25rem, 9vw, 3.3rem);
+        line-height: 1.12;
+        margin-bottom: 22px;
+    }
+}
