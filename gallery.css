@@ -756,43 +756,6 @@ BEFORE & AFTER
 }
 
 
-/* ==================================================
-
-MULTIPLE BEFORE & AFTER RESTORATION GALLERY
-
-================================================== */
-
-
-.restoration-gallery {
-
-    padding:110px 0;
-
-    background:var(--ivory);
-
-}
-
-
-
-
-
-
-
-.restoration-comparison-card {
-
-    background:var(--white);
-
-    border-radius:var(--radius);
-
-    padding:40px;
-
-    box-shadow:var(--shadow);
-
-    border:1px solid var(--border);
-
-}
-
-
-
 /* ==========================================
 BEFORE & AFTER RESTORATION GALLERY
 SIDE BY SIDE VERSION
@@ -888,6 +851,11 @@ SIDE BY SIDE VERSION
 
 
 
+
+/* Three-source composites show both originals beside the finished image. */
+.three-source-comparison .restoration-images {
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+}
 
 /* LABELS */
 
@@ -1261,58 +1229,6 @@ CUSTOM PORTRAIT FEATURE
     margin-bottom:45px;
 
 }
-
-/* ==========================================
-LEGACY MESSAGE FEATURED SECTION
-========================================== */
-
-
-.legacy-feature {
-
-    padding:120px 0;
-
-    background:var(--ivory);
-
-}
-
-
-
-.legacy-grid {
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-    background:var(--white);
-
-    padding:60px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-}
-
-
-
-.legacy-content h2 {
-
-    font-size:clamp(2rem,4vw,3.2rem);
-
-}
-
-
-
-.legacy-content p {
-
-    font-size:1.05rem;
-
-}
-
 
 /* ==================================================
 
