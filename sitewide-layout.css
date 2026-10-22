@@ -73,3 +73,48 @@
   .sitewide-footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 420px) { .sitewide-footer-inner { grid-template-columns: 1fr; } .sitewide-footer-brand { grid-column: auto; } }
+
+
+/* ==========================================
+SITEWIDE SPACING AND TYPOGRAPHY RHYTHM
+========================================== */
+.sitewide-header + main,
+.sitewide-header + section {
+    margin-top: 0;
+}
+
+section {
+    scroll-margin-top: 24px;
+}
+
+section .section-label {
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+section h2 {
+    line-height: 1.16;
+    text-wrap: balance;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+section .section-introduction {
+    line-height: 1.75;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    section h2 {
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    section .section-label {
+        margin-bottom: 14px;
+    }
+
+    section .section-introduction {
+        line-height: 1.7;
+    }
+}
