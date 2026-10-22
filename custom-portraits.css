@@ -2484,3 +2484,21 @@ box-shadow:none;
 /*==================================================
 END OF STYLESHEET
 ==================================================*/
+
+
+/* ==========================================
+CUSTOM PORTRAIT CTA BUTTON CONTRAST FIX
+========================================== */
+.cta .cta-buttons .button-secondary,
+.cta .cta-buttons .button-secondary:visited {
+    background: var(--ivory);
+    border: 2px solid var(--gold);
+    color: var(--navy);
+}
+
+.cta .cta-buttons .button-secondary:hover,
+.cta .cta-buttons .button-secondary:focus-visible {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+}
