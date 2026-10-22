@@ -3,12 +3,6 @@
     ["index.html", "Home"],
     ["about.html", "About"],
     ["gallery.html", "Gallery"],
-    ["family-memories.html", "Family Memories"],
-    ["childhood-memories.html", "Childhood Memories"],
-    ["classic-restoration.html", "Classic Restoration"],
-    ["heritage-restoration.html", "Heritage Restoration"],
-    ["legacy-portrait-creation.html", "Legacy Portraits"],
-    ["custom-portraits.html", "Custom Portraits"],
     ["pricing.html", "Pricing"],
     ["contact.html", "Contact"]
   ];
@@ -30,9 +24,9 @@
   footer.className = "sitewide-footer";
   footer.innerHTML = '<div class="sitewide-footer-inner">' +
     '<div class="sitewide-footer-brand"><a href="index.html">TruePortrait Revival</a><p>Restoring the Image. Preserving the Person.</p><p class="sitewide-footer-note">Preserving treasured photographs and the stories they hold for generations to come.</p></div>' +
-    '<div class="sitewide-footer-links"><h2>Explore</h2>' +
-    '<a href="about.html">About</a><a href="gallery.html">Gallery</a><a href="custom-portraits.html">Custom Portraits</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>' +
-    '<div class="sitewide-footer-links"><h2>Information</h2><a href="ethics.html">Restoration Ethics</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="copyright.html">Copyright</a></div>' +
+    '<div class="sitewide-footer-links"><h2>Quick Links</h2>' +
+    '<a href="gallery.html">Gallery</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>' +
+    '<div class="sitewide-footer-links"><h2>Policies</h2><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>' +
     '</div><div class="sitewide-footer-bottom"><p>© ' + new Date().getFullYear() + ' TruePortrait Revival. All rights reserved.</p></div>';
 
   const install = () => {
