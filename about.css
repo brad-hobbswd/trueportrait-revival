@@ -1708,3 +1708,23 @@ ABOUT HERO SPACING REFINEMENT
     .about-hero .eyebrow { letter-spacing: 3px; margin-bottom: 18px; }
     .about-hero .hero-text { font-size: 1.08rem; margin-bottom: 28px; }
 }
+
+
+/* ABOUT PAGE GALLERY PREVIEW: SHOW COMPLETE PHOTOGRAPHS */
+.about-gallery-preview .gallery-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--ivory);
+}
+
+@media (max-width: 768px) {
+    .about-gallery-preview .gallery-card img {
+        height: auto;
+        max-height: 360px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+    }
+}
