@@ -2640,3 +2640,158 @@ GENERATIONS REUNITED SECTION DIVIDER
         padding: 9px 16px;
     }
 }
+
+
+/* CUSTOM PRINTS AND CREATIVE DESIGN SECTION */
+#custom-prints {
+    position: relative;
+    padding: clamp(64px, 8vw, 104px) clamp(22px, 5vw, 76px);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(200,164,93,.10), transparent 55%),
+        linear-gradient(180deg, #f7f0e6 0%, #fbf8f2 100%);
+    border-top: 1px solid rgba(200,164,93,.28);
+    border-bottom: 1px solid rgba(200,164,93,.24);
+    text-align: center;
+}
+
+#custom-prints h2 {
+    max-width: 980px;
+    margin: 0 auto 20px;
+    color: #111e32;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.14;
+    text-wrap: balance;
+}
+
+#custom-prints .section-introduction {
+    max-width: 920px;
+    margin: 0 auto 30px;
+    color: #344052;
+    font-size: clamp(1rem, 1.25vw, 1.1rem);
+    line-height: 1.8;
+}
+
+#custom-prints .service-grid {
+    width: min(1240px, 100%);
+    margin: 32px auto 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(16px, 2vw, 28px);
+}
+
+#custom-prints .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 230px;
+    padding: clamp(26px, 3vw, 38px) clamp(20px, 2.5vw, 32px);
+    border: 1px solid rgba(200,164,93,.24);
+    border-top: 4px solid #c8a45d;
+    border-radius: 15px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 14px 36px rgba(28,34,45,.08);
+    text-align: center;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+#custom-prints .card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200,164,93,.65);
+    box-shadow: 0 20px 42px rgba(28,34,45,.12);
+}
+
+#custom-prints .card h3 {
+    margin: 0 0 18px;
+    color: #14243a;
+    font-size: clamp(1.08rem, 1.35vw, 1.3rem);
+    line-height: 1.35;
+    text-wrap: balance;
+}
+
+#custom-prints .card p {
+    margin: 0;
+    color: #465163;
+    font-size: .98rem;
+    line-height: 1.8;
+}
+
+#custom-prints .section-introduction:nth-of-type(2) {
+    margin-top: 8px;
+    margin-bottom: 22px;
+}
+
+#custom-prints > .button,
+#custom-prints .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: 4px;
+    padding: 0 28px;
+    border: 1px solid #b9944e;
+    border-radius: 7px;
+    background: #c8a45d;
+    color: #fff !important;
+    font-size: .92rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(117,85,31,.12);
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+#custom-prints .button:hover {
+    transform: translateY(-2px);
+    background: #14243a;
+    border-color: #14243a;
+    color: #fff !important;
+}
+
+@media (max-width: 900px) {
+    #custom-prints .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #custom-prints {
+        padding: 58px 20px 64px;
+    }
+
+    #custom-prints .service-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 26px;
+    }
+
+    #custom-prints .card {
+        min-height: 0;
+        padding: 28px 23px;
+    }
+
+    #custom-prints .section-introduction {
+        font-size: .98rem;
+        line-height: 1.75;
+    }
+
+    #custom-prints .button {
+        width: 100%;
+        padding: 12px 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #custom-prints .card,
+    #custom-prints .button {
+        transition: none;
+    }
+
+    #custom-prints .card:hover,
+    #custom-prints .button:hover {
+        transform: none;
+    }
+}
