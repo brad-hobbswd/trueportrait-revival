@@ -33,23 +33,38 @@
     document.querySelectorAll("body > header, body > footer, body > .site-footer").forEach(el => el.remove());
     document.body.insertBefore(header, document.body.firstChild);
     document.body.appendChild(footer);
-    const toggle = header.querySelector(".sitewide-menu-toggle");
-    const nav = header.querySelector(".sitewide-nav");
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      toggle.setAttribute("aria-label", open ? "Open navigation" : "Close navigation");
-      nav.classList.toggle("is-open", !open);
-      toggle.classList.toggle("is-open", !open);
-    });
-    nav.addEventListener("click", event => {
-      if (event.target.closest("a")) {
-        nav.classList.remove("is-open");
-        toggle.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open navigation");
-      }
-    });
+    // Delegate menu interactions so legacy page scripts cannot leave the replacement header with a detached event handler.
+    if (!document.documentElement.dataset.sitewideMenuBound) {
+      document.documentElement.dataset.sitewideMenuBound = "true";
+      document.addEventListener("click", event => {
+        const toggle = event.target.closest(".sitewide-menu-toggle");
+        if (toggle) {
+          event.preventDefault();
+          event.stopPropagation();
+          const activeHeader = toggle.closest(".sitewide-header");
+          const nav = activeHeader && activeHeader.querySelector(".sitewide-nav");
+          if (!nav) return;
+          const open = toggle.getAttribute("aria-expanded") !== "true";
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+          nav.classList.toggle("is-open", open);
+          toggle.classList.toggle("is-open", open);
+          return;
+        }
+        if (event.target.closest(".sitewide-nav a")) {
+          const activeHeader = event.target.closest(".sitewide-header");
+          if (!activeHeader) return;
+          const nav = activeHeader.querySelector(".sitewide-nav");
+          const menuButton = activeHeader.querySelector(".sitewide-menu-toggle");
+          if (nav) nav.classList.remove("is-open");
+          if (menuButton) {
+            menuButton.classList.remove("is-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+          }
+        }
+      }, true);
+    }
   };
 
   if (document.readyState === "loading") {
