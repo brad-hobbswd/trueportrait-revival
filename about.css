@@ -1682,3 +1682,29 @@ ABOUT PAGE CTA BUTTON CONTRAST FIX
     color: var(--navy);
     border-color: var(--gold);
 }
+
+
+/* ==========================================
+ABOUT HERO SPACING REFINEMENT
+========================================== */
+.about-hero {
+    min-height: min(780px, calc(100svh - 56px));
+}
+.about-hero .hero-overlay {
+    padding: 90px 20px 80px;
+}
+.about-hero .eyebrow {
+    margin-bottom: 22px;
+}
+.about-hero h1 {
+    margin-bottom: 24px;
+}
+.about-hero .hero-text {
+    margin-bottom: 34px;
+}
+@media (max-width: 768px) {
+    .about-hero { min-height: auto; }
+    .about-hero .hero-overlay { padding: 76px 22px 68px; }
+    .about-hero .eyebrow { letter-spacing: 3px; margin-bottom: 18px; }
+    .about-hero .hero-text { font-size: 1.08rem; margin-bottom: 28px; }
+}
