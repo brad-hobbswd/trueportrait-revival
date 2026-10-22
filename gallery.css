@@ -2060,3 +2060,74 @@ RESTORATION PORTFOLIO LAYOUT
     }
 
 }
+
+
+/* ==========================================
+CONSISTENT GALLERY CARD SPACING
+========================================== */
+
+/* Keep every restoration card separated by the same amount. */
+.gallery-collections .container > .restoration-comparison-card {
+    margin: 0 0 36px;
+}
+
+.gallery-collections .restoration-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    margin-top: 36px;
+}
+
+.gallery-collections .restoration-grid > .restoration-comparison-card {
+    margin: 0;
+    min-width: 0;
+}
+
+.restoration-gallery .restoration-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+}
+
+.restoration-gallery .restoration-comparison-card {
+    margin: 0;
+    min-width: 0;
+}
+
+.gallery-collections .restoration-comparison-card,
+.restoration-gallery .restoration-comparison-card {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.gallery-collections .collection-content,
+.restoration-gallery .collection-content {
+    padding: 30px 34px 34px;
+}
+
+.gallery-collections .restoration-images,
+.restoration-gallery .restoration-images {
+    gap: 28px;
+}
+
+@media (max-width: 768px) {
+    .gallery-collections .container > .restoration-comparison-card {
+        margin-bottom: 26px;
+    }
+
+    .gallery-collections .restoration-grid,
+    .restoration-gallery .restoration-grid {
+        gap: 26px;
+        margin-top: 28px;
+    }
+
+    .gallery-collections .collection-content,
+    .restoration-gallery .collection-content {
+        padding: 22px;
+    }
+
+    .gallery-collections .restoration-images,
+    .restoration-gallery .restoration-images {
+        gap: 18px;
+    }
+}
