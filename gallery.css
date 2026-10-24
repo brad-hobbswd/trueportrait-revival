@@ -2360,3 +2360,32 @@ CUSTOM ARTISTRY SECTION DIVIDER
         line-height: 1.45;
     }
 }
+
+
+/* TABLET PORTRAIT: KEEP ALL OTHER BEFORE AND AFTER PAIRS ON ONE ROW */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        align-items: start;
+    }
+
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-images figure {
+        min-width: 0;
+    }
+
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-images img {
+        width: 100%;
+        height: clamp(220px, 30vh, 360px);
+        object-fit: contain;
+    }
+
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-tag {
+        top: 8px;
+        left: 8px;
+        padding: 5px 7px;
+        font-size: 0.58rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+}
