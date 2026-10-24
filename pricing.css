@@ -1626,3 +1626,103 @@ nav a{
         transform: none;
     }
 }
+
+
+/* PRICING SERVICE CARDS: BALANCED SPACING AND BADGE ALIGNMENT */
+.services-grid {
+    align-items: stretch;
+    gap: 26px;
+}
+
+.services-grid .service-card {
+    padding: 34px 30px;
+    min-width: 0;
+}
+
+.services-grid .service-card h3 {
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.services-grid .service-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.services-grid .service-card ul {
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.services-grid .service-card li {
+    align-items: flex-start;
+    line-height: 1.55;
+}
+
+.services-grid .service-card .service-icon {
+    width: 76px;
+    height: 76px;
+    font-size: 2.1rem;
+    margin-bottom: 24px;
+    flex: 0 0 auto;
+}
+
+.services-grid .service-card .featured-label {
+    align-self: center;
+    margin: 0 auto 22px;
+    position: static;
+    transform: none;
+}
+
+.services-grid .service-card.featured {
+    transform: none;
+    margin-top: 0;
+}
+
+.services-grid .service-card.featured:hover {
+    transform: translateY(-5px);
+}
+
+@media (min-width: 1101px) {
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .services-grid .service-card {
+        padding: 30px 26px;
+    }
+
+    .services-grid .service-card .featured-label {
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .services-grid .service-card {
+        width: 100%;
+        max-width: none;
+        padding: 28px 24px;
+    }
+
+    .services-grid .service-card .featured-label {
+        align-self: center;
+        margin: 0 auto 20px;
+    }
+}
