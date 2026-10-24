@@ -1597,3 +1597,59 @@ body{
         padding: 25px 22px;
     }
 }
+
+
+/* SERVICE PAGE FEATURED CARD REFINEMENT
+   Keep badges inside cards and align the featured content consistently. */
+.service-grid .service-card.featured,
+.service-grid .service-card:has(.featured-badge) {
+    transform: none;
+    margin-top: 0;
+}
+
+.service-grid .service-card.featured:hover,
+.service-grid .service-card:has(.featured-badge):hover {
+    transform: translateY(-5px);
+}
+
+.service-grid .service-card .featured-badge {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 22px;
+    padding: 7px 13px;
+    border: 1px solid rgba(200, 164, 93, 0.45);
+    border-radius: 999px;
+    background: #f5ecd9;
+    color: #715522;
+    box-shadow: none;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: normal;
+}
+
+.service-grid .service-card.featured {
+    border: 1px solid rgba(200, 164, 93, 0.8);
+    box-shadow: 0 12px 30px rgba(16, 27, 43, 0.08);
+}
+
+@media (max-width: 700px) {
+    .service-grid .service-card {
+        min-width: 0;
+        padding: 28px 24px;
+    }
+
+    .service-grid .service-card .featured-badge {
+        align-self: center;
+        margin: 0 auto 20px;
+    }
+}
