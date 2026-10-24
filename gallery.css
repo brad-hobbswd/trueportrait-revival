@@ -2309,15 +2309,15 @@ CUSTOM ARTISTRY SECTION DIVIDER
 }
 
 
-/* TABLET PORTRAIT: KEEP THIS THREE-PHOTO COMPOSITE SIDE BY SIDE */
+/* TABLET PORTRAIT: BOTH BEFORE PHOTOS FIRST, AFTER PHOTO BELOW */
 @media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
     .three-source-comparison {
         padding: 22px;
     }
 
     .three-source-comparison .restoration-images {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
         align-items: start;
     }
 
@@ -2325,10 +2325,20 @@ CUSTOM ARTISTRY SECTION DIVIDER
         min-width: 0;
     }
 
+    .three-source-comparison .restoration-images figure:nth-child(3) {
+        grid-column: 1 / -1;
+        width: min(70%, 360px);
+        justify-self: center;
+    }
+
     .three-source-comparison .restoration-images img {
         width: 100%;
-        height: clamp(190px, 27vh, 300px);
+        height: clamp(200px, 30vh, 340px);
         object-fit: contain;
+    }
+
+    .three-source-comparison .restoration-images figure:nth-child(3) img {
+        height: clamp(220px, 34vh, 380px);
     }
 
     .three-source-comparison .restoration-tag {
