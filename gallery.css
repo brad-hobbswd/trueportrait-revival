@@ -2389,3 +2389,19 @@ CUSTOM ARTISTRY SECTION DIVIDER
         white-space: nowrap;
     }
 }
+
+
+/* TABLET PORTRAIT: ENLARGE REGULAR BEFORE AND AFTER PHOTOS */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+    .restoration-comparison-card:not(.three-source-comparison) {
+        padding: 18px;
+    }
+
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-images {
+        gap: 10px;
+    }
+
+    .restoration-comparison-card:not(.three-source-comparison) .restoration-images img {
+        height: clamp(300px, 38vh, 440px);
+    }
+}
