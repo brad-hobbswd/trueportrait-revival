@@ -1653,3 +1653,49 @@ body{
         margin: 0 auto 20px;
     }
 }
+
+
+/* ACCESSIBLE PRICING CARD CONTRAST FIX
+   The pricing comparison uses a light card, so its text must remain dark
+   even if older featured-card rules set headings and paragraphs to white. */
+.pricing-comparison .price-card,
+.pricing-comparison .price-card.featured {
+    color: #222222;
+    background: #ffffff;
+}
+
+.pricing-comparison .price-card h3,
+.pricing-comparison .price-card.featured h3 {
+    color: #101b2b;
+}
+
+.pricing-comparison .price-card p,
+.pricing-comparison .price-card.featured p {
+    color: #4b5563;
+}
+
+.pricing-comparison .price-card .price {
+    color: #98763a;
+}
+
+.pricing-comparison .price-card.featured .price {
+    color: #98763a;
+}
+
+.pricing-comparison .price-card.featured .featured-badge {
+    background: #f5ecd9;
+    color: #715522;
+    border-color: rgba(200, 164, 93, 0.55);
+}
+
+@media (max-width: 700px) {
+    .pricing-comparison .price-card h3,
+    .pricing-comparison .price-card.featured h3 {
+        color: #101b2b;
+    }
+
+    .pricing-comparison .price-card p,
+    .pricing-comparison .price-card.featured p {
+        color: #4b5563;
+    }
+}
