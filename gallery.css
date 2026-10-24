@@ -2256,35 +2256,31 @@ CUSTOM ARTISTRY SECTION DIVIDER
 }
 
 
-/* PHONE PORTRAIT: IMPROVE READABILITY AND PHOTO SIZE */
+/* PHONE PORTRAIT: SPECIAL LAYOUT FOR THE THREE-PHOTO COMPOSITE ONLY */
 @media (max-width: 600px) and (orientation: portrait) {
-    .restoration-comparison-card {
+    .three-source-comparison {
         padding: 16px;
         border-radius: 16px;
     }
 
-    .restoration-images {
+    .three-source-comparison .restoration-images {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    /* Show the two source photos and finished composite clearly, one per row. */
-    .three-source-comparison .restoration-images {
-        grid-template-columns: 1fr;
-    }
-
-    .restoration-images figure {
+    .three-source-comparison .restoration-images figure {
         width: 100%;
+        min-width: 0;
     }
 
-    .restoration-images img {
+    .three-source-comparison .restoration-images img {
         width: 100%;
         height: auto;
         max-height: 420px;
         object-fit: contain;
     }
 
-    .restoration-tag {
+    .three-source-comparison .restoration-tag {
         top: 10px;
         left: 10px;
         padding: 6px 10px;
@@ -2294,26 +2290,20 @@ CUSTOM ARTISTRY SECTION DIVIDER
         white-space: nowrap;
     }
 
-    .collection-content {
+    .three-source-comparison .collection-content {
         padding: 12px 2px 4px;
     }
 
-    .collection-content h3 {
+    .three-source-comparison .collection-content h3 {
         font-size: 1.2rem;
         line-height: 1.3;
         margin: 12px 0 10px;
         text-align: center;
     }
 
-    .collection-content p {
+    .three-source-comparison .collection-content p {
         font-size: 0.92rem;
         line-height: 1.5;
         margin-bottom: 10px;
-    }
-
-    .section-introduction {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 28px;
     }
 }
