@@ -273,4 +273,57 @@ animatedItems.forEach(item=>{
 
 });
 
+
+/* ================================
+   GALLERY IMAGE LIGHTBOX
+   Opens the selected original or restoration at a larger size.
+================================ */
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = lightbox ? lightbox.querySelector("img") : null;
+const lightboxClose = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+
+function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    if (lightboxImage) {
+        lightboxImage.src = "";
+        lightboxImage.alt = "Expanded restoration image";
+    }
+    document.body.style.overflow = "";
+}
+
+document.querySelectorAll("a.lightbox-image").forEach(link => {
+    link.addEventListener("click", function (event) {
+        if (!lightbox || !lightboxImage) return;
+        event.preventDefault();
+        const image = this.querySelector("img");
+        lightboxImage.src = this.href;
+        lightboxImage.alt = image ? image.alt : "Expanded restoration image";
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        if (lightboxClose) lightboxClose.focus();
+    });
+});
+
+if (lightboxClose) {
+    lightboxClose.setAttribute("type", "button");
+    lightboxClose.setAttribute("aria-label", "Close enlarged photograph");
+    lightboxClose.addEventListener("click", closeLightbox);
+}
+
+if (lightbox) {
+    lightbox.setAttribute("aria-hidden", "true");
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeLightbox();
+    });
+}
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && lightbox && lightbox.classList.contains("active")) {
+        closeLightbox();
+    }
+});
+
 });
