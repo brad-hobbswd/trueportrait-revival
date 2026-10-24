@@ -1574,3 +1574,55 @@ nav a{
 
 }
 
+
+
+/* REFINED FEATURED SERVICE CARD */
+.services-grid .service-card.featured {
+    transform: none;
+    margin-top: 0;
+    border: 1px solid rgba(200, 164, 93, 0.85);
+    background: linear-gradient(180deg, #ffffff 0%, #fbf7ee 100%);
+}
+
+.services-grid .service-card.featured:hover {
+    transform: translateY(-5px);
+}
+
+.services-grid .service-card .featured-label {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    max-width: 100%;
+    margin: 0 0 22px;
+    padding: 7px 12px;
+    border: 1px solid rgba(200, 164, 93, 0.5);
+    border-radius: 999px;
+    background: #f5ecd9;
+    color: #715522;
+    box-shadow: none;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: normal;
+}
+
+@media (max-width: 700px) {
+    .services-grid .service-card {
+        padding: 30px 22px;
+    }
+
+    .services-grid .service-card .featured-label {
+        align-self: center;
+        margin-bottom: 18px;
+    }
+
+    .services-grid .service-card.featured {
+        transform: none;
+    }
+}
