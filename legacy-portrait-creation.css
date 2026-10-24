@@ -1699,3 +1699,50 @@ body{
         color: #4b5563;
     }
 }
+
+
+/* MOBILE SPACING REFINEMENT
+   Reduce the oversized vertical gaps between the pricing section,
+   the family introduction, and its promise card. */
+@media (max-width: 768px) {
+    .pricing-comparison {
+        margin-bottom: 24px;
+    }
+
+    .introduction {
+        padding-top: 48px;
+        padding-bottom: 52px;
+    }
+
+    .introduction .intro-grid {
+        gap: 28px;
+        align-items: start;
+    }
+
+    .introduction .intro-content p {
+        margin-bottom: 18px;
+    }
+
+    .introduction .intro-content h2 {
+        margin-bottom: 20px;
+    }
+
+    .introduction .intro-card {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .introduction {
+        padding-top: 38px;
+        padding-bottom: 42px;
+    }
+
+    .introduction .intro-grid {
+        gap: 22px;
+    }
+
+    .introduction .intro-content p {
+        line-height: 1.7;
+    }
+}
