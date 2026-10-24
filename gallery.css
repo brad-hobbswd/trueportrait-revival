@@ -2223,3 +2223,34 @@ CUSTOM ARTISTRY SECTION DIVIDER
         padding: 16px 6px;
     }
 }
+
+
+/* PHONE LANDSCAPE: COMPACT TEXT TO GIVE PHOTOS MORE ROOM */
+@media (max-width: 900px) and (orientation: landscape) {
+    .collection-content h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin: 10px 0 8px;
+    }
+
+    .collection-content p {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        margin-bottom: 8px;
+    }
+
+    .collection-content {
+        padding: 12px 6px;
+    }
+
+    .restoration-tag {
+        font-size: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .section-introduction {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 24px;
+    }
+}
