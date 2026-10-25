@@ -3001,3 +3001,111 @@ CUSTOM PORTRAITS HERO SPACING AND READABILITY
         max-width: 320px;
     }
 }
+
+/* FAQ SECTION: CLEAR QUESTION AND ANSWER GROUPING */
+.faq {
+    padding-top: clamp(58px, 7vw, 88px);
+    padding-bottom: clamp(58px, 7vw, 88px);
+    background: linear-gradient(180deg, #ffffff 0%, #fcfaf6 100%);
+}
+
+.faq > .container > .section-label {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.faq > .container > h2 {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.faq .faq-list {
+    display: grid;
+    gap: 12px;
+    margin: 36px auto 0;
+    max-width: 900px;
+}
+
+.faq .faq-list h3 {
+    position: relative;
+    margin: 0;
+    padding: 20px 54px 20px 24px;
+    border: 1px solid rgba(200, 164, 93, 0.28);
+    border-left: 4px solid #c8a45d;
+    border-radius: 14px;
+    background: #f7f0e6;
+    color: #172234;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    font-weight: 600;
+    box-shadow: 0 5px 16px rgba(16, 27, 43, 0.035);
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.faq .faq-list h3::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c6b2f;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.faq .faq-list h3:hover {
+    background: #f2e7d5;
+    border-color: rgba(200, 164, 93, 0.55);
+}
+
+.faq .faq-list p {
+    margin: -4px 0 8px;
+    padding: 16px 24px 18px;
+    border: 1px solid rgba(23, 34, 52, 0.07);
+    border-radius: 0 0 12px 12px;
+    background: #ffffff;
+    color: #525b66;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.faq::after {
+    margin-top: 46px;
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding-top: 48px;
+        padding-bottom: 52px;
+    }
+
+    .faq .faq-list {
+        gap: 10px;
+        margin-top: 26px;
+    }
+
+    .faq .faq-list h3 {
+        padding: 17px 44px 17px 17px;
+        font-size: 1rem;
+        line-height: 1.45;
+        border-radius: 12px;
+    }
+
+    .faq .faq-list h3::after {
+        right: 14px;
+        font-size: 1.25rem;
+    }
+
+    .faq .faq-list p {
+        padding: 14px 17px 16px;
+        font-size: .96rem;
+        line-height: 1.7;
+    }
+
+    .faq::after {
+        margin-top: 34px;
+    }
+}
