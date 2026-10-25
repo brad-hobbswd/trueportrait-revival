@@ -3359,3 +3359,57 @@ CUSTOM PORTRAITS HERO SPACING AND READABILITY
         font-size: .95rem;
     }
 }
+
+/* FAQ HEADER: COMPACT, CENTERED EDITORIAL COMPOSITION */
+.faq > .container > .section-label {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 14px;
+    color: #b18b43;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    line-height: 1.5;
+    text-align: center;
+}
+.faq > .container > h2 {
+    max-width: 720px;
+    margin: 0 auto 14px;
+    color: #172234;
+    font-size: clamp(2.15rem, 4.1vw, 3.25rem);
+    line-height: 1.08;
+    text-align: center;
+    text-wrap: balance;
+}
+.faq > .container > .faq-intro {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #59616b;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: center;
+}
+@media (min-width: 761px) {
+    .faq > .container > h2 {
+        max-width: 780px;
+        font-size: clamp(2.4rem, 3.5vw, 3.1rem);
+    }
+}
+@media (max-width: 760px) {
+    .faq > .container > .section-label {
+        margin-bottom: 12px;
+        font-size: .68rem;
+        letter-spacing: .17em;
+    }
+    .faq > .container > h2 {
+        max-width: 520px;
+        margin-bottom: 12px;
+        font-size: clamp(2rem, 7.5vw, 2.6rem);
+        line-height: 1.12;
+    }
+    .faq > .container > .faq-intro {
+        max-width: 520px;
+        font-size: .96rem;
+        line-height: 1.65;
+    }
+}
