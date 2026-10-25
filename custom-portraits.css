@@ -3461,3 +3461,156 @@ CUSTOM PORTRAITS HERO SPACING AND READABILITY
         line-height: 1.68;
     }
 }
+
+/* PAGE-WIDE SECTION RHYTHM: CLEAR BOUNDARIES, LESS EMPTY SPACE */
+main > section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+    margin: 0;
+    position: relative;
+}
+main > section:not(.hero) + section:not(.hero) {
+    border-top: 1px solid rgba(23, 34, 52, 0.055);
+}
+main > section > .container > .section-label {
+    margin-bottom: 12px;
+    line-height: 1.45;
+}
+main > section > .container > h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+main > section > .container > .section-introduction,
+main > section > .container > p.section-introduction {
+    margin-top: 0;
+    margin-bottom: 28px;
+    line-height: 1.72;
+}
+main > section .possibilities-grid,
+main > section .story-grid,
+main > section .services-grid,
+main > section .process-grid {
+    margin-top: 32px;
+}
+main > section .invitation-comparison {
+    margin-top: 30px;
+}
+main > section .why-grid {
+    gap: 42px;
+}
+main > section .portrait-story-message {
+    margin-top: 30px;
+}
+main > section .service-actions {
+    margin-top: 20px;
+}
+main > section .faq-list {
+    margin-top: 30px;
+}
+main > section::after {
+    margin-top: 34px;
+}
+main > section.hero {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+main > section.introduction > .container > p:not(.section-label) {
+    margin-bottom: 16px;
+    line-height: 1.75;
+}
+main > section.introduction > .container > p:last-child {
+    margin-bottom: 0;
+}
+main > section.custom-composite {
+    padding-bottom: 68px;
+}
+main > section.custom-composite .collection-showcase-content {
+    padding-top: 48px;
+}
+main > section.portrait-services.print-services {
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+main > section.design-process .process-grid {
+    margin-top: 38px;
+}
+main > section.faq {
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+main > section.quality-promise,
+main > section.cta {
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+@media (max-width: 992px) {
+    main > section {
+        padding-top: 54px;
+        padding-bottom: 54px;
+    }
+    main > section .possibilities-grid,
+    main > section .story-grid,
+    main > section .services-grid,
+    main > section .process-grid {
+        margin-top: 26px;
+    }
+    main > section .why-grid {
+        gap: 30px;
+    }
+    main > section.custom-composite .collection-showcase-content {
+        padding-top: 38px;
+    }
+}
+@media (max-width: 650px) {
+    main > section {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    main > section > .container > .section-label {
+        margin-bottom: 10px;
+        font-size: .68rem;
+        letter-spacing: .16em;
+    }
+    main > section > .container > h2 {
+        margin-bottom: 12px;
+    }
+    main > section > .container > .section-introduction,
+    main > section > .container > p.section-introduction {
+        margin-bottom: 22px;
+        line-height: 1.68;
+    }
+    main > section .possibilities-grid,
+    main > section .story-grid,
+    main > section .services-grid,
+    main > section .process-grid {
+        margin-top: 22px;
+        gap: 16px;
+    }
+    main > section .invitation-comparison {
+        margin-top: 22px;
+    }
+    main > section .portrait-story-message {
+        margin-top: 22px;
+    }
+    main > section.custom-composite {
+        padding-bottom: 42px;
+    }
+    main > section.custom-composite .collection-showcase-content {
+        padding-top: 30px;
+    }
+    main > section.portrait-services.print-services {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+    main > section.design-process .process-grid {
+        margin-top: 28px;
+        gap: 24px;
+    }
+    main > section.faq,
+    main > section.quality-promise,
+    main > section.cta {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+}
