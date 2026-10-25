@@ -3614,3 +3614,52 @@ main > section.cta {
         padding-bottom: 42px;
     }
 }
+
+
+/* VERIFIED OVERRIDE: MAKE SECTION SPACING CHANGES VISIBLE OVER LEGACY RULES */
+main > section:not(.hero) {
+    padding-block: clamp(38px, 4.2vw, 58px) !important;
+    margin-block: 0 !important;
+}
+main > section:not(.hero) + section:not(.hero) {
+    border-top: 1px solid rgba(23, 34, 52, 0.09) !important;
+}
+main > section > .container > .section-label {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+main > section > .container > h2 {
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+}
+main > section > .container > p:not(.section-label) {
+    margin-top: 0;
+}
+main > section .possibilities-grid,
+main > section .story-grid,
+main > section .services-grid,
+main > section .process-grid,
+main > section .faq-list {
+    margin-top: 26px !important;
+}
+main > section.custom-composite .collection-showcase-content {
+    padding-top: 34px !important;
+}
+main > section.hero {
+    padding-block: 0 !important;
+}
+@media (max-width: 650px) {
+    main > section:not(.hero) {
+        padding-block: 34px !important;
+    }
+    main > section .possibilities-grid,
+    main > section .story-grid,
+    main > section .services-grid,
+    main > section .process-grid,
+    main > section .faq-list {
+        margin-top: 20px !important;
+    }
+    main > section.custom-composite .collection-showcase-content {
+        padding-top: 26px !important;
+    }
+}
