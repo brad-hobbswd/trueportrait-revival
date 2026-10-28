@@ -55,3 +55,15 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .image-pair a:has(img[src$="IMG_0960.png"]),
 .image-pair a:has(img[src$="IMG_0961.png"]){height:calc((100vw - 40px)/3);min-height:105px}
 }
+
+
+/* Precisely frame the photograph inside the four social-media screenshots.
+   The source files remain untouched; the gallery viewport hides the phone UI. */
+.image-pair a:has(img[src$="IMG_0958.png"]),
+.image-pair a:has(img[src$="IMG_0959.png"]),
+.image-pair a:has(img[src$="IMG_0960.png"]),
+.image-pair a:has(img[src$="IMG_0961.png"]){overflow:hidden}
+.image-pair img[src$="IMG_0958.png"]{object-fit:cover;object-position:center 50%;transform:scale(2.55)}
+.image-pair img[src$="IMG_0959.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
+.image-pair img[src$="IMG_0960.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(2.05)}
+.image-pair img[src$="IMG_0961.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
