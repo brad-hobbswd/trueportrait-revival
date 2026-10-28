@@ -47,3 +47,11 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .image-pair a:has(img[src$="IMG_0959.png"]),
 .image-pair a:has(img[src$="IMG_0960.png"]),
 .image-pair a:has(img[src$="IMG_0961.png"]){height:220px;min-height:220px}
+
+
+@media(max-width:760px){
+.image-pair a:has(img[src$="IMG_0958.png"]),
+.image-pair a:has(img[src$="IMG_0959.png"]),
+.image-pair a:has(img[src$="IMG_0960.png"]),
+.image-pair a:has(img[src$="IMG_0961.png"]){height:calc((100vw - 40px)/3);min-height:105px}
+}
