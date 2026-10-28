@@ -35,3 +35,15 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .heritage-footer a{color:var(--heritage-gold);text-decoration:none}
 @media(max-width:760px){.heritage-hero{min-height:420px;padding:64px 22px}.heritage-intro{padding:56px 22px 30px}.heritage-collection{padding:18px 16px 60px}.heritage-grid{grid-template-columns:1fr;gap:22px}.image-pair a{height:clamp(170px,55vw,300px);min-height:170px}.heritage-card-copy{padding:20px}.heritage-cta{padding:58px 22px 64px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Crop phone screenshot originals to the photograph area in gallery cards.
+   These four source files contain tall phone screenshots around landscape photos. */
+.image-pair img[src$="IMG_0958.png"],
+.image-pair img[src$="IMG_0959.png"],
+.image-pair img[src$="IMG_0960.png"],
+.image-pair img[src$="IMG_0961.png"]{object-fit:cover;object-position:center}
+.image-pair a:has(img[src$="IMG_0958.png"]),
+.image-pair a:has(img[src$="IMG_0959.png"]),
+.image-pair a:has(img[src$="IMG_0960.png"]),
+.image-pair a:has(img[src$="IMG_0961.png"]){height:220px;min-height:220px}
