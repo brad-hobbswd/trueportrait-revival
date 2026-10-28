@@ -13,7 +13,7 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .heritage-intro p:not(.section-label){font-size:1.05rem;line-height:1.85}
 .heritage-note{margin:28px auto 0;padding:16px 20px;border-left:3px solid var(--heritage-gold);background:#fff9ef;color:#5d574d;text-align:left;font-size:.92rem!important}
 .heritage-collection{padding:20px 5% 90px}
-.heritage-grid{max-width:1380px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.heritage-grid{max-width:1600px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
 .heritage-card{min-width:0;background:#fff;border:1px solid rgba(16,27,43,.1);box-shadow:0 12px 32px rgba(16,27,43,.08);overflow:hidden}
 .image-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:#e5d9c6}
 .image-pair figure{position:relative;min-width:0;margin:0;background:#eee5d8}
@@ -67,3 +67,8 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .image-pair img[src$="IMG_0959.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
 .image-pair img[src$="IMG_0960.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(2.05)}
 .image-pair img[src$="IMG_0961.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
+
+/* Larger two-card gallery layout for easier photo viewing */
+.heritage-collection{padding-left:3%;padding-right:3%}
+.image-pair a{height:clamp(280px,32vw,460px);min-height:280px}
+@media(max-width:760px){.heritage-collection{padding-left:16px;padding-right:16px}.image-pair a{height:clamp(180px,55vw,320px);min-height:180px}}
