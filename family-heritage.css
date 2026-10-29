@@ -12,17 +12,17 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .heritage-intro h2,.heritage-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.1;color:var(--heritage-navy);margin:10px 0 22px}
 .heritage-intro p:not(.section-label){font-size:1.05rem;line-height:1.85}
 .heritage-note{margin:28px auto 0;padding:16px 20px;border-left:3px solid var(--heritage-gold);background:#fff9ef;color:#5d574d;text-align:left;font-size:.92rem!important}
-.heritage-collection{padding:20px 5% 90px}
-.heritage-grid{max-width:1600px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
-.heritage-card{min-width:0;background:#fff;border:1px solid rgba(16,27,43,.1);box-shadow:0 12px 32px rgba(16,27,43,.08);overflow:hidden}
-.image-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:#e5d9c6}
+.heritage-collection{padding:12px 3% 72px}
+.heritage-grid{max-width:1600px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.heritage-card{min-width:0;background:#fff;border:1px solid rgba(16,27,43,.1);box-shadow:0 10px 28px rgba(16,27,43,.07);overflow:hidden;border-radius:3px}
+.image-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#e5d9c6}
 .image-pair figure{position:relative;min-width:0;margin:0;background:#eee5d8}
-.image-pair figure span{position:absolute;top:10px;left:10px;z-index:1;padding:4px 8px;background:rgba(16,27,43,.9);color:#fff;font:600 .68rem Inter,sans-serif;letter-spacing:1.2px}
-.image-pair a{display:grid;place-items:center;min-height:220px;height:clamp(220px,27vw,380px);background:#f2ece3}
+.image-pair figure span{position:absolute;top:9px;left:9px;z-index:1;padding:4px 7px;background:rgba(16,27,43,.9);color:#fff;font:600 .59rem/1.2 Inter,sans-serif;letter-spacing:.8px}
+.image-pair a{display:block;position:relative;overflow:hidden;aspect-ratio:1.2/1;background:#f2ece3}
 .image-pair img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
-.heritage-card-copy{padding:24px 26px 28px}
-.heritage-card-copy h3{font-family:Cinzel,serif;font-size:1.08rem;color:var(--heritage-navy);margin:0 0 10px}
-.heritage-card-copy p{margin:0;color:var(--heritage-muted);line-height:1.75}
+.heritage-card-copy{padding:18px 22px 20px}
+.heritage-card-copy h3{font-family:Cinzel,serif;font-size:1rem;line-height:1.3;color:var(--heritage-navy);margin:0 0 6px}
+.heritage-card-copy p{margin:0;color:var(--heritage-muted);font-size:.94rem;line-height:1.6}
 .heritage-cta{padding:78px 24px 86px;text-align:center;background:#ebe1d1}
 .heritage-cta>p:not(.section-label){max-width:720px;margin:0 auto 26px;line-height:1.8}
 .heritage-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
@@ -33,67 +33,20 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
 .heritage-footer p{margin:6px 0 12px}
 .heritage-footer div{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:18px 0}
 .heritage-footer a{color:var(--heritage-gold);text-decoration:none}
-@media(max-width:760px){.heritage-hero{min-height:420px;padding:64px 22px}.heritage-intro{padding:56px 22px 30px}.heritage-collection{padding:18px 16px 60px}.heritage-grid{grid-template-columns:1fr;gap:22px}.image-pair a{height:clamp(170px,55vw,300px);min-height:170px}.heritage-card-copy{padding:20px}.heritage-cta{padding:58px 22px 64px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-
-
-/* Crop phone screenshot originals to the photograph area in gallery cards.
-   These four source files contain tall phone screenshots around landscape photos. */
-.image-pair img[src$="IMG_0958.png"],
-.image-pair img[src$="IMG_0959.png"],
-.image-pair img[src$="IMG_0960.png"],
-.image-pair img[src$="IMG_0961.png"]{object-fit:cover;object-position:center}
-.image-pair a:has(img[src$="IMG_0958.png"]),
-.image-pair a:has(img[src$="IMG_0959.png"]),
-.image-pair a:has(img[src$="IMG_0960.png"]),
-.image-pair a:has(img[src$="IMG_0961.png"]){height:220px;min-height:220px}
-
-
-@media(max-width:760px){
-.image-pair a:has(img[src$="IMG_0958.png"]),
-.image-pair a:has(img[src$="IMG_0959.png"]),
-.image-pair a:has(img[src$="IMG_0960.png"]),
-.image-pair a:has(img[src$="IMG_0961.png"]){height:calc((100vw - 40px)/3);min-height:105px}
-}
-
-
-/* Precisely frame the photograph inside the four social-media screenshots.
-   The source files remain untouched; the gallery viewport hides the phone UI. */
-.image-pair a:has(img[src$="IMG_0958.png"]),
-.image-pair a:has(img[src$="IMG_0959.png"]),
-.image-pair a:has(img[src$="IMG_0960.png"]),
-.image-pair a:has(img[src$="IMG_0961.png"]){overflow:hidden}
+/* Frame the four supplied phone screenshot originals without changing source files. */
 .image-pair img[src$="IMG_0958.png"]{object-fit:cover;object-position:center 50%;transform:scale(2.55)}
 .image-pair img[src$="IMG_0959.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
 .image-pair img[src$="IMG_0960.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(2.05)}
 .image-pair img[src$="IMG_0961.png"]{object-fit:cover;object-position:center 31.5%;transform:scale(1.65)}
-
-/* Larger two-card gallery layout for easier photo viewing */
-.heritage-collection{padding-left:3%;padding-right:3%}
-.image-pair a{height:clamp(280px,32vw,460px);min-height:280px}
-@media(max-width:760px){.heritage-collection{padding-left:16px;padding-right:16px}.image-pair a{height:clamp(180px,55vw,320px);min-height:180px}}
-
-
-/* Phone layout: show each before/after image at a readable width, stacked vertically. */
+@media(max-width:900px){.heritage-collection{padding-left:20px;padding-right:20px}.heritage-grid{gap:18px}.image-pair a{aspect-ratio:1.05/1}}
 @media(max-width:600px){
-  .heritage-grid{grid-template-columns:minmax(0,1fr)}
-  .image-pair{grid-template-columns:minmax(0,1fr);gap:8px}
-  .image-pair a{height:auto;min-height:0;aspect-ratio:4/3}
-  .image-pair img{width:100%;height:100%;object-fit:contain}
-  .image-pair a:has(img[src$="IMG_0958.png"]),
-  .image-pair a:has(img[src$="IMG_0959.png"]),
-  .image-pair a:has(img[src$="IMG_0960.png"]),
-  .image-pair a:has(img[src$="IMG_0961.png"]){height:auto;min-height:0;aspect-ratio:4/3}
+.heritage-hero{min-height:420px;padding:64px 22px}
+.heritage-intro{padding:56px 22px 30px}
+.heritage-collection{padding:8px 14px 56px}
+.heritage-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+.image-pair{gap:1px}
+.image-pair a{aspect-ratio:.92/1}
+.heritage-card-copy{padding:16px 18px 18px}
+.heritage-cta{padding:58px 22px 64px}
 }
-
-
-/* Keep original and restored photos side by side on phones too. */
-@media(max-width:600px){
-  .image-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
-  .image-pair a{height:clamp(190px,58vw,300px);min-height:190px;aspect-ratio:auto}
-  .image-pair img{width:100%;height:100%;object-fit:contain}
-  .image-pair a:has(img[src$="IMG_0958.png"]),
-  .image-pair a:has(img[src$="IMG_0959.png"]),
-  .image-pair a:has(img[src$="IMG_0960.png"]),
-  .image-pair a:has(img[src$="IMG_0961.png"]){height:clamp(190px,58vw,300px);min-height:190px;aspect-ratio:auto}
-}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
