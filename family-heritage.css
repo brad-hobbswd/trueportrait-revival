@@ -85,3 +85,15 @@ body{margin:0;background:var(--heritage-ivory);color:var(--heritage-ink);font-fa
   .image-pair a:has(img[src$="IMG_0960.png"]),
   .image-pair a:has(img[src$="IMG_0961.png"]){height:auto;min-height:0;aspect-ratio:4/3}
 }
+
+
+/* Keep original and restored photos side by side on phones too. */
+@media(max-width:600px){
+  .image-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
+  .image-pair a{height:clamp(190px,58vw,300px);min-height:190px;aspect-ratio:auto}
+  .image-pair img{width:100%;height:100%;object-fit:contain}
+  .image-pair a:has(img[src$="IMG_0958.png"]),
+  .image-pair a:has(img[src$="IMG_0959.png"]),
+  .image-pair a:has(img[src$="IMG_0960.png"]),
+  .image-pair a:has(img[src$="IMG_0961.png"]){height:clamp(190px,58vw,300px);min-height:190px;aspect-ratio:auto}
+}
